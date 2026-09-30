@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>餐厅 · 3D 空间漫游</title>
+  <style>
+    :root{color-scheme:dark;--ink:#f7f2e9;--muted:#c3b9aa;--glass:rgba(31,27,23,.78);--line:rgba(255,244,222,.16);--accent:#d7a65b;--green:#adc18c}
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#171512;color:var(--ink);font-family:Inter,"Segoe UI","Microsoft YaHei",sans-serif}
+    #scene{position:fixed;inset:0}canvas{display:block;width:100%;height:100%}
+    .topbar{position:fixed;left:22px;right:22px;top:18px;display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+    .brand,.top-actions{pointer-events:auto}.brand{display:flex;gap:12px;align-items:center;padding:11px 15px;border:1px solid var(--line);border-radius:15px;background:var(--glass);backdrop-filter:blur(15px);box-shadow:0 12px 32px #0005}
+    .mark{width:35px;height:35px;border-radius:11px;background:linear-gradient(145deg,#eed7a9,#aa7040);display:grid;place-items:center;color:#402b18;font-size:18px}.brand strong{display:block;font-size:14px;letter-spacing:.08em}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+    .top-actions{display:flex;gap:8px}.pill,.iconbtn{border:1px solid var(--line);background:var(--glass);color:var(--ink);padding:10px 13px;border-radius:12px;backdrop-filter:blur(12px);cursor:pointer;font-size:12px}.pill.active{background:#d7a65b;color:#2a2117;border-color:#e3c385}
+    .panel{position:fixed;top:88px;bottom:24px;width:250px;padding:17px;border:1px solid var(--line);border-radius:18px;background:var(--glass);backdrop-filter:blur(18px);box-shadow:0 20px 45px #0005;overflow:auto}.left{left:22px}.right{right:22px;width:274px}
+    .eyebrow{font-size:10px;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}.panel h2{font-size:17px;margin:0 0 6px}.sub{font-size:11px;color:var(--muted);line-height:1.6;margin:0 0 16px}
+    .item{display:flex;gap:10px;align-items:center;padding:10px;border:1px solid transparent;border-radius:12px;cursor:pointer;transition:.2s}.item:hover,.item.selected{background:#ffffff10;border-color:#ffffff1c}.swatch{width:31px;height:31px;border-radius:9px;background:linear-gradient(135deg,#74502d,#b18855);flex:none;display:grid;place-items:center;color:#f9e4bd;font-size:14px}.item b{font-size:12px;display:block;font-weight:600}.item small{font-size:10px;color:var(--muted);display:block;margin-top:3px}
+    .divider{height:1px;background:var(--line);margin:13px 0}.controlrow{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;margin:11px 0}.toggle{width:36px;height:20px;background:#49433b;border-radius:12px;position:relative;cursor:pointer;flex:none}.toggle:after{content:"";position:absolute;width:14px;height:14px;left:3px;top:3px;border-radius:50%;background:#eee2ce;transition:.2s}.toggle.on{background:#bd8a44}.toggle.on:after{left:19px;background:#fff}.range{width:100%;accent-color:var(--accent)}.presets{display:grid;grid-template-columns:1fr 1fr;gap:7px}.presets button{background:#ffffff0c;border:1px solid var(--line);border-radius:10px;padding:9px 6px;color:var(--ink);font-size:10px;cursor:pointer}.presets button:hover{border-color:#d7a65b}
+    .hint{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(12px);padding:9px 14px;border-radius:99px;color:#ddd2c2;font-size:10px;white-space:nowrap}.hint kbd{font:inherit;color:#fff;background:#ffffff18;padding:3px 6px;border-radius:5px;margin:0 3px}
+    #loading{position:fixed;inset:0;z-index:8;display:grid;place-items:center;background:#191612;transition:opacity .5s}.loadbox{width:min(340px,85vw);text-align:center}.loader-icon{font-size:34px;margin-bottom:14px}.loadbox h1{font-size:16px;letter-spacing:.1em}.loadbox p{font-size:11px;color:var(--muted)}.bar{height:3px;background:#ffffff17;border-radius:4px;overflow:hidden;margin-top:18px}.bar i{display:block;height:100%;width:4%;background:var(--accent);transition:width .3s}
+    #info{position:fixed;left:50%;bottom:78px;transform:translateX(-50%) translateY(12px);opacity:0;pointer-events:none;background:rgba(25,22,19,.9);border:1px solid var(--line);padding:12px 17px;border-radius:14px;min-width:220px;text-align:center;transition:.22s;backdrop-filter:blur(12px)}#info.show{opacity:1;transform:translateX(-50%) translateY(0)}#info b{font-size:13px}#info span{display:block;color:var(--muted);font-size:10px;margin-top:5px}
+    .notice{font-size:10px;color:#d7c7ad;line-height:1.6;padding:10px;background:#ffffff09;border-radius:10px}.hide{display:none!important}
+    @media(max-width:850px){.panel{width:205px}.right{width:225px}.left{left:10px}.right{right:10px}.topbar{left:10px;right:10px}.hint{bottom:10px}.brand small{display:none}}
+    @media(max-width:650px){.panel{top:auto;bottom:52px;height:230px;width:calc(50% - 15px);padding:12px}.left{left:10px}.right{right:10px}.topbar{top:10px}.pill{padding:9px;font-size:10px}.hint{font-size:9px;max-width:90vw;white-space:normal;text-align:center}.brand{padding:8px}.brand strong{font-size:11px}}
+  </style>
+  <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.164.1/build/three.module.js","three/addons/":"https://unpkg.com/three@0.164.1/examples/jsm/"}}</script>
+</head>
+<body>
+  <div id="scene"></div>
+  <div id="loading"><div class="loadbox"><div class="loader-icon">✿</div><h1>餐厅空间正在布置</h1><p id="loadtext">正在准备墙面、瓷砖与家具模型…</p><div class="bar"><i id="progress"></i></div></div></div>
+  <header class="topbar"><div class="brand"><div class="mark">⌂</div><div><strong>DINING ROOM</strong><small>美式田园 · 餐厅交互漫游</small></div></div><div class="top-actions"><button class="pill" id="reset">重置视角</button><button class="iconbtn" id="roof">显示屋顶</button></div></header>
+  <div class="hint"><kbd>拖动</kbd>旋转 <kbd>滚轮</kbd>缩放 <kbd>右键</kbd>平移</div>
+  <script type="module">
+    import * as THREE from 'three';
+    import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+    import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+
+    const host=document.querySelector('#scene');
+    const scene=new THREE.Scene();scene.background=new THREE.Color('#d9cfc0');scene.fog=new THREE.Fog('#d9cfc0',14,28);
+    const camera=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.1,100);camera.position.set(5.2,4.5,9.5);
+    const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;host.appendChild(renderer.domElement);
+    const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,1.1,0);controls.enableDamping=true;controls.dampingFactor=.07;controls.maxPolarAngle=Math.PI*.48;controls.minDistance=5;controls.maxDistance=16;
+    const hemi=new THREE.HemisphereLight(0xfff3df,0x544237,1.2);scene.add(hemi);
+    const sun=new THREE.DirectionalLight(0xffebcb,2.3);sun.position.set(-3,8,5);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-8;sun.shadow.camera.right=8;sun.shadow.camera.top=8;sun.shadow.camera.bottom=-8;scene.add(sun);
+
+    const room=new THREE.Group();scene.add(room);const wallMat=new THREE.MeshStandardMaterial({color:'#e6d9c5',roughness:.92});
+    function box(w,h,d,mat,x,y,z,parent=room){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m;}
+    // farmhouse tile floor: individual terracotta squares with diagonal inset lines and rosette centers
+    const floorBase=new THREE.Mesh(new THREE.PlaneGeometry(8,6),new THREE.MeshStandardMaterial({color:'#81553c',roughness:.88}));floorBase.rotation.x=-Math.PI/2;floorBase.position.y=-.025;floorBase.receiveShadow=true;room.add(floorBase);
+    const tileGroup=new THREE.Group();room.add(tileGroup);const tileMats={warm:new THREE.MeshStandardMaterial({color:'#9a684a',roughness:.86}),cream:new THREE.MeshStandardMaterial({color:'#c9b99c',roughness:.9}),sage:new THREE.MeshStandardMaterial({color:'#9d9a79',roughness:.88})};
+    const grout=new THREE.MeshStandardMaterial({color:'#d0c0a6',roughness:.95});
+    for(let ix=0;ix<10;ix++)for(let iz=0;iz<8;iz++){const x=-3.6+ix*.8,z=-2.8+iz*.8;const t=new THREE.Mesh(new THREE.PlaneGeometry(.77,.77),tileMats.warm);t.rotation.x=-Math.PI/2;t.position.set(x,.002,z);t.receiveShadow=true;tileGroup.add(t);const diamond=new THREE.Mesh(new THREE.PlaneGeometry(.56,.56),grout);diamond.rotation.set(-Math.PI/2,0,Math.PI/4);diamond.position.set(x,.006,z);tileGroup.add(diamond);const center=new THREE.Mesh(new THREE.PlaneGeometry(.12,.12),new THREE.MeshStandardMaterial({color:'#8e694e',roughness:.8}));center.rotation.set(-Math.PI/2,0,Math.PI/4);center.position.set(x,.009,z);tileGroup.add(center);}
+    // Two full walls and short side returns keep the room open for inspection.
+    box(8,3.2,.16,wallMat,0,1.6,-3);box(.16,3.2,6,wallMat,-4,1.6,0);
+    // wall trim and ceiling cornice
+    const trim=new THREE.MeshStandardMaterial({color:'#f5ecdd',roughness:.82});box(8,.12,.22,trim,0,3.08,-2.89);box(.22,.12,6,trim,-3.89,3.08,0);
+    // wainscot on back wall
+    const panelMat=new THREE.MeshStandardMaterial({color:'#d8c4a6',roughness:.9});box(7.86,.72,.035,panelMat,0,.42,-2.89);
+    for(let x=-3.55;x<3.7;x+=.72){box(.025,.68,.04,trim,x,.43,-2.86);}
+    box(7.9,.07,.08,trim,0,.82,-2.84);
+    // farmhouse ceiling beams, ceiling is a toggled roof
+    const roofGroup=new THREE.Group();room.add(roofGroup);const roofMat=new THREE.MeshStandardMaterial({color:'#eadfc9',roughness:.9});box(8,.12,6,roofMat,0,3.32,0,roofGroup);const beamMat=new THREE.MeshStandardMaterial({color:'#815b3b',roughness:.8});for(let z=-2.4;z<=2.4;z+=1.2)box(8,.12,.12,beamMat,0,3.23,z,roofGroup);
+    // ceiling fan mount
+    const mount=new THREE.Mesh(new THREE.CylinderGeometry(.1,.13,.12,16),new THREE.MeshStandardMaterial({color:'#8b765d',metalness:.55,roughness:.4}));mount.position.set(0,3.04,0);room.add(mount);
+
+    const defs=[
+      {key:'table',name:'餐桌',sub:'红蓝金棕格纹桌布 · 木质桌架',file:'餐桌_独立彩色.glb',target:[2.6,.9,1.5],pos:[0,0,.12],yaw:0},
+      {key:'chair1',name:'餐椅',sub:'资产库同款四腿木椅',file:'椅子_资产库.glb',target:[.68,1.08,.68],pos:[-.7,0,-.98],yaw:0},
+      {key:'chair2',name:'餐椅',sub:'资产库同款四腿木椅',file:'椅子_资产库.glb',target:[.68,1.08,.68],pos:[.7,0,-.98],yaw:0},
+      {key:'chair3',name:'餐椅',sub:'资产库同款四腿木椅',file:'椅子_资产库.glb',target:[.68,1.08,.68],pos:[-.7,0,1.12],yaw:Math.PI},
+      {key:'chair4',name:'餐椅',sub:'资产库同款四腿木椅',file:'椅子_资产库.glb',target:[.68,1.08,.68],pos:[.7,0,1.12],yaw:Math.PI},
+      {key:'chair5',name:'餐椅',sub:'资产库同款四腿木椅',file:'椅子_资产库.glb',target:[.68,1.08,.68],pos:[-1.62,0,.08],yaw:Math.PI/2},
+      {key:'cabinet',name:'餐边柜',sub:'资产库玻璃门实木展示柜',file:'餐边柜_资产库.glb',target:[1.55,2.35,.78],pos:[0,0,.65],yaw:0},
+      {key:'fan',name:'餐厅吊扇',sub:'五叶扇 · 暖色灯罩',file:'餐厅吊扇.glb',target:[1.7,.32,1.7],pos:[0,2.9,0],yaw:0},
+      {key:'clock',name:'古典挂钟',sub:'墙面挂钟',file:'餐厅挂钟.glb',target:[.62,.9,.16],pos:[-3.82,1.95,-1.05],yaw:Math.PI/2},
+      {key:'window',name:'百叶窗',sub:'木框与双侧百叶',file:'餐厅窗户.glb',target:[1.12,1.35,.2],pos:[2.15,1.62,-2.8],yaw:0},
+      {key:'painting',name:'窗边油画',sub:'资产库花卉油画',file:'餐厅油画_资产库.glb',target:[.62,.76,.12],pos:[.35,1.92,-2.8],yaw:0},
+      {key:'frame',name:'墙上相框',sub:'装饰画框',file:'餐厅相框.glb',target:[.78,.62,.1],pos:[-3.82,2.0,-2.15],yaw:Math.PI/2}
+    ];
+    let done=0;const loadbar=document.querySelector('#progress'),loadtext=document.querySelector('#loadtext');
+    const loader=new GLTFLoader();
+    function setMaterial(obj){obj.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;o.material=o.material.clone();if(o.material.map)o.material.map.colorSpace=THREE.SRGBColorSpace;o.material.side=THREE.DoubleSide;}})}
+    function fitAsset(root,target,pos,yaw){root.updateMatrixWorld(true);let b=new THREE.Box3().setFromObject(root),size=b.getSize(new THREE.Vector3()),center=b.getCenter(new THREE.Vector3());const sx=target[0]/Math.max(size.x,.001),sy=target[1]/Math.max(size.y,.001),sz=target[2]/Math.max(size.z,.001);root.scale.set(sx,sy,sz);root.rotation.y=yaw;root.updateMatrixWorld(true);b.setFromObject(root);const c=b.getCenter(new THREE.Vector3());root.position.set(pos[0]-c.x,pos[1]-b.min.y,pos[2]-c.z);}
+    function addBouquet(){const g=new THREE.Group();g.name='餐桌鲜花';const vase=new THREE.Mesh(new THREE.CylinderGeometry(.16,.22,.42,20),new THREE.MeshStandardMaterial({color:'#f1e5d0',roughness:.36}));vase.position.set(.58,.98,.06);g.add(vase);for(let i=0;i<13;i++){const a=i*2.4,r=.12+(i%4)*.06;const stem=new THREE.Mesh(new THREE.CylinderGeometry(.008,.012,.8+(i%3)*.1,6),new THREE.MeshStandardMaterial({color:'#58784b'}));stem.position.set(.58+Math.cos(a)*r,1.55+(i%3)*.08,.06+Math.sin(a)*r);stem.rotation.z=(Math.random()-.5)*.35;g.add(stem);const bloom=new THREE.Mesh(new THREE.SphereGeometry(.11,10,8),new THREE.MeshStandardMaterial({color:['#d86e59','#f0b49b','#d99b64'][i%3],roughness:.55}));bloom.position.set(.58+Math.cos(a)*r,1.98+(i%3)*.06,.06+Math.sin(a)*r);g.add(bloom);}scene.add(g);}
+    function addShoeBench(){const g=new THREE.Group();g.name='换鞋凳';const wood=new THREE.MeshStandardMaterial({color:'#493323',roughness:.72}),seat=new THREE.MeshStandardMaterial({color:'#d8c9aa',roughness:.9}),basket=new THREE.MeshStandardMaterial({color:'#5c4938',roughness:.95});const part=(w,h,d,mat,x,y,z)=>{const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;g.add(m);};part(1.48,.1,.46,seat,0,.57,0);part(.09,.46,.44,wood,-.68,.3,0);part(.09,.46,.44,wood,.68,.3,0);part(1.34,.09,.42,wood,0,.13,0);part(1.38,.08,.06,wood,0,.33,-.19);for(const x of [-.36,.36]){part(.55,.3,.34,basket,x,.31,.015);for(let y=.2;y<.43;y+=.07)part(.56,.018,.35,wood,x,y,.015);}g.position.set(-3.47,0,-.85);g.rotation.y=Math.PI/2;scene.add(g);}
+    const count=defs.length;const jobs=defs.map(def=>new Promise(resolve=>loader.load('./assets/'+def.file,gltf=>{const root=gltf.scene;root.name=def.key;setMaterial(root);fitAsset(root,def.target,def.pos,def.yaw);scene.add(root);done++;loadbar.style.width=`${Math.round(done/count*100)}%`;loadtext.textContent=`已载入 ${done} / ${count} 个模型`;resolve();},undefined,err=>{console.error(err);done++;loadbar.style.width=`${Math.round(done/count*100)}%`;resolve();})));
+    await Promise.all(jobs);addBouquet();addShoeBench();document.querySelector('#loading').style.opacity='0';setTimeout(()=>document.querySelector('#loading').remove(),550);
+    // clickable soft area rugs under the dining set
+    const rug=new THREE.Mesh(new THREE.PlaneGeometry(3.9,3.2),new THREE.MeshStandardMaterial({color:'#b59a74',roughness:1,transparent:true,opacity:.17}));rug.rotation.x=-Math.PI/2;rug.position.set(0,.012,.1);scene.add(rug);
+    document.querySelector('#reset').onclick=()=>{camera.position.set(5.2,4.5,9.5);controls.target.set(0,1.1,0);controls.update();};
+    let roofOn=false;roofGroup.visible=false;document.querySelector('#roof').onclick=e=>{roofOn=!roofOn;roofGroup.visible=roofOn;e.currentTarget.textContent=roofOn?'隐藏屋顶':'显示屋顶';};
+    window.addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
+    function animate(){requestAnimationFrame(animate);controls.update();renderer.render(scene,camera);}animate();
+  </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f3ed" />
+    <title>归家 · 客厅漫游</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23576144'/%3E%3Cpath d='M9 20L20 10L31 20V31H9Z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="./" aria-label="归家首页"
+        ><span class="brand-icon">⌂</span
+        ><span>归家<span class="brand-en">A ROOM TO REMEMBER</span></span></a
+      >
+      <div class="project-title">记忆里的客厅 <span>/</span> 交互空间</div>
+      <div class="header-actions">
+        <span class="live-dot"></span><span class="live-text">实时 3D</span
+        ><button id="help" class="icon-button" aria-label="操作帮助">?</button
+        ><button id="fullscreen" class="icon-button" aria-label="全屏浏览">
+          ⛶
+        </button>
+      </div>
+    </header>
+    <main id="viewport" aria-label="客厅三维场景">
+      <div id="canvas-host"></div>
+      <div class="vignette"></div>
+      <div class="scene-heading">
+        <div class="eyebrow"><span></span> THE LIVING ROOM · 01</div>
+        <h1>让回忆，有处可归。</h1>
+        <p>木头的温度，花布的纹理，午后的一束光。</p>
+      </div>
+      <div class="top-tools">
+        <div class="segmented" aria-label="灯光模式">
+          <button id="day" class="active" aria-pressed="true">
+            ☼ <span>午后日光</span></button
+          ><button id="night" aria-pressed="false">
+            ☾ <span>温暖夜晚</span>
+          </button>
+        </div>
+        <button id="photo" class="tool-button">▧ <span>参考照片</span></button>
+      </div>
+      <aside class="detail-card">
+        <span class="mini-label">家的细节</span>
+        <h2>熟悉的田园时光</h2>
+        <p>
+          花布木沙发、拱形书架与拼花地砖，<br />把日常的温柔，一点点放回空间。
+        </p>
+        <div class="palette">
+          <i style="--swatch: #e4d8be"></i><i style="--swatch: #704a32"></i
+          ><i style="--swatch: #a67750"></i><i style="--swatch: #748060"></i
+          ><span>奶油白 / 胡桃木 / 鼠尾草绿</span>
+        </div>
+        <div class="card-line"></div>
+        <button id="enter" class="primary">开始自由漫游 <span>↗</span></button
+        ><span class="small-hint">也可以直接拖动画面，环顾四周</span>
+      </aside>
+      <div id="crosshair" aria-hidden="true"></div>
+      <div id="toast" role="status"></div>
+      <div id="fade"></div>
+      <aside class="map-card">
+        <div class="map-title">
+          <span>空间导览</span><span id="location">客厅 · 全景</span>
+        </div>
+        <svg id="map" viewBox="0 0 180 210" aria-label="空间平面示意图">
+          <path
+            d="M23 14H157V196H23Z"
+            fill="#f0ece2"
+            stroke="#b5b4a4"
+            stroke-width="3"
+          />
+          <path d="M24 120H42M112 120H157" stroke="#b5b4a4" stroke-width="5" />
+          <rect x="121" y="39" width="22" height="63" rx="3" fill="#b0b69a" />
+          <rect x="64" y="106" width="45" height="19" rx="3" fill="#b0b69a" />
+          <rect x="80" y="57" width="24" height="35" rx="2" fill="#c4b096" />
+          <rect x="34" y="147" width="54" height="29" rx="3" fill="#c4b096" />
+          <rect x="62" y="20" width="64" height="10" fill="#c4b096" />
+          <text x="60" y="48">客厅</text>
+          <text x="112" y="175">餐厅</text>
+          <g id="map-marker">
+            <path d="M0 0L-11 -23Q0 -28 11 -23Z" fill="#727f5240" />
+            <circle r="5" fill="#69764b" stroke="white" stroke-width="2" />
+          </g>
+        </svg>
+        <div class="map-foot">
+          <span class="position-dot"></span> 我的位置 <span>示意布局</span>
+        </div>
+      </aside>
+      <div class="walk-pad" aria-label="移动控制">
+        <button data-move="forward" aria-label="向前移动">↑</button>
+        <div>
+          <button data-move="left" aria-label="向左移动">←</button
+          ><button data-move="back" aria-label="向后移动">↓</button
+          ><button data-move="right" aria-label="向右移动">→</button>
+        </div>
+      </div>
+      <div class="view-status">
+        <span class="status-dot"></span><span id="mode-label">第一人称视角</span
+        ><span class="status-separator">|</span
+        ><span id="height-label">视高 1.60 m</span
+        ><button id="reset" aria-label="回到初始视角">↺ 重置</button>
+      </div>
+      <div id="loading">
+        <div class="loading-mark">⌂</div>
+        <h2>正在把家布置好</h2>
+        <p id="load-message">铺好地砖，点亮灯光…</p>
+        <div class="loading-bar"><i></i></div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-label">
+        <span class="mini-label">EXPLORE THE SPACE</span
+        ><strong>换个角度，看看家</strong>
+      </div>
+      <nav class="view-nav" aria-label="预设参观视角">
+        <button data-view="overview" class="selected">
+          <span class="view-number">01</span
+          ><span>客厅全景<small>LIVING ROOM</small></span></button
+        ><button data-view="entry">
+          <span class="view-number">02</span
+          ><span>从进门处<small>THE ENTRANCE</small></span></button
+        ><button data-view="sofa">
+          <span class="view-number">03</span
+          ><span>坐在沙发上<small>A QUIET MOMENT</small></span></button
+        ><button data-view="nook">
+          <span class="view-number">04</span
+          ><span>书架与角落<small>READING CORNER</small></span>
+        </button>
+      </nav>
+      <div class="keyboard-hint">
+        <div>
+          <kbd>W</kbd><span> / </span><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 移动
+        </div>
+        <span>拖动环顾 · Shift 加速 · Esc 退出</span>
+      </div>
+    </footer>
+    <dialog id="gallery">
+      <div class="dialog-top">
+        <div>
+          <span class="mini-label">MEMORIES & DETAILS</span>
+          <h2>空间的原始记忆</h2>
+        </div>
+        <button class="close" aria-label="关闭照片">×</button>
+      </div>
+      <div class="gallery-grid">
+        <figure>
+          <img src="/references/sofa.jpg" alt="花布木沙发与茶几参考照片" />
+          <figcaption>01 / 花布沙发与客厅</figcaption>
+        </figure>
+        <figure>
+          <img src="/references/entry.jpg" alt="进门看向餐厅和客厅的参考照片" />
+          <figcaption>02 / 进门视角</figcaption>
+        </figure>
+        <figure>
+          <img src="/references/living.jpg" alt="客厅另一个视角参考照片" />
+          <figcaption>03 / 客厅的另一个角度</figcaption>
+        </figure>
+        <figure>
+          <img src="/references/desk.jpg" alt="拱形书架和书桌参考照片" />
+          <figcaption>04 / 书架与书桌</figcaption>
+        </figure>
+      </div>
+      <p class="dialog-note">
+        根据四张照片重建空间与家具，尺寸及照片未覆盖的区域为估算。
+      </p>
+    </dialog>
+    <dialog id="help-dialog">
+      <div class="dialog-top">
+        <h2>自在地逛一逛</h2>
+        <button class="close" aria-label="关闭帮助">×</button>
+      </div>
+      <div class="help-grid">
+        <p>
+          <b>环顾四周</b><span>按住画面拖动；自由漫游时直接移动鼠标。</span>
+        </p>
+        <p>
+          <b>走动与转向</b
+          ><span>W A S D 移动，方向键前进、后退和转向，Shift 加速。</span>
+        </p>
+        <p>
+          <b>手机也能参观</b><span>手指滑动画面环顾，长按左下方箭头移动。</span>
+        </p>
+        <p>
+          <b>休息一下</b><span>Esc 退出自由漫游。底部可切换四个参观位置。</span>
+        </p>
+      </div>
+      <button id="help-ok" class="primary">知道了，去看看 →</button>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

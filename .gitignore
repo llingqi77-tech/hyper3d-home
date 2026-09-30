@@ -1,0 +1,16 @@
+# Reinstallable dependencies and generated builds
+node_modules/
+dist/
+
+# Local tools, logs, and credentials
+.workbuddy/
+.codex/
+.agents/
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+Thumbs.db
+.DS_Store
