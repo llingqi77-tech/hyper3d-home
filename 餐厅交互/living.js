@@ -154,8 +154,8 @@ export function buildLiving({scene,box,obstacles}){
   cube(.06,.06,1.06,m.wood,.04,.69,0,windowGroup);
   cube(.06,.06,1.06,m.wood,.04,2.43,0,windowGroup);
   for(let i=0;i<7;i++)cube(.07,1.65,.10,m.curtain,.14,1.56,-.55+i*.035,windowGroup);
-  // Place the living-room artwork on the west wall, beside the balcony glazing.
-  const painting=group('客厅的画',-3.42,1.72,-3.12,Math.PI/2);
+  // The artwork is on the wall behind the sofas, in the desk-side bay shown in the reference.
+  const painting=group('客厅的画',-2.35,1.72,-2.89,Math.PI);
   cube(.66,.78,.055,m.wood,0,0,0,painting);
   const paintingMap=new THREE.TextureLoader().load('../客厅的画.jpg');
   paintingMap.colorSpace=THREE.SRGBColorSpace;
