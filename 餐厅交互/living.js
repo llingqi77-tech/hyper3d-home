@@ -69,7 +69,6 @@ export function buildLiving({scene,box,obstacles}){
       const back=rounded((width-.3)/count-.01,.53,.19,.06,fabric,px,.91,.27,g);
       back.rotation.x=-.10;
     }
-    rounded(width-.3,.02,.59,.015,m.cane,0,.68,-.02,g);
     for(const sx of[-1,1])for(const sz of[-1,1])cube(.09,.30,.09,m.wood,sx*(width/2-.12),.15,sz*.30,g);
     block(x,z,Math.abs(angle)>.1?.9:width,Math.abs(angle)>.1?width:.9);
     return g;
@@ -101,7 +100,7 @@ export function buildLiving({scene,box,obstacles}){
   cube(1.91,.82,.025,m.brass,0,1.48,-.15,television);
   cube(1.83,.74,.026,m.black,0,1.48,-.17,television);
   block(-.46,-5.16,2.15,.53);
-  const desk=group('绿色书桌与拱形壁龛',-2.55,0,-1.96,Math.PI);
+  const desk=group('绿色书桌',-2.55,0,-1.96,Math.PI);
   cube(.96,.075,.43,m.sage,0,.78,0,desk);
   cube(.88,.18,.34,m.sage,0,.61,.03,desk);
   for(const x of[-.40,.40])cube(.06,.52,.06,m.sage,x,.28,.08,desk);
@@ -114,12 +113,6 @@ export function buildLiving({scene,box,obstacles}){
   for(let i=0;i<9;i++)cube(.045,.29,.19,material(i%3?'#9e8c6d':'#657c70'),-.38+i*.09,1.33,-.25,desk);
   for(let i=0;i<8;i++)cube(.055,.25,.18,material(i%2?'#ae6a58':'#5e7565'),-.34+i*.092,1.75,-.25,desk);
   cube(1.04,1.52,.025,material('#d2c4a6'),0,1.66,-.45,desk);
-  for(const x of[-.51,.51])cube(.085,1.30,.38,m.arch,x,1.50,-.23,desk);
-  const archPoints=[];for(let i=0;i<=24;i++){
-    const a=Math.PI-i*Math.PI/24;archPoints.push(new THREE.Vector3(Math.cos(a)*.51,2.15+Math.sin(a)*.48,.20));
-  }
-  const archCurve=new THREE.CatmullRomCurve3(archPoints);
-  mesh(new THREE.TubeGeometry(archCurve,48,.055,8,false),m.arch,0,0,0,desk);
   for(const x of[-.43,.43])cube(.035,.80,.32,m.woodLight,x,1.58,-.24,desk);
   block(-2.55,-1.96,1.0,.54);
   const chair=group('书桌木椅',-2.55,0,-2.61,Math.PI);
@@ -161,8 +154,8 @@ export function buildLiving({scene,box,obstacles}){
   cube(.06,.06,1.06,m.wood,.04,.69,0,windowGroup);
   cube(.06,.06,1.06,m.wood,.04,2.43,0,windowGroup);
   for(let i=0;i<7;i++)cube(.07,1.65,.10,m.curtain,.14,1.56,-.55+i*.035,windowGroup);
-  // The photo shows the artwork beside the green desk, between the two sofa zones.
-  const painting=group('客厅的画',-1.82,1.72,-1.69,Math.PI);
+  // Place the living-room artwork on the west wall, beside the balcony glazing.
+  const painting=group('客厅的画',-3.42,1.72,-3.12,Math.PI/2);
   cube(.66,.78,.055,m.wood,0,0,0,painting);
   const paintingMap=new THREE.TextureLoader().load('../客厅的画.jpg');
   paintingMap.colorSpace=THREE.SRGBColorSpace;
