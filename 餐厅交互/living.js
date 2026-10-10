@@ -75,7 +75,7 @@ export function buildLiving({scene,box,obstacles}){
     return g;
   }
   // Plan: one sofa along the west wall, one across the south side.
-  sofa('西侧碎花沙发',-2.34,-3.75,1.85,Math.PI/2);
+  sofa('西侧碎花沙发',-2.34,-3.75,1.85,-Math.PI/2);
   sofa('南侧碎花沙发',-.58,-2.31,2.02,0);
   const tea=group('客厅茶几',-.68,0,-3.58);
   rounded(1.10,.09,.67,.025,m.wood,0,.56,0,tea);
@@ -83,6 +83,17 @@ export function buildLiving({scene,box,obstacles}){
   for(const x of[-.44,.44])for(const z of[-.25,.25])cube(.075,.5,.075,m.wood,x,.27,z,tea);
   for(let i=0;i<3;i++)cube(.26,.025,.31,material(i%2?'#657668':'#cfb894'),-.22,.63,-.13+i*.04,tea);
   cylinder(.055,.045,.1,m.porcelain,.25,.63,.14,tea);
+  // The reference table is lived-in: layered books, papers, cups, and storage below.
+  for(let pile=0;pile<3;pile++)for(let sheet=0;sheet<4;sheet++){
+    const book=cube(.22+pile*.025,.014,.29,material(['#9a7654','#cfb994','#68776b'][pile]),-.34+pile*.29,.645+sheet*.016,.10-pile*.07,tea);
+    book.rotation.y=(pile-1)*.12;
+  }
+  const paper=cube(.36,.003,.25,m.porcelain,.27,.62,-.17,tea);paper.rotation.y=.16;
+  cylinder(.075,.07,.018,m.brass,.28,.635,.15,tea);
+  for(const x of[-.28,.18])cube(.32,.07,.47,m.woodLight,x,.34,0,tea);
+  const stool=group('茶几旁小凳',.25,0,-4.20);
+  rounded(.31,.05,.31,.02,m.red,0,.37,0,stool);
+  for(const x of[-.12,.12])for(const z of[-.12,.12])cube(.035,.36,.035,m.red,x,.18,z,stool);
   block(-.68,-3.58,1.1,.67);
   const television=group('电视墙',-.46,0,-5.16);
   cube(2.15,.63,.38,m.wood,0,.34,0,television);
@@ -90,21 +101,31 @@ export function buildLiving({scene,box,obstacles}){
   cube(1.91,.82,.025,m.brass,0,1.48,-.15,television);
   cube(1.83,.74,.026,m.black,0,1.48,-.17,television);
   block(-.46,-5.16,2.15,.53);
-  const desk=group('绿色书桌与拱形壁龛',-2.42,0,-2.22);
+  const desk=group('绿色书桌与拱形壁龛',-2.55,0,-1.96,Math.PI);
   cube(.96,.075,.43,m.sage,0,.78,0,desk);
   cube(.88,.18,.34,m.sage,0,.61,.03,desk);
   for(const x of[-.40,.40])cube(.06,.52,.06,m.sage,x,.28,.08,desk);
+  for(const x of[-.28,0,.28]){
+    cube(.26,.18,.025,m.green,x,.61,.218,desk);
+    ball(.012,m.brass,x,.61,.237,desk);
+  }
+  cube(.93,.045,.38,m.woodLight,0,.84,0,desk);
   for(const y of[1.15,1.60,2.05])cube(.91,.045,.34,m.cream,0,y,-.26,desk);
   for(let i=0;i<9;i++)cube(.045,.29,.19,material(i%3?'#9e8c6d':'#657c70'),-.38+i*.09,1.33,-.25,desk);
-  const deskArch=new THREE.Shape();deskArch.moveTo(-.55,2.12);deskArch.lineTo(.55,2.12);
-  deskArch.absarc(0,2.12,.55,0,Math.PI,false);deskArch.lineTo(-.55,2.12);
-  const archTrim=mesh(new THREE.ShapeGeometry(deskArch),m.arch,0,0,-.46,desk);
-  archTrim.castShadow=false;
-  block(-2.42,-2.22,1.0,.54);
-  const chair=group('书桌木椅',-1.73,0,-2.15);
+  for(let i=0;i<8;i++)cube(.055,.25,.18,material(i%2?'#ae6a58':'#5e7565'),-.34+i*.092,1.75,-.25,desk);
+  cube(1.04,1.52,.025,material('#d2c4a6'),0,1.66,-.45,desk);
+  for(const x of[-.51,.51])cube(.085,1.30,.38,m.arch,x,1.50,-.23,desk);
+  const archPoints=[];for(let i=0;i<=24;i++){
+    const a=Math.PI-i*Math.PI/24;archPoints.push(new THREE.Vector3(Math.cos(a)*.51,2.15+Math.sin(a)*.48,.20));
+  }
+  const archCurve=new THREE.CatmullRomCurve3(archPoints);
+  mesh(new THREE.TubeGeometry(archCurve,48,.055,8,false),m.arch,0,0,0,desk);
+  for(const x of[-.43,.43])cube(.035,.80,.32,m.woodLight,x,1.58,-.24,desk);
+  block(-2.55,-1.96,1.0,.54);
+  const chair=group('书桌木椅',-2.55,0,-2.61,Math.PI);
   cube(.35,.06,.36,m.wood,0,.46,0,chair);cube(.35,.45,.06,m.wood,0,.77,.17,chair);
   for(const x of[-.14,.14])for(const z of[-.14,.14])cube(.05,.44,.05,m.wood,x,.22,z,chair);
-  block(-1.73,-2.15,.39,.39);
+  block(-2.55,-2.61,.39,.39);
   // True open spandrel at the shared dining/living threshold.
   const portal=group('餐客厅拱门',0,0,-1.625);
   const openingHalf=1.37;
@@ -140,19 +161,13 @@ export function buildLiving({scene,box,obstacles}){
   cube(.06,.06,1.06,m.wood,.04,.69,0,windowGroup);
   cube(.06,.06,1.06,m.wood,.04,2.43,0,windowGroup);
   for(let i=0;i<7;i++)cube(.07,1.65,.10,m.curtain,.14,1.56,-.55+i*.035,windowGroup);
-  const painting=group('客厅的画',1.48,1.72,-3.95,-Math.PI/2);
-  cube(.82,.91,.055,m.wood,0,0,0,painting);
+  // The photo shows the artwork beside the green desk, between the two sofa zones.
+  const painting=group('客厅的画',-1.82,1.72,-1.69,Math.PI);
+  cube(.66,.78,.055,m.wood,0,0,0,painting);
   const paintingMap=new THREE.TextureLoader().load('../客厅的画.jpg');
   paintingMap.colorSpace=THREE.SRGBColorSpace;
   // The source photo includes the surrounding wall; crop its UVs to the canvas itself.
   paintingMap.repeat.set(.794,.517);paintingMap.offset.set(.102,.226);
-  cube(.74,.83,.065,new THREE.MeshStandardMaterial({map:paintingMap,roughness:.95}),0,0,.045,painting);
-  const plant=group('客厅绿植',1.15,0,-2.48);
-  cylinder(.15,.11,.26,m.red,0,.13,0,plant);
-  cylinder(.02,.025,.9,m.wood,0,.70,0,plant);
-  for(let i=0;i<9;i++){
-    const a=i*2.4;const leaf=ball(.14,m.green,Math.cos(a)*.21,.87+(i%3)*.10,Math.sin(a)*.21,plant);
-    leaf.scale.set(1,.55,1.1);
-  }
+  cube(.61,.73,.065,new THREE.MeshStandardMaterial({map:paintingMap,roughness:.95}),0,0,.045,painting);
   return {root,ceiling,objects,lamp};
 }
