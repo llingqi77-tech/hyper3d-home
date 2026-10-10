@@ -73,9 +73,9 @@ export function buildLiving({scene,box,obstacles}){
     block(x,z,Math.abs(angle)>.1?.9:width,Math.abs(angle)>.1?width:.9);
     return g;
   }
-  // Plan: one sofa along the west wall, one across the south side.
-  sofa('西侧碎花沙发',-2.34,-3.75,1.85,-Math.PI/2);
-  sofa('南侧碎花沙发',-.58,-2.31,2.02,0);
+  // Three-seat sofa is by the balcony; the two-seat sofa is nearer the dining room.
+  sofa('阳台侧三人碎花沙发',-2.34,-3.75,2.02,-Math.PI/2);
+  sofa('餐厅侧双人碎花沙发',-.58,-2.31,1.85,0);
   const tea=group('客厅茶几',-.68,0,-3.58);
   rounded(1.10,.09,.67,.025,m.wood,0,.56,0,tea);
   cube(1.00,.05,.58,m.wood,0,.18,0,tea);
@@ -154,8 +154,8 @@ export function buildLiving({scene,box,obstacles}){
   cube(.06,.06,1.06,m.wood,.04,.69,0,windowGroup);
   cube(.06,.06,1.06,m.wood,.04,2.43,0,windowGroup);
   for(let i=0;i<7;i++)cube(.07,1.65,.10,m.curtain,.14,1.56,-.55+i*.035,windowGroup);
-  // The artwork is on the wall behind the sofas, in the desk-side bay shown in the reference.
-  const painting=group('客厅的画',-2.35,1.72,-2.89,Math.PI);
+  // Hang the artwork on the continuous south wall beside the balcony opening, facing north toward the desk.
+  const painting=group('客厅的画',-1.32,1.72,-5.27,0);
   cube(.66,.78,.055,m.wood,0,0,0,painting);
   const paintingMap=new THREE.TextureLoader().load('../客厅的画.jpg');
   paintingMap.colorSpace=THREE.SRGBColorSpace;
