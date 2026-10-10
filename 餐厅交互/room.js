@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {buildArchitecture} from './architecture.js?v=8';
 import {createNavigation} from './navigation.js?v=9';
-import {buildLiving} from './living.js?v=5';
+import {buildLiving} from './living.js?v=6';
 const $=s=>document.querySelector(s);
 const scene=new THREE.Scene();scene.background=new THREE.Color('#e6e2d8');
 const camera=new THREE.PerspectiveCamera(66,innerWidth/innerHeight,.04,45);camera.rotation.order='YXZ';

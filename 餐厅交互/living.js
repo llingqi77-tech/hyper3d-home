@@ -76,7 +76,7 @@ export function buildLiving({scene,box,obstacles}){
   // Three-seat sofa is by the balcony; the two-seat sofa is nearer the dining room.
   sofa('阳台侧三人碎花沙发',-2.34,-3.75,2.02,-Math.PI/2);
   sofa('餐厅侧双人碎花沙发',-.58,-2.31,1.85,0);
-  const tea=group('客厅茶几',-.68,0,-3.58);
+  const tea=group('客厅茶几',-.68,0,-3.58,Math.PI/2);
   rounded(1.10,.09,.67,.025,m.wood,0,.56,0,tea);
   cube(1.00,.05,.58,m.wood,0,.18,0,tea);
   for(const x of[-.44,.44])for(const z of[-.25,.25])cube(.075,.5,.075,m.wood,x,.27,z,tea);
@@ -94,12 +94,12 @@ export function buildLiving({scene,box,obstacles}){
   rounded(.31,.05,.31,.02,m.red,0,.37,0,stool);
   for(const x of[-.12,.12])for(const z of[-.12,.12])cube(.035,.36,.035,m.red,x,.18,z,stool);
   block(-.68,-3.58,1.1,.67);
-  const television=group('电视墙',-.46,0,-5.16);
+  const television=group('电视墙',-.78,0,-5.16);
   cube(2.15,.63,.38,m.wood,0,.34,0,television);
   cube(1.83,.74,.045,m.black,0,1.48,-.12,television);
   cube(1.91,.82,.025,m.brass,0,1.48,-.15,television);
   cube(1.83,.74,.026,m.black,0,1.48,-.17,television);
-  block(-.46,-5.16,2.15,.53);
+  block(-.78,-5.16,2.15,.53);
   const desk=group('绿色书桌',-2.55,0,-1.96,Math.PI);
   cube(.96,.075,.43,m.sage,0,.78,0,desk);
   cube(.88,.18,.34,m.sage,0,.61,.03,desk);
@@ -154,8 +154,8 @@ export function buildLiving({scene,box,obstacles}){
   cube(.06,.06,1.06,m.wood,.04,.69,0,windowGroup);
   cube(.06,.06,1.06,m.wood,.04,2.43,0,windowGroup);
   for(let i=0;i<7;i++)cube(.07,1.65,.10,m.curtain,.14,1.56,-.55+i*.035,windowGroup);
-  // Hang the artwork on the continuous south wall beside the balcony opening, facing north toward the desk.
-  const painting=group('客厅的画',-1.32,1.72,-5.27,0);
+  // Hang the artwork on the west wall between the bookcase and balcony window, facing east toward the desk.
+  const painting=group('客厅的画',-3.42,1.72,-2.18,Math.PI/2);
   cube(.66,.78,.055,m.wood,0,0,0,painting);
   const paintingMap=new THREE.TextureLoader().load('../客厅的画.jpg');
   paintingMap.colorSpace=THREE.SRGBColorSpace;
