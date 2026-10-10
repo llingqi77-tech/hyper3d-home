@@ -1,8 +1,14 @@
 $ErrorActionPreference = 'Stop'
-$previewRoot = $PSScriptRoot
-$previewPython = 'C:\Users\admin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
-if (-not (Test-Path -LiteralPath $previewPython)) {
-    throw 'Preview Python runtime was not found.'
+$previewRoot = Split-Path -Parent $PSScriptRoot
+$previewPython = Get-Command py -ErrorAction SilentlyContinue
+if ($previewPython) {
+    $previewExe = $previewPython.Source
+    $previewArgs = @('-3', '-m', 'http.server', '8765', '--bind', '127.0.0.1')
+} else {
+    $previewPython = Get-Command python -ErrorAction SilentlyContinue
+    if (-not $previewPython) { throw 'Python 3 was not found on PATH.' }
+    $previewExe = $previewPython.Source
+    $previewArgs = @('-m', 'http.server', '8765', '--bind', '127.0.0.1')
 }
 $previewRunning = $false
 try {
@@ -10,6 +16,6 @@ try {
     $previewRunning = $previewResponse.StatusCode -eq 200
 } catch { }
 if (-not $previewRunning) {
-    Start-Process -FilePath $previewPython -ArgumentList @('-m', 'http.server', '8765', '--bind', '127.0.0.1') -WorkingDirectory $previewRoot -WindowStyle Hidden -RedirectStandardOutput (Join-Path $previewRoot 'preview.stdout.log') -RedirectStandardError (Join-Path $previewRoot 'preview.stderr.log') | Out-Null
+    Start-Process -FilePath $previewExe -ArgumentList $previewArgs -WorkingDirectory $previewRoot -WindowStyle Hidden -RedirectStandardOutput (Join-Path $PSScriptRoot 'preview.stdout.log') -RedirectStandardError (Join-Path $PSScriptRoot 'preview.stderr.log') | Out-Null
 }
 Write-Output 'Preview: http://127.0.0.1:8765/'

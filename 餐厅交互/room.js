@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {buildArchitecture} from './architecture.js?v=8';
 import {createNavigation} from './navigation.js?v=8';
+import {buildLiving} from './living.js';
 const $=s=>document.querySelector(s);
 const scene=new THREE.Scene();scene.background=new THREE.Color('#e6e2d8');
 const camera=new THREE.PerspectiveCamera(66,innerWidth/innerHeight,.04,45);camera.rotation.order='YXZ';
@@ -25,6 +26,7 @@ tile.wrapS=tile.wrapT=THREE.RepeatWrapping;
 const architecture=buildArchitecture({scene,wall,trim,tile,box,mat,canvasTexture,LEFT,RIGHT,ENTRY,FRONT});
 
 const loader=new GLTFLoader(),cache=new Map(),obstacles=[],placed=new Map(),solidFurniture=[];
+const living=buildLiving({scene,box,obstacles});
 const tableW=1.55,tableD=.90,tableH=.77;
 const tableCenter={x:LEFT+(tableW+.018)/2,z:-.15};
 function getAsset(file){if(!cache.has(file))cache.set(file,loader.loadAsync('assets/'+encodeURIComponent(file)).then(g=>g.scene));return cache.get(file)}
@@ -33,14 +35,14 @@ function place(root,{key,height,width,pos,yaw=0,collide=false,wallSide}){const g
 const assets=[
 {key:'cabinet',file:'餐边柜_已核对.glb',width:1.50,pos:[LEFT+.75,0,ENTRY-.3],yaw:Math.PI,wallSide:'entry',collide:true},
 {key:'bench',file:'鞋柜凳.glb',width:.90,pos:[.3,0,ENTRY-.25],yaw:Math.PI,wallSide:'entry',collide:true},
-{file:'餐厅窗户.glb',height:.864,pos:[LEFT+.16,1.588,tableCenter.z],yaw:Math.PI/2,wallSide:'left'},
-{file:'花卉油画.glb',height:.62,pos:[RIGHT-.08,1.55,-.98],yaw:-Math.PI/2,wallSide:'right'},
+{key:'diningWindow',file:'餐厅窗户.glb',height:.864,pos:[LEFT+.16,1.588,tableCenter.z],yaw:Math.PI/2,wallSide:'left'},
+{key:'diningArt',file:'花卉油画.glb',height:.62,pos:[RIGHT-.08,1.55,-.98],yaw:-Math.PI/2,wallSide:'right'},
 {key:'clock',file:'餐厅挂钟.glb',height:.57,pos:[LEFT+.23,1.75,FRONT+.35],yaw:0},
 {key:'frame',file:'餐厅相框.glb',height:.4,pos:[.3,1.73,ENTRY-.08],yaw:Math.PI,wallSide:'entry'},
 {file:'餐厅吊扇.glb',width:1.18,pos:[-.45,2.32,tableCenter.z]},
 ...[
 [-.40,-.66,0],[.40,-.66,0],[-.40,.66,Math.PI],[.40,.66,Math.PI],[tableW/2+.45,0,-Math.PI/2]
-].map(([x,z,yaw])=>({file:'温莎椅_单体.glb',height:1.0,pos:[tableCenter.x+x,0,tableCenter.z+z],yaw,collide:true}))
+].map(([x,z,yaw],i)=>({key:'chair'+i,file:'温莎椅_单体.glb',height:1.0,pos:[tableCenter.x+x,0,tableCenter.z+z],yaw,collide:true}))
 ];
 // Build a separate table, excluding the fused chairs in the generated assets.
 const tableGroup=new THREE.Group();tableGroup.position.set(tableCenter.x,0,tableCenter.z);scene.add(tableGroup);
@@ -59,7 +61,60 @@ let loaded=0;const total=assets.length+1,failed=[];
 function progress(){loaded++;$('#percent').textContent=Math.round(loaded/total*100)+'%';$('#progress').style.width=loaded/total*100+'%';$('#status').textContent='布置家具 '+loaded+' / '+total;}
 const ready=Promise.all(assets.map(async def=>{try{place((await getAsset(def.file)).clone(true),def)}catch(e){failed.push(def.file);console.error(def.file,e)}finally{progress()}}).concat(tabletopProps().catch(e=>{failed.push('桌面摆件');console.error(e)}).finally(progress)));
 const navigation=createNavigation({camera,renderer,architecture,obstacles,RIGHT,ENTRY});
-const renderClock=new THREE.Clock();renderer.setAnimationLoop(()=>{const dt=Math.min(renderClock.getDelta(),.045);navigation.update(dt);renderer.render(scene,navigation.camera)});
+const renderClock=new THREE.Clock();renderer.setAnimationLoop(()=>{const dt=Math.min(renderClock.getDelta(),.045);navigation.update(dt);living.ceiling.visible=navigation.mode!=='plan';renderer.render(scene,navigation.camera)});
+const pickRoots=[],tour=[],raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
+let tourIndex=-1,press=null;
+function addFeature(id,root,name,photo,description,eye,target){
+  if(!root)return;
+  root.userData.feature=id;pickRoots.push(root);tour.push({id,name,photo,description,eye,target});
+}
+function showFeature(item){
+  const detail=$('#detail'),img=$('#detailImage');
+  img.src='../'+encodeURIComponent(item.photo);img.alt=item.name+'的实景参考';
+  $('#detailName').textContent=item.name;$('#detailCopy').textContent=item.description;
+  detail.hidden=false;
+  navigation.focus(item.eye,item.target);
+}
+function setupTour(){
+  addFeature('table',tableGroup,'餐桌','餐桌.jpg','餐厅原有的实木餐桌、格纹桌布和 GLB 桌面物件保持原位。',[.65,1.75,.25],[tableCenter.x,.78,tableCenter.z]);
+  addFeature('cabinet',placed.get('cabinet'),'餐边柜','餐边柜.jpg','保留已经核对的餐边柜 GLB 模型。',[.24,1.62,.35],[-.9,1.28,1.30]);
+  addFeature('chair',placed.get('chair0'),'餐椅','椅子.jpg','餐桌旁保留原有的温莎椅单体模型。',[.53,1.45,-.36],[tableCenter.x-.4,.62,-.81]);
+  addFeature('clock',placed.get('clock'),'餐厅挂钟','餐厅的时钟.jpg','餐厅与客厅过渡处的双面复古时钟。',[-.25,1.68,-.65],[-1.42,1.75,-1.26]);
+  const livingStops=[
+    ['餐客厅拱门','进门视角（看餐厅和客厅）.jpg','拱门连接南侧餐厅与北侧客厅，门洞可以步行穿过。',[.58,1.6,-.45],[0,1.75,-1.625]],
+    ['西侧碎花沙发','沙发.jpg','木框与碎花布艺沙发按照布局图放在客厅西侧。',[-.75,1.48,-3.05],[-2.34,.77,-3.75]],
+    ['南侧碎花沙发','沙发.jpg','第二组沙发位于客厅南侧，与茶几形成会客区。',[.62,1.48,-3.35],[-.58,.79,-2.31]],
+    ['客厅茶几','客厅的另一个视角.jpg','深红棕木茶几保留日常杯具和书册细节。',[.54,1.49,-3.48],[-.68,.58,-3.58]],
+    ['电视墙','进门视角（看餐厅和客厅）.jpg','电视按照布局图移至客厅北端。',[.52,1.58,-3.82],[-.46,1.43,-5.16]],
+    ['绿色书桌与拱形壁龛','客厅沙发边的桌子.jpg','浅绿书桌与拱形书架取自客厅实景照片。',[-.72,1.52,-2.82],[-2.42,1.35,-2.22]],
+    ['西侧窗与阳台','客厅的另一个视角.jpg','客厅西侧保持面向阳台的窗与帘。',[-1.77,1.6,-4.04],[-3.36,1.53,-4.04]],
+    ['客厅的画','客厅的画.jpg','墙面画作直接使用实景照片作贴图。',[.18,1.66,-3.92],[1.48,1.72,-3.95]],
+    ['客厅吊扇','客厅风扇.jpg','客厅吊扇依据单独提供的实物照片建模。',[-.68,1.56,-3.35],[-.70,2.65,-3.50]]
+  ];
+  for(const [name,photo,description,eye,target] of livingStops)
+    addFeature(name,living.objects.get(name),name,photo,description,eye,target);
+}
+renderer.domElement.addEventListener('pointerdown',e=>{press={x:e.clientX,y:e.clientY}});
+renderer.domElement.addEventListener('pointerup',e=>{
+  if(!press||Math.hypot(e.clientX-press.x,e.clientY-press.y)>6){press=null;return}
+  press=null;
+  pointer.set(e.clientX/innerWidth*2-1,-e.clientY/innerHeight*2+1);
+  raycaster.setFromCamera(pointer,navigation.camera);
+  const hit=raycaster.intersectObjects(pickRoots,true)[0];
+  if(hit){let node=hit.object;while(node&&!node.userData.feature)node=node.parent;
+    const item=tour.find(entry=>entry.id===node?.userData.feature);
+    if(item){showFeature(item);return}
+  }
+  const floor=raycaster.intersectObjects(architecture.root.children.filter(child=>child.name==='Dining'||child.name==='Living room with bay'))[0];
+  if(floor){
+    if(navigation.mode==='plan'){
+      const dining=floor.object.name==='Dining';
+      navigation.focus(dining?[.65,1.6,.42]:[.60,1.6,-2.58],dining?[tableCenter.x,.85,-.15]:[-.6,1.2,-4.0]);
+    }else navigation.goTo(floor.point.x,floor.point.z);
+  }
+});
+$('#nextObject').onclick=()=>{if(!tour.length)return;tourIndex=(tourIndex+1)%tour.length;showFeature(tour[tourIndex])};
+$('#closeDetail').onclick=()=>{$('#detail').hidden=true};
 
 ready.then(()=>{
 navigation.ready();
@@ -70,11 +125,5 @@ if(cabinet&&bench){let cabinetBox=new THREE.Box3().setFromObject(cabinet);cabine
 const wallClock=placed.get('clock');
 if(wallClock&&cabinet){const target=new THREE.Box3().setFromObject(cabinet).getCenter(new THREE.Vector3());wallClock.rotation.y=Math.atan2(target.x-wallClock.position.x,target.z-wallClock.position.z);wallClock.updateMatrixWorld(true)}
 for(const group of solidFurniture){const b=new THREE.Box3().setFromObject(group);obstacles.push({minX:b.min.x,maxX:b.max.x,minZ:b.min.z,maxZ:b.max.z})}
+setupTour();
 $('#status').textContent=failed.length?'部分模型未载入':'空间已就绪';$('#enter').disabled=false;$('#enter').innerHTML='从门外进入 <span>→</span>';if(failed.length){$('#error').hidden=false;$('#error').textContent='未载入：'+[...new Set(failed)].join('、')+'。请刷新重试。'}});
-
-
-
-
-
-
-
