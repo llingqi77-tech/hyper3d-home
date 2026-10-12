@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f3eb" />
+    <meta name="description" content="根据厨房实景照片搭建的可交互三维厨房漫游。" />
+    <title>归家 · 厨房漫游</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="归家厨房首页"><span class="brand-mark">⌂</span><span>归家<span class="brand-sub">A ROOM TO REMEMBER</span></span></a>
+      <div class="page-name">实景厨房 <span>/</span> 交互空间</div>
+      <div class="top-actions">
+        <span class="live"><i></i>实时 3D</span>
+        <button id="help" class="icon-button" aria-label="操作帮助">?</button>
+        <button id="fullscreen" class="icon-button" aria-label="切换全屏">⛶</button>
+      </div>
+    </header>
+    <main id="stage">
+      <div id="canvas-host"></div>
+      <div class="scene-wash"></div>
+      <section class="hero">
+        <span class="eyebrow">THE KITCHEN · 03</span>
+        <h1>烟火有序，<br />日常有光。</h1>
+        <p>白色木作、暖色拼砖与熟悉的操作台，<br />按厨房实景照片和户型关系复原。</p>
+      </section>
+      <section class="toolbar" aria-label="场景控制">
+        <div class="segmented" aria-label="灯光模式">
+          <button id="day" class="active" aria-pressed="true">☼ <span>自然光</span></button>
+          <button id="night" aria-pressed="false">☾ <span>夜间灯光</span></button>
+        </div>
+        <button id="references" class="tool-button">▧ <span>参考照片</span></button>
+      </section>
+      <aside class="object-panel">
+        <div class="panel-heading"><span class="eyebrow">KITCHEN OBJECTS</span><span class="object-count">16 项</span></div>
+        <h2>物件清单</h2>
+        <p class="panel-hint">点选物件，查看它在厨房中的位置</p>
+        <div id="object-list" class="object-list"></div>
+        <div class="asset-note"><span class="note-dot"></span><span id="asset-progress">模型资产载入中</span></div>
+      </aside>
+      <aside class="floorplan-card">
+        <div class="map-head"><strong>空间导览</strong><span id="view-label">厨房全景</span></div>
+        <svg id="floorplan" viewBox="0 0 180 170" role="img" aria-label="灶台位于短边后墙，东西两侧为长边台面的厨房平面示意图">
+          <path d="M42 8H138V151H42Z" fill="#efe9dc" stroke="#aaa18f" stroke-width="3"/>
+          <path d="M43 9H137V31H43ZM43 31H60V150H43ZM120 31H137V150H120Z" fill="#b9aa8d"/>
+          <rect x="66" y="11" width="42" height="17" rx="3" fill="#899398"/>
+          <circle cx="78" cy="19" r="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="96" cy="19" r="4" fill="none" stroke="#fff" stroke-width="2"/>
+          <rect x="122" y="91" width="13" height="35" rx="4" fill="#7d9298"/>
+          <text x="67" y="48">后墙 · 灶台短边</text><text x="123" y="137">水槽</text>
+          <text x="4" y="82">西侧</text><text x="143" y="82">东侧</text>
+          <path d="M80 164v-10m-5 5 5-5 5 5" fill="none" stroke="#44545a" stroke-width="2"/>
+          <text x="91" y="166">入口</text>
+        </svg>
+        <div class="map-foot"><span class="status-pip"></span>已确认相对摆位 <span>比例示意</span></div>
+      </aside>
+      <div class="view-controls" aria-label="视角快捷切换">
+        <button data-view="overview" class="selected">全景</button>
+        <button data-view="cooktop">灶台</button>
+        <button data-view="sink">水槽</button>
+        <button data-view="top">俯视</button>
+      </div>
+      <div class="scene-foot"><span id="interaction-hint">拖动环顾 · 滚轮缩放 · 选择左侧物件聚焦</span><button id="reset">重置视角 ↺</button></div>
+      <div id="toast" role="status" aria-live="polite"></div>
+      <div id="loading" class="loading"><span class="loader"></span><span>正在布置厨房</span></div>
+      <dialog id="help-dialog" class="modal">
+        <button class="close" aria-label="关闭">×</button>
+        <span class="eyebrow">HOW TO EXPLORE</span><h2>厨房漫游</h2>
+        <p>拖动画面环顾，滚轮缩放。选择物件卡片或底部视角按钮，可以快速查看不同区域。手机上可单指旋转、双指缩放。</p>
+        <p>场景尺寸按户型图与照片比例估算，未作为施工尺寸使用。</p>
+        <button id="help-ok" class="primary">开始查看</button>
+      </dialog>
+      <dialog id="gallery-dialog" class="modal gallery-modal">
+        <button class="close" aria-label="关闭">×</button>
+        <span class="eyebrow">REFERENCE PHOTOS</span><h2>厨房实景依据</h2>
+        <div class="gallery-grid"><figure><img src="/references/kitchen.jpg" alt="厨房全景参考照"/><figcaption>厨房全景</figcaption></figure><figure><img src="/references/entry-light.jpg" alt="厨房门口吊灯参考照"/><figcaption>入口吊灯</figcaption></figure></div>
+      </dialog>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
