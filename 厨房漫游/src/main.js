@@ -132,7 +132,8 @@ function updateCutaway() {
     const part=o.userData.cutaway;
     if(part) o.visible=!cutaway || (part==="east" ? camera.position.x < .5 : part==="west" ? camera.position.x > -.5 : false);
   });
-  kitchen.groups.get("07").visible=!cutaway;
+  // Opening the roof must not remove the original central ceiling light.
+  kitchen.groups.get("07").visible=true;
 }
 
 function setLighting(night) {

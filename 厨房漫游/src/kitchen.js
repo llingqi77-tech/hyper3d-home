@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { objects, assetTargets } from "./assets.js";
+import { UPPER_CABINET_CENTER, UPPER_CABINET_HEIGHT } from './dimensions.js';
 
 const palette = {
   wall: "#eee8dc", cream: "#f4f0e8", cabinet: "#f4f1eb", cabinetInset: "#ebe6dc",
@@ -182,13 +183,13 @@ export function createKitchen(scene) {
   box(0.65, 0.075, 1.32, mat.stone, 1.19, 0.83, -0.03, base);
   // 02 back-wall cabinets with a glazed section on the right.
   const uppers = mark("02", "吊柜组", [0, 0, 0]);
-  for (const [x, w] of [[-1.23, 0.35], [0.59, 0.46], [1.1, 0.48]]) {
-    box(w, 0.62, 0.38, mat.cabinet, x, 1.91, -0.77, uppers);
-    paneledDoor(uppers, x, 1.91, -0.57, w * 0.88, 0.53, "z", x > 0.85);
+  for (const [x, w] of [[-1.12, 0.48], [-0.56, 0.52], [0.02, 0.52], [0.59, 0.46], [1.1, 0.48]]) {
+    box(w, UPPER_CABINET_HEIGHT, 0.38, mat.cabinet, x, UPPER_CABINET_CENTER, -0.77, uppers);
+    paneledDoor(uppers, x, UPPER_CABINET_CENTER, -0.57, w * 0.88, 0.53, "z", x > 0.85);
   }
   // Glass detail: muntins across the rightmost cabinet faces.
-  for (const x of [0.99, 1.2]) box(0.018, 0.48, 0.016, mat.cabinet, x, 1.91, -0.532, uppers);
-  box(0.41, 0.018, 0.016, mat.cabinet, 1.1, 1.91, -0.532, uppers);
+  for (const x of [0.99, 1.2]) box(0.018, 0.48, 0.016, mat.cabinet, x, UPPER_CABINET_CENTER, -0.532, uppers);
+  box(0.41, 0.018, 0.016, mat.cabinet, 1.1, UPPER_CABINET_CENTER, -0.532, uppers);
   // 03 range hood and 04 hob.
   const hood = mark("03", "抽油烟机", [-0.58, 1.4, -0.85]);
   const hoodBody = box(0.75, 0.44, 0.32, mat.ceramic, 0, 0, 0, hood);
