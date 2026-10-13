@@ -36,36 +36,34 @@ function makeDiamondTexture() {
   return texture;
 }
 
-// Match the terracotta tile used across the dining floor and connected hall.
-function makeDiningFloorTexture() {
+// Match the user's kitchen close-up: terracotta and cream checkerboard.
+function makeKitchenFloorTexture() {
   const canvas = document.createElement("canvas");
   canvas.width = canvas.height = 1024;
   const ctx = canvas.getContext("2d");
-  ctx.fillStyle = "#b99a72";
+  ctx.fillStyle = "#575c59";
   ctx.fillRect(0, 0, 1024, 1024);
-  const glaze = ctx.createLinearGradient(0, 0, 1024, 1024);
-  glaze.addColorStop(0, "#b56635"); glaze.addColorStop(.55, "#a45229"); glaze.addColorStop(1, "#c47a43");
-  ctx.fillStyle = glaze; ctx.fillRect(5, 5, 1014, 1014);
+  for (let row = 0; row < 2; row++) for (let col = 0; col < 2; col++) {
+    const x = col * 512, y = row * 512;
+    const glaze = ctx.createRadialGradient(x + 220, y + 180, 20, x + 260, y + 250, 420);
+    const terracotta = (row + col) % 2 === 0;
+    glaze.addColorStop(0, terracotta ? '#b38a76' : '#ddd8cc');
+    glaze.addColorStop(1, terracotta ? '#936952' : '#b6b2a6');
+    ctx.fillStyle = glaze; ctx.fillRect(x + 3, y + 3, 506, 506);
+    ctx.strokeStyle = terracotta ? '#c6a58e' : '#e3dfd5';
+    ctx.lineWidth = 2; ctx.strokeRect(x + 5, y + 5, 502, 502);
+  }
   let seed = 89;
   const random = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
   for (let i = 0; i < 42000; i++) {
     ctx.fillStyle = random() > .5 ? "rgba(255,223,153,.035)" : "rgba(56,20,4,.025)";
     ctx.fillRect(random() * 1024, random() * 1024, random() * 9 + 1, random() * 8 + 1);
   }
-  ctx.strokeStyle = "#d28d52"; ctx.lineWidth = 3; ctx.strokeRect(10, 10, 1004, 1004);
-  for (const x of [0, 1024]) for (const y of [0, 1024]) {
-    ctx.save(); ctx.translate(x, y); ctx.rotate(Math.PI / 4);
-    ctx.fillStyle = "#e0c39a"; ctx.fillRect(-62, -62, 124, 124);
-    ctx.strokeStyle = "#755735"; ctx.lineWidth = 6; ctx.strokeRect(-51, -51, 102, 102);
-    ctx.lineWidth = 3; ctx.strokeRect(-39, -39, 78, 78); ctx.fillStyle = "#876744";
-    for (let i = 0; i < 8; i++) { ctx.save(); ctx.rotate(i * Math.PI / 4); ctx.beginPath(); ctx.ellipse(0, 19, 6, 13, 0, 0, Math.PI * 2); ctx.fill(); ctx.restore(); }
-    ctx.restore();
-  }
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
   texture.anisotropy = 8;
-  // One dining tile is 60 cm; the kitchen floor is scaled to 2.06 × 3.08 m.
+  // Two 30 cm squares per repeat, measured after the room's x/z scaling.
   texture.repeat.set(2.06 / .6, 3.08 / .6);
   return texture;
 }
@@ -98,7 +96,7 @@ export function createKitchen(scene) {
     brass: material(palette.brass, 0.3, 0.7), wood: material(palette.wood), woodLight: material(palette.woodLight),
     tile: new THREE.MeshStandardMaterial({ map: makeDiamondTexture(), roughness: 0.95 }),
     sideTile: new THREE.MeshStandardMaterial({ map: makeDiamondTexture(), roughness: 0.95 }),
-    floor: new THREE.MeshStandardMaterial({ map: makeDiningFloorTexture(), roughness: 0.74 }),
+    floor: new THREE.MeshStandardMaterial({ map: makeKitchenFloorTexture(), roughness: 0.38 }),
     stone: new THREE.MeshStandardMaterial({ map: makeCounterTexture(), roughness: 0.68 }),
     metal: material(palette.metal, 0.26, 0.82), dark: material(palette.dark, 0.35, 0.45),
     ceramic: material("#c9d0d1", 0.28, 0.22), towel: material(palette.towel, 1), green: material(palette.soap, 0.35),
@@ -131,14 +129,25 @@ export function createKitchen(scene) {
 
   // x is the short stove-wall width; z is the longer east/west counter direction.
   // The floor-plan proportion is roughly 2.06 m × 3.08 m, not construction-grade.
-  box(3.08, 0.12, 2.06, mat.floor, 0, -0.06, 0);
-  box(3.08, 0.1, 2.06, mat.wood, 0, 2.5, 0);
+  const floorEdge = material('#a48872');
+  box(3.08, 0.12, 2.06, [floorEdge, floorEdge, mat.floor, floorEdge, floorEdge, floorEdge], 0, -0.06, 0);
+  // Three rows of 6 cm mosaic squares lie flat across the dining threshold.
+  const threshold = new THREE.Group();
+  threshold.name = 'kitchen-dining-mosaic-threshold';
+  scene.add(threshold);
+  const mosaicColors = ['#2c7193', '#5da2aa', '#b5ced1', '#dfded1', '#969d73', '#b99d73'];
+  box(2.06, .015, .186, material('#525957'), 0, .002, 1.445, threshold);
+  for (let row = 0; row < 3; row++) for (let col = 0; col < 34; col++) {
+    box(.057, .006, .057, material(mosaicColors[(col * 5 + row * 3 + Math.floor(col / 3)) % mosaicColors.length], .35),
+      -1.02 + .03 + col * .06, .012, 1.385 + row * .06, threshold);
+  }
+  box(3.08, 0.1, 2.06, mat.wood, 0, 2.5, 0).userData.cutaway = 'roof';
   box(3.08, 2.42, 0.1, mat.tile, 0, 1.21, -0.99);
   // All three room walls are covered with the same brown diamond-pattern tile.
-  box(0.1, 2.42, 1.98, mat.sideTile, -1.5, 1.21, 0);
-  box(0.1, 2.42, 1.98, mat.sideTile, 1.5, 1.21, 0);
+  box(0.1, 2.42, 1.98, mat.sideTile, -1.5, 1.21, 0).userData.cutaway = 'west';
+  box(0.1, 2.42, 1.98, mat.sideTile, 1.5, 1.21, 0).userData.cutaway = 'east';
   // Wood ceiling boards.
-  for (let x = -1.46; x <= 1.46; x += 0.16) box(0.012, 0.035, 2, mat.woodLight, x, 2.44, 0);
+  for (let x = -1.46; x <= 1.46; x += 0.16) box(0.012, 0.035, 2, mat.woodLight, x, 2.44, 0).userData.cutaway = 'roof';
   // Wall tiles continue behind the cabinetry and counter without backsplash patches.
 
   function paneledDoor(parent, x, y, z, w, h, face = "z", glass = false) {
@@ -173,7 +182,7 @@ export function createKitchen(scene) {
   box(0.65, 0.075, 1.32, mat.stone, 1.19, 0.83, -0.03, base);
   // 02 back-wall cabinets with a glazed section on the right.
   const uppers = mark("02", "吊柜组", [0, 0, 0]);
-  for (const [x, w] of [[-1.12, 0.48], [-0.56, 0.52], [0.02, 0.52], [0.59, 0.46], [1.1, 0.48]]) {
+  for (const [x, w] of [[-1.23, 0.35], [0.59, 0.46], [1.1, 0.48]]) {
     box(w, 0.62, 0.38, mat.cabinet, x, 1.91, -0.77, uppers);
     paneledDoor(uppers, x, 1.91, -0.57, w * 0.88, 0.53, "z", x > 0.85);
   }
@@ -224,7 +233,7 @@ export function createKitchen(scene) {
     mesh(new THREE.CylinderGeometry(0.017, 0.022, 0.06, 12), mat.brass, x, h + 0.025, 0, bottles);
   }
   // 10 holder, 11 condiment set, 12 cutting boards.
-  const utensils = mark("10", "厨具筒", [0.12, 0.9, -0.73]);
+  const utensils = mark("10", "厨具筒", [0.78, 0.9, -0.65]);
   mesh(new THREE.CylinderGeometry(0.075, 0.09, 0.2, 24), material("#b4773d"), 0, 0.1, 0, utensils);
   for (let i = 0; i < 6; i++) {
     const x = (i - 2.5) * 0.026;
@@ -269,10 +278,13 @@ export function createKitchen(scene) {
   const lanternBulb = new THREE.PointLight("#ffb95f", 0.8, 2.4, 2);
   lanternBulb.position.set(0, 0.14, 0);
   lantern.add(lanternBulb);
+  // Empty anchors reserve positions for separately generated new assets.
+  mark('17', '水槽上方双门吊柜', [1.22, 1.9, .25]);
+  mark('18', '高压锅', [-.17, 1.02, -.66]);
 
-  const amb = new THREE.HemisphereLight("#fff2d9", "#77624d", 2.0);
+  const amb = new THREE.HemisphereLight("#ffffff", "#8b8377", 1.5);
   scene.add(amb);
-  const sun = new THREE.DirectionalLight("#fff1d3", 2.5);
+  const sun = new THREE.DirectionalLight("#fffaf1", 1.8);
   sun.position.set(-2.5 * (2.06 / 3.08), 4.6, 3.7 * (3.08 / 2.06));
   sun.castShadow = true;
   sun.shadow.mapSize.set(1536, 1536);

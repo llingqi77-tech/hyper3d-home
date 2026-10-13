@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-13",
+  "jobs": [
+    {
+      "key": "white-hood",
+      "ext": "png",
+      "mime": "image/png",
+      "size": 1067338,
+      "prompt": "Single isolated white wall-mounted inclined side-suction kitchen range hood, match reference silhouette exactly: broad angled WHITE rectangular glass front panel, subtle touch buttons centered along lower front, narrow dark intake along bottom, shallow gray metal side shell and short white rectangular chimney rising behind top center. Upright Y, front faces +Z, width X. No cabinets, no stove, no room, no extra objects.",
+      "generation_id": "2123f0c2-3074-493c-8c9f-0060a054c571",
+      "status": "completed",
+      "display_url": "https://hyper3d.ai/workspace/rodin/2123f0c2-3074-493c-8c9f-0060a054c571"
+    },
+    {
+      "key": "sink-upper-cabinet",
+      "ext": "jpg",
+      "mime": "image/jpeg",
+      "size": 18169,
+      "prompt": "Single isolated white traditional kitchen wall cabinet, two side by side raised panel doors, white frame and short cornice, small brass round knobs at inner bottom corners. Match reference, width slightly more than height, shallow depth. Upright Y front +Z. Wall mounted upper cabinet only, no countertop no sink no legs no room.",
+      "generation_id": "824e4ff9-1853-473b-a42b-7a154c88f258",
+      "status": "completed",
+      "display_url": "https://hyper3d.ai/workspace/rodin/824e4ff9-1853-473b-a42b-7a154c88f258"
+    },
+    {
+      "key": "two-burner-hob",
+      "ext": "jpg",
+      "mime": "image/jpeg",
+      "size": 93883,
+      "prompt": "Single isolated horizontal built-in black glass gas hob matching reference. Exactly TWO circular gas burners side by side across width X, cast iron supports, two small control knobs along FRONT +Z edge. Flat broad rectangular glass plate. Top faces +Y. No cookware, no cabinet, no room.",
+      "generation_id": "1a88fdaf-9762-4bae-83d4-021ef1fc6bd9",
+      "status": "completed",
+      "display_url": "https://hyper3d.ai/workspace/rodin/1a88fdaf-9762-4bae-83d4-021ef1fc6bd9"
+    },
+    {
+      "key": "pressure-cooker",
+      "ext": "jpg",
+      "mime": "image/jpeg",
+      "size": 180019,
+      "prompt": "Single isolated stainless steel stovetop pressure cooker matching reference. Polished squat silver cylindrical cooking pot, locked domed silver lid, small black pressure regulator valve on top, paired long black locking handles extending +X and small opposite helper handle. Upright +Y. No electric base, no stove, no room, no logo.",
+      "generation_id": "40349bfc-f287-4f69-ac0b-d18fccc811e7",
+      "status": "completed",
+      "display_url": "https://hyper3d.ai/workspace/rodin/40349bfc-f287-4f69-ac0b-d18fccc811e7"
+    },
+    {
+      "key": "nonstick-pan",
+      "ext": "webp",
+      "mime": "image/webp",
+      "size": 86353,
+      "prompt": "Single isolated empty black nonstick frying pan matching reference. Shallow wide round black bowl open upward +Y, flat bottom, one long black handle extending along +X. Subtle silver rim, matte dark interior. No lid, no stove, no room, no text.",
+      "generation_id": "e3dfa250-7bdb-480b-a961-1eda59792c23",
+      "status": "completed",
+      "display_url": "https://hyper3d.ai/workspace/rodin/e3dfa250-7bdb-480b-a961-1eda59792c23"
+    }
+  ],
+  "hoodImagePrompt": "Use case: precise-object-edit. Edit the supplied angled kitchen range hood reference into a WHITE version. Keep exact wide rectangular inclined side-suction range hood silhouette, sloped flat front panel, narrow bottom grease collection channel, shallow wedge side profile and short vertical rectangular chimney visible at top. Change all black exterior front and side panels to glossy pure white enamel and white glass. Keep tiny subtle gray touch controls near lower middle and slim dark intake opening along lower lip. Isolate only one complete hood in three-quarter front view on transparent background, uncropped, no room, cabinetry, cooktop, pots, text, brand or shadows. Product reference for standalone 3D reconstruction.",
+  "references": [
+    {
+      "key": "sink-upper-cabinet",
+      "url": "https://images.thdstatic.com/productImages/5237642b-acfe-487f-bd62-2ce52cfb05b2/svn/satin-white-hampton-bay-assembled-kitchen-cabinets-kw3630-sw-64_1000.jpg",
+      "source": "https://www.homedepot.com/p/325134695",
+      "ext": "jpg"
+    },
+    {
+      "key": "two-burner-hob",
+      "url": "https://vees.com.my/wp-content/uploads/2024/05/VGH-23882B-BK.jpg",
+      "source": "https://vees.com.my/product/vees-premium-gas-hob-vgh-2388-2b-bk/",
+      "ext": "jpg"
+    },
+    {
+      "key": "nonstick-pan",
+      "url": "https://www.tefal.com.au/cdn/shop/files/1.B5560722TefalSimpleCookNon-StickFrypan30cm.webp?v=1754548753&width=2048",
+      "source": "https://www.tefal.com.au/products/tefal-simple-cook-non-stick-frypan-30cm",
+      "ext": "webp"
+    },
+    {
+      "key": "pressure-cooker",
+      "url": "https://static-01.daraz.com.bd/p/502f7ca106b46d87d6c87e4699affcaa.jpg",
+      "source": "https://www.daraz.com.bd/products/prestige-stainless-steel-pressure-cooker-3-litre-i321448532.html",
+      "ext": "jpg"
+    }
+  ]
+}

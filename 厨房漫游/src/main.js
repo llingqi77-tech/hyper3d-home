@@ -1,7 +1,8 @@
 import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { loadGeneratedModels } from "./generated-models.js";
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { createKitchen } from "./kitchen.js";
 import { objects, assetTargets } from "./assets.js";
 
@@ -21,8 +22,13 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.08;
+renderer.toneMappingExposure = .92;
 host.appendChild(renderer.domElement);
+const pmrem = new THREE.PMREMGenerator(renderer);
+const environment = new RoomEnvironment();
+scene.environment = pmrem.fromScene(environment).texture;
+scene.environmentIntensity = .25;
+environment.dispose(); pmrem.dispose();
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.065;
@@ -56,9 +62,9 @@ function renderObjectList() {
 renderObjectList();
 
 const views = {
-  overview: { camera: [3.25, 2.5, 3.8], target: [0, 1.05, -0.1], label: "厨房全景" },
-  cooktop: { camera: [-1.65, 1.8, 1.05], target: [-0.5, 1.1, -0.7], label: "灶台与操作台" },
-  sink: { camera: [2.7, 1.85, 1.2], target: [1.05, 1.05, 0.04], label: "水槽与收纳" },
+  overview: { camera: [-3.25, 2.8, 3.8], target: [0, 1.05, -0.1], label: "厨房全景" },
+  cooktop: { camera: [-.3, 2.35, 1.25], target: [-.38, 1.25, -.7], label: "灶台与操作台" },
+  sink: { camera: [-1.0, 2.4, 1.6], target: [1.0, 1.45, .2], label: "水槽与收纳" },
   top: { camera: [0.1, 5.3, 0.1], target: [0, 0.65, -0.08], label: "厨房俯视" },
 };
 function setView(name, animate = true) {
@@ -96,7 +102,7 @@ function focusObject(id) {
   document.querySelectorAll(".object-row").forEach((b) => b.classList.toggle("active", b.dataset.object === id));
   const p = new THREE.Vector3(...roomPoint(item.focus));
   const direction = camera.position.clone().sub(controls.target).normalize();
-  const distance = Math.max(1.5, Math.min(2.6, target.size.length() * 2));
+  const distance = Math.max(1.5, Math.min(2.6, Math.hypot(...target.size) * 2));
   const fromPosition = camera.position.clone();
   const fromTarget = controls.target.clone();
   const toPosition = p.clone().add(direction.multiplyScalar(distance));
@@ -112,45 +118,30 @@ function focusObject(id) {
   toast(`${item.id} · ${item.name}：${statusLabel(item.status)}`);
 }
 
-// Load only the independently generated entry lantern. Other generated assets
-// remain in the review folder until each one is visually calibrated.
 const modelStatus = $("#asset-progress");
-modelStatus.textContent = "厨房场景已就绪 · 正在载入入口吊灯";
-const lanternLoader = new GLTFLoader();
-lanternLoader.load("/assets/entry-lantern.glb", (gltf) => {
-  const item = objects.find((entry) => entry.id === "16");
-  const fallback = kitchen.groups.get("16");
-  const model = gltf.scene;
-  const bounds = new THREE.Box3().setFromObject(model);
-  const size = bounds.getSize(new THREE.Vector3());
-  const center = bounds.getCenter(new THREE.Vector3());
-  const desired = [0.55, 0.62, 0.55];
-  const scale = Math.min(desired[0] / Math.max(size.x, 0.001), desired[1] / Math.max(size.y, 0.001), desired[2] / Math.max(size.z, 0.001));
-  model.scale.setScalar(scale);
-  model.position.set(-center.x * scale, -bounds.min.y * scale, -center.z * scale);
-  model.traverse((object) => {
-    if (object.isMesh) { object.castShadow = true; object.receiveShadow = true; }
-  });
-  const placement = new THREE.Group();
-  placement.name = "hyper3d-entry-lantern";
-  placement.position.set(...roomPoint([0, 1.8, 1.12]));
-  placement.add(model);
-  scene.add(placement);
-  if (fallback) fallback.traverse((object) => { if (object.isMesh) object.visible = false; });
-  const row = document.querySelector('[data-object="16"] .asset-state');
-  if (row) { row.textContent = "Hyper3D 已接入"; row.className = "asset-state completed"; }
-  modelStatus.textContent = `${objects.length} 个物件已编目 · 入口吊灯已接入`;
-}, undefined, () => {
-  modelStatus.textContent = `${objects.length} 个物件已编目 · 入口吊灯暂用场景模型`;
+loadGeneratedModels(scene, kitchen, (loaded,total,failures) => {
+  modelStatus.textContent = failures.length ? loaded + " 件已接入 · " + failures.length + " 件加载失败，请刷新" : loaded + " / " + total + " 件独立模型已接入";
 });
+let cutaway = true;
+$("#cutaway").addEventListener("click", () => {
+  cutaway=!cutaway; $("#cutaway").setAttribute("aria-pressed",String(cutaway));
+  $("#cutaway").textContent=cutaway?"剖开墙顶":"完整墙顶";
+});
+function updateCutaway() {
+  kitchen.root.traverse(o => {
+    const part=o.userData.cutaway;
+    if(part) o.visible=!cutaway || (part==="east" ? camera.position.x < .5 : part==="west" ? camera.position.x > -.5 : false);
+  });
+  kitchen.groups.get("07").visible=!cutaway;
+}
 
 function setLighting(night) {
   state.night = night;
-  kitchen.lights.amb.intensity = night ? 0.66 : 2.0;
-  kitchen.lights.sun.intensity = night ? 0.07 : 2.5;
+  kitchen.lights.amb.intensity = night ? 0.66 : 1.5;
+  kitchen.lights.sun.intensity = night ? 0.07 : 1.8;
   kitchen.lights.ceilingGlow.intensity = night ? 4.8 : 1.3;
   kitchen.lights.lanternBulb.intensity = night ? 4.5 : 0.8;
-  renderer.toneMappingExposure = night ? 1 : 1.08;
+  renderer.toneMappingExposure = night ? 1 : .92;
   scene.background.set(night ? "#303a3d" : "#d9d6cb");
   $("#day").classList.toggle("active", !night);
   $("#night").classList.toggle("active", night);
@@ -176,6 +167,6 @@ function resize() {
 new ResizeObserver(resize).observe(host);
 resize();
 setView("overview", false);
-function animate() { requestAnimationFrame(animate); controls.update(); renderer.render(scene, camera); }
+function animate() { requestAnimationFrame(animate); controls.update(); updateCutaway(); renderer.render(scene, camera); }
 animate();
 setTimeout(() => { $("#loading").classList.add("hidden"); }, 550);

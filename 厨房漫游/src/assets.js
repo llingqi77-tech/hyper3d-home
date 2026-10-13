@@ -1,12 +1,12 @@
 export const objects = [
   { id: "01", name: "U 形下柜与台面", kind: "固定木作", model: "base-cabinets-counter.glb", generationId: "db5907f6-a036-4478-83a2-8efa43a1022c", status: "completed", focus: [0, 0.6, -0.3] },
   { id: "02", name: "吊柜组", kind: "固定木作", model: "upper-cabinet-set.glb", generationId: "545172be-42f6-4e28-a38e-e372f4ebbc14", status: "completed", focus: [0, 1.9, -0.7] },
-  { id: "03", name: "抽油烟机", kind: "灶台区", model: "range-hood.glb", generationId: "24f31ef8-91d3-473e-8c05-96dba5d71d9a", status: "completed", focus: [-0.58, 1.55, -0.72] },
-  { id: "04", name: "双头燃气灶", kind: "灶台区", model: "two-burner-gas-hob.glb", generationId: "9a3b6e19-2e01-438e-8527-acba59a735e4", status: "completed", focus: [-0.58, 0.98, -0.69] },
+  { id: "03", name: "白色侧吸油烟机", kind: "灶台区", model: "white-hood-v2.glb", generationId: "2123f0c2-3074-493c-8c9f-0060a054c571", status: "completed", focus: [-.39, 1.75, -.82] },
+  { id: "04", name: "双头燃气灶", kind: "灶台区", model: "two-burner-hob-v2.glb", generationId: "1a88fdaf-9762-4bae-83d4-021ef1fc6bd9", status: "completed", focus: [-.39, .95, -.68] },
   { id: "05", name: "双槽水槽", kind: "水槽区", model: "double-basin-sink.glb", generationId: "c8204d6c-9450-4586-877a-38a8ebc7181d", status: "completed", focus: [1.14, 0.94, 0.27] },
   { id: "06", name: "水龙头", kind: "水槽区", model: "kitchen-faucet.glb", generationId: "dcc29d45-80e6-4975-aa06-c9853246fcd2", status: "completed", focus: [1.15, 1.22, 0.2] },
   { id: "07", name: "厨房吸顶灯", kind: "灯具", model: "ceiling-light.glb", generationId: "8f9d9cf7-3cfe-4933-bcc3-4a346dfe33e4", status: "completed", focus: [0, 2.45, 0] },
-  { id: "08", name: "带盖锅具", kind: "灶台区", model: "lidded-pot.glb", generationId: "4385b039-7016-4fbb-a974-a5db49276fe5", status: "completed", focus: [-0.58, 1.12, -0.68] },
+  { id: "08", name: "黑色不粘锅", kind: "左侧灶眼", model: "nonstick-pan-v2.glb", generationId: "e3dfa250-7bdb-480b-a961-1eda59792c23", status: "completed", focus: [-.73, 1.02, -.64] },
   { id: "09", name: "油瓶与调味瓶", kind: "台面小物", model: "oil-seasoning-bottles.glb", generationId: "fcab268c-862e-49c8-a831-393f60554c23", status: "completed", focus: [-1.18, 0.96, -0.3] },
   { id: "10", name: "厨具筒", kind: "台面小物", model: "utensil-holder.glb", generationId: "ee089336-acbf-4085-a03a-da554347608b", status: "completed", focus: [0.1, 0.95, -0.73] },
   { id: "11", name: "调料罐与调料碟", kind: "台面小物", model: "spice-set.glb", generationId: "147ca381-9e07-4655-adca-91cbceb98b57", status: "completed", focus: [0.3, 0.95, -0.48] },
@@ -15,6 +15,8 @@ export const objects = [
   { id: "14", name: "粉色抹布", kind: "收纳", model: "pink-towel.glb", generationId: "9f2d7add-4952-4640-95b1-67561314ca5c", status: "completed", focus: [1.44, 1.14, -0.05] },
   { id: "15", name: "清洁瓶", kind: "水槽区", model: "cleaner-bottle.glb", generationId: "53af04a3-e634-45db-9bb2-58c65bad76cf", status: "completed", focus: [1.15, 0.96, 0.57] },
   { id: "16", name: "入口彩色吊灯", kind: "入口外侧", model: "entry-lantern.glb", generationId: "8b4052ee-c73e-443e-96d8-c3c0b31b2553", status: "completed", focus: [0, 2.22, 1.13] },
+  { id: "17", name: "水槽上方双门吊柜", kind: "东侧水槽区", model: "sink-upper-cabinet-v2.glb", generationId: "824e4ff9-1853-473b-a42b-7a154c88f258", status: "completed", focus: [1.24, 1.98, .28] },
+  { id: "18", name: "不锈钢高压锅", kind: "右侧灶眼", model: "pressure-cooker-v2.glb", generationId: "40349bfc-f287-4f69-ac0b-d18fccc811e7", status: "completed", focus: [-.04, 1.08, -.64] },
 ];
 
 export const assetTargets = {
@@ -34,4 +36,6 @@ export const assetTargets = {
   "14": { position: [1.43, 1.1, -0.05], size: [0.06, 0.45, 0.31] },
   "15": { position: [1.16, 0.92, 0.57], size: [0.12, 0.29, 0.12] },
   "16": { position: [0, 1.8, 1.12], size: [0.42, 0.65, 0.42] },
+  "17": { position: [1.24, 1.66, .28], size: [1,.69,.28] },
+  "18": { position: [-.04, .957, -.64], size: [.4,.29,.28] },
 };
