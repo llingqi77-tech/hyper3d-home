@@ -1,0 +1,101 @@
+[
+  {
+    "id": "lamp",
+    "file": "lamp.glb",
+    "generation_id": "a1247bac-9cff-4aad-8b3c-56d881a32ffb",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/a1247bac-9cff-4aad-8b3c-56d881a32ffb",
+    "generator": "Hyper3D Rodin Gen-2.5-High",
+    "polygonsRequested": 25000
+  },
+  {
+    "id": "fan",
+    "file": "fan.glb",
+    "generation_id": "324c4c74-f7d8-4ea2-897c-c497218dead7",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/324c4c74-f7d8-4ea2-897c-c497218dead7",
+    "generator": "Hyper3D Rodin Gen-2.5-High",
+    "polygonsRequested": 25000
+  },
+  {
+    "id": "bamboo",
+    "file": "bamboo.glb",
+    "generation_id": "7f588bf0-1e31-4e8e-ab75-09a5530a8cac",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/7f588bf0-1e31-4e8e-ab75-09a5530a8cac",
+    "generator": "Hyper3D Rodin Gen-2.5-High",
+    "polygonsRequested": 25000
+  },
+  {
+    "id": "cactus",
+    "file": "cactus.glb",
+    "generation_id": "f5c79c16-7a24-431b-bc53-abdc4bedb96b",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/f5c79c16-7a24-431b-bc53-abdc4bedb96b",
+    "generator": "Hyper3D Rodin Gen-2.5-High",
+    "polygonsRequested": 25000
+  },
+  {
+    "id": "chair",
+    "file": "chair.glb",
+    "generation_id": "cc89e7d4-0f30-48e9-b9a3-07de5b54e004",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/cc89e7d4-0f30-48e9-b9a3-07de5b54e004",
+    "generator": "Hyper3D Rodin Gen-2.5-High",
+    "polygonsRequested": 25000
+  },
+  {
+    "id": "quilt",
+    "file": "quilt.glb",
+    "generation_id": "8ee13e38-f683-46e3-802e-6b1bb2d6bbbf",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/8ee13e38-f683-46e3-802e-6b1bb2d6bbbf",
+    "generator": "Hyper3D Rodin Gen-2.5-High",
+    "polygonsRequested": 25000
+  },
+  {
+    "id": "pillow",
+    "file": "pillow.glb",
+    "generation_id": "1eb0e046-1d15-4f14-9576-860349079b46",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/1eb0e046-1d15-4f14-9576-860349079b46",
+    "generator": "Hyper3D Rodin Gen-2.5-High",
+    "polygonsRequested": 25000
+  },
+  {
+    "id": "monitor",
+    "file": "monitor.glb",
+    "generation_id": "191744bb-d7a4-4291-a5ee-2b17307da9c5",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/191744bb-d7a4-4291-a5ee-2b17307da9c5",
+    "generator": "Hyper3D Rodin Gen-2.5-High",
+    "polygonsRequested": 25000
+  },
+  {
+    "id": "keyboard",
+    "file": "keyboard.glb",
+    "generation_id": "77951d30-420b-4a60-a1a2-1fbce2e24b96",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/77951d30-420b-4a60-a1a2-1fbce2e24b96",
+    "generator": "Hyper3D Rodin Gen-2.5-High",
+    "polygonsRequested": 25000
+  },
+  {
+    "id": "pencils",
+    "file": "pencils.glb",
+    "generation_id": "fbd58ff7-7576-495d-a8d9-bb98ed6f8571",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/fbd58ff7-7576-495d-a8d9-bb98ed6f8571",
+    "generator": "Hyper3D Rodin Gen-2.5-High",
+    "polygonsRequested": 25000
+  },
+  {
+    "id": "books",
+    "file": "books.glb",
+    "generation_id": "6ce6ee7b-8677-4b12-aef6-5662eaf53b98",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/6ce6ee7b-8677-4b12-aef6-5662eaf53b98",
+    "generator": "Hyper3D Rodin Gen-2.5-High",
+    "polygonsRequested": 25000
+  }
+]

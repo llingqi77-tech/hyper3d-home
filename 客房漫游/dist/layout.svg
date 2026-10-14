@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1120" viewBox="0 0 1680 1120" role="img" aria-labelledby="title desc">
+<title id="title">客房物品布局与物品清单修订稿</title><desc id="desc">下侧靠左是与四面墙等高的入口门。门打开后沿左墙收起，左侧书柜填满门扇净空以外直至窗墙的整段墙面。窗下是书桌，右侧是加宽床。</desc>
+<defs>
+ <pattern id="floor" width="140" height="58" patternUnits="userSpaceOnUse"><rect width="140" height="58" fill="#7f4834"/><path d="M0 1H140M0 29H140M68 0V29M120 29V58" stroke="#542f28" stroke-width="2"/><path d="M8 9c27-6 50 7 82 0m-78 9c18-3 37 4 57 0m40 20c10-3 20 3 28 0" fill="none" stroke="#a76945" stroke-opacity=".25"/></pattern>
+ <pattern id="bamboo" width="17" height="17" patternUnits="userSpaceOnUse"><rect width="17" height="17" fill="#c29451"/><path d="M2 0v17m4-17v17m6-17v17M0 8h17" stroke="#906832" stroke-opacity=".55" stroke-width="1"/></pattern>
+ <pattern id="plaid" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#e4dac7"/><path d="M4 0v16M12 0v16M0 4h16M0 12h16" stroke="#b5a68e" stroke-width="1"/></pattern>
+ <style>
+ text{font-family:"Microsoft YaHei","PingFang SC",sans-serif;fill:#354035}.title{font-family:"Songti SC","STSong",serif;font-size:43px;letter-spacing:4px}.small{font-size:13px;fill:#818778}.label{font-size:14px}.item{font-size:13px}.number{font-size:12px;font-weight:700;fill:#fff}.subhead{font-size:14px;letter-spacing:2px;fill:#738064}
+ </style>
+</defs>
+<rect width="1680" height="1120" fill="#f3f0e9"/>
+<text x="62" y="78" class="title">客房物品布局 · 修订稿</text>
+<text x="62" y="112" class="small">门与四面墙等高　/　左侧整墙书柜　/　按确认布局拓宽床面</text>
+<text x="1608" y="74" text-anchor="end" class="subhead">住宅客房 · 兼书房功能</text>
+<!-- top-down room -->
+<rect x="76" y="151" width="832" height="752" rx="8" fill="#fffdf8" stroke="#d8d6cb"/>
+<text x="104" y="184" class="subhead">俯视布局　·　展示比例，非施工尺寸</text>
+<rect x="130" y="218" width="760" height="640" fill="url(#floor)"/>
+<!-- four equal-height wall lines with a full-height entrance opening -->
+<path d="M130 858V218H890V858H380 M130 578V858" fill="none" stroke="#6c6e67" stroke-width="15" stroke-linejoin="round"/>
+<path d="M134 220H886 M134 222V573 M385 854H886" fill="none" stroke="#f7f1e5" stroke-width="5"/>
+<text x="513" y="236" class="small">北侧窗墙 · 墙高统一 2.72 米*</text>
+<!-- window -->
+<rect x="280" y="211" width="255" height="21" fill="#697780" stroke="#d6d0c2" stroke-width="5"/>
+<rect x="292" y="216" width="231" height="10" fill="#bbc9ca"/>
+<!-- curtains -->
+<path d="M277 230h28v86q-14 20-28 0z" fill="#708794" stroke="#b79e68" stroke-width="2"/>
+<path d="M277 275h28v42q-14 20-28 0z" fill="url(#plaid)"/>
+<path d="M510 230h29v87q-15 20-29 0z" fill="#708794" stroke="#b79e68" stroke-width="2"/>
+<path d="M510 275h29v42q-15 20-29 0z" fill="url(#plaid)"/>
+<!-- desk -->
+<rect x="254" y="247" width="331" height="115" rx="7" fill="#eee5d2" stroke="#8e8a7c" stroke-width="2"/>
+<rect x="266" y="260" width="305" height="85" rx="3" fill="#f4eddf"/>
+<rect x="335" y="274" width="84" height="52" rx="3" fill="#242724"/>
+<rect x="344" y="282" width="66" height="34" fill="#34404a"/>
+<rect x="448" y="324" width="82" height="18" rx="3" fill="#303332"/>
+<circle cx="553" cy="287" r="8" fill="#71914e"/>
+<text x="420" y="356" text-anchor="middle" class="label">窗下定制书桌</text>
+<!-- low cabinet and cubby -->
+<rect x="585" y="247" width="293" height="115" rx="6" fill="#e8dfce" stroke="#8e8a7c" stroke-width="2"/>
+<path d="M731 252v106M590 300h284" stroke="#c6baa6" stroke-width="2"/>
+<rect x="690" y="223" width="170" height="47" fill="#f6eddb" stroke="#928c7b" stroke-width="2"/>
+<path d="M775 224v45M690 247h170M775 224h85v23h-85" fill="none" stroke="#c4b8a2" stroke-width="4"/>
+<text x="726" y="350" text-anchor="middle" class="small">连体低柜＋三格架</text>
+<!-- bookcase along left wall, ends after inward swing zone -->
+<rect x="140" y="233" width="82" height="340" rx="3" fill="#f2ebdc" stroke="#6f7168" stroke-width="3"/>
+<path d="M145 240h72M145 318h72M145 396h72M145 474h72M145 552h72" stroke="#b7ad98" stroke-width="5"/>
+<path d="M173 246v64m14-64v64m-31-64v64m44 16v64m-43-64v64m28-64v64m-28 15v63m39-63v63m-52 16v63m18-63v63m16-63v63m21 16v63m-44-63v63" stroke="#aa9878" stroke-width="7" stroke-linecap="round"/>
+<rect x="242" y="390" width="182" height="58" rx="5" fill="#f5f2e9" stroke="#9b9b8b"/>
+<text x="333" y="414" text-anchor="middle" class="label">左侧整墙书柜</text>
+<text x="333" y="434" text-anchor="middle" class="small">门扇净空之后铺至窗墙</text>
+<!-- chair -->
+<ellipse cx="451" cy="468" rx="52" ry="40" fill="#a87e4c" stroke="#292b29" stroke-width="6"/>
+<path d="M415 443v-58m17 56v-62m18 61v-66m18 66v-62m17 65v-56M401 394q51-31 104 0v39" fill="none" stroke="#252825" stroke-width="8" stroke-linecap="round"/>
+<path d="M421 500l-14 43m71-43 15 43" stroke="#252825" stroke-width="7"/>
+<text x="451" y="566" text-anchor="middle" class="small">木椅</text>
+<!-- bed widened, right edge remains against right wall -->
+<rect x="545" y="374" width="331" height="465" rx="7" fill="#e8dfca" stroke="#80796e" stroke-width="4"/>
+<rect x="558" y="387" width="305" height="438" fill="url(#bamboo)" stroke="#f5efdf" stroke-width="7"/>
+<path d="M550 380h321" stroke="#f7f2e4" stroke-width="13"/>
+<rect x="570" y="395" width="135" height="82" rx="16" fill="#e9a6b4" stroke="#c5748a" stroke-width="2"/>
+<path d="M581 427q25-35 45 0t45 0M583 454q26-36 45 0t48 0" fill="none" stroke="#bb476c" stroke-width="6"/>
+<rect x="711" y="402" width="112" height="70" rx="20" fill="#d98594"/>
+<path d="M730 429q21-31 39 0t39 0" fill="none" stroke="#a64458" stroke-width="5"/>
+<text x="708" y="620" text-anchor="middle" class="label">右侧贴墙 · 加宽床面</text>
+<text x="708" y="644" text-anchor="middle" class="small">床架与竹席同步拓宽至标注线</text>
+<!-- doorway and full-height leaf swings along left wall -->
+<rect x="124" y="587" width="14" height="260" fill="#fffdf8"/>
+<path d="M130 858A260 260 0 0 1 390 598" fill="none" stroke="#aa9a75" stroke-width="3" stroke-dasharray="9 7"/>
+<path d="M130 858V598" stroke="#e8dfca" stroke-width="13" stroke-linecap="round"/>
+<circle cx="130" cy="858" r="8" fill="#9a815b"/>
+<rect x="245" y="734" width="130" height="47" rx="20" fill="#59684e"/>
+<text x="310" y="764" text-anchor="middle" fill="#fff" class="label" style="fill:#fff">全高入口门</text>
+<text x="130" y="888" class="small">门净宽约 1.14 米* · 门扇向内打开后沿左墙收起</text>
+<path d="M130 931H890" stroke="#9a9d91" stroke-width="1"/>
+<text x="130" y="957" class="small">四面墙顶线统一，入口门从地面到墙顶；不设屋顶以便查看室内</text>
+<!-- inventory panel -->
+<rect x="939" y="151" width="678" height="822" rx="8" fill="#fffdf8" stroke="#d8d6cb"/>
+<text x="973" y="194" class="subhead">物品清单</text>
+<text x="1582" y="194" text-anchor="end" class="small">共 18 项 · 11 件独立 Hyper3D 模型</text>
+<g class="item">
+<g transform="translate(973 228)"><text y="0" class="item">01　白色整墙书柜 × 1</text><text y="20" class="small">奶油白开放格，左墙门扇净空后至窗墙*</text></g>
+<g transform="translate(973 274)"><text y="0" class="item">02　窗帘 × 1 套</text><text y="20" class="small">灰蓝上帘、米色格纹下帘、金色滚边</text></g>
+<g transform="translate(973 320)"><text y="0" class="item">03　窗户 × 1</text><text y="20" class="small">深色窗框、浅蓝灰玻璃</text></g>
+<g transform="translate(973 366)"><text y="0" class="item">04　定制书桌 × 1 组</text><text y="20" class="small">奶油白台面与抽屉、圆形金属拉手</text></g>
+<g transform="translate(973 412)"><text y="0" class="item">05　显示器 × 1　　06　键盘 × 1</text><text y="20" class="small">黑色独立设备，置于桌面与键盘托</text></g>
+<g transform="translate(973 458)"><text y="0" class="item">07　桌面笔筒 × 1</text><text y="20" class="small">亮绿镂空笔筒，带彩色文具</text></g>
+<g transform="translate(973 504)"><text y="0" class="item">08　书刊 × 1 组　　09　木椅 × 1</text><text y="20" class="small">米色浅棕纸面；黑色木框与棕色座面</text></g>
+<g transform="translate(973 550)"><text y="0" class="item">10　连体收纳低柜 × 1 组</text><text y="20" class="small">奶油白抽屉与双开门、金属圆拉手</text></g>
+<g transform="translate(973 596)"><text y="0" class="item">11　阶梯开放置物架 × 1 组</text><text y="20" class="small">奶油白三格，置于低柜台面</text></g>
+<g transform="translate(973 642)"><text y="0" class="item">12　加宽床架 × 1　　13　竹席 × 1</text><text y="20" class="small">奶油白框架、蜂蜜金棕色席面</text></g>
+<g transform="translate(973 688)"><text y="0" class="item">14　粉色花卉被褥 × 1 组</text><text y="20" class="small">粉色底、玫红花卉纹，床头叠放</text></g>
+<g transform="translate(973 734)"><text y="0" class="item">15　红粉图案枕头 × 1</text><text y="20" class="small">棉布纹理，置于床头</text></g>
+<g transform="translate(973 780)"><text y="0" class="item">16　三头吊灯 × 1</text><text y="20" class="small">鼠尾草绿布罩、古铜色灯臂</text></g>
+<g transform="translate(973 826)"><text y="0" class="item">17　桌面台扇 × 1</text><text y="20" class="small">米白网罩与红粉扇叶</text></g>
+<g transform="translate(973 872)"><text y="0" class="item">18　绿植 × 2 盆</text><text y="20" class="small">高挑绿植与黄盆仙人球</text></g>
+</g>
+<text x="973" y="933" class="small">* 展示估算值。房间边长、门高及书柜尺寸需现场复尺。</text>
+<!-- palette -->
+<rect x="939" y="994" width="678" height="87" rx="8" fill="#fffdf8" stroke="#d8d6cb"/>
+<text x="973" y="1026" class="subhead">空间配色</text>
+<g transform="translate(1116 1009)">
+ <rect width="78" height="30" rx="3" fill="#bfd9e5"/><text x="39" y="52" text-anchor="middle" class="small">浅蓝硅藻泥</text>
+ <rect x="94" width="78" height="30" rx="3" fill="#eee4cf"/><text x="133" y="52" text-anchor="middle" class="small">奶油白</text>
+ <rect x="188" width="78" height="30" rx="3" fill="#7d929e"/><text x="227" y="52" text-anchor="middle" class="small">灰蓝</text>
+ <rect x="282" width="78" height="30" rx="3" fill="#854932"/><text x="321" y="52" text-anchor="middle" class="small">深红棕</text>
+ <rect x="376" width="78" height="30" rx="3" fill="#8e9b7d"/><text x="415" y="52" text-anchor="middle" class="small">鼠尾草绿</text>
+</g>
+</svg>
