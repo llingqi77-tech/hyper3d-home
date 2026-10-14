@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#efe8dd"><link rel="icon" href="data:,"><title>公卫 2 · 家的细节</title></head>
+<body><main class="app">
+<section class="stage" aria-label="公卫2三维场景"><div id="canvas-host"></div>
+<header class="masthead"><a class="brand" href="../" aria-label="返回家的导览"><span class="brand-icon">居</span><span><b>HOME STUDY</b><small>家的细节 · 公卫 2</small></span></a><div class="light-switch" aria-label="照明"><button id="day" class="active" aria-pressed="true">自然光</button><button id="warm" aria-pressed="false">暖灯</button></div></header>
+<div class="scene-heading"><span>ROOM STUDY / 02</span><h1>棕陶色的日常</h1><p>相同的墙地砖，两盏温暖的灯。</p></div>
+<div class="scene-tools"><button id="curtain-toggle" aria-pressed="false">拉上分隔帘</button><button id="references">照片与布局</button></div>
+<div class="compass" aria-label="方位">北 ↑<span>西 ← · → 东</span></div>
+<div id="load-state" role="status">正在载入独立物件…</div>
+<div id="selected-label" hidden></div>
+<footer class="stage-footer"><span class="hint">拖动旋转 · 滚轮缩放</span><nav class="views" aria-label="场景视角"><button data-view="overview" class="active">全景</button><button data-view="vanity">洗手台</button><button data-view="shower">淋浴区</button><button data-view="top">俯视</button></nav><button id="reset">重置 ↻</button></footer>
+</section>
+<aside class="sidebar"><div class="side-heading"><span class="eyebrow">PUBLIC BATHROOM · 02</span><h2>空间里的物件</h2><p>点选一件，靠近看看。</p></div><div class="filters" aria-label="物件分类"><button data-filter="all" class="active">全部</button><button data-filter="fixture">设施</button><button data-filter="daily">日用品</button></div><div id="object-list"></div><div class="side-note"><span class="status-dot"></span><span id="asset-count">独立模型载入中</span><p>布局依据已确认示意图<br>空间比例为展示估算，非实测尺寸</p></div><a class="model-link" href="./models.html">单独查看每件模型 ↗</a></aside>
+</main>
+<dialog id="reference-dialog"><header><h2>照片与确认布局</h2><button id="close-reference" aria-label="关闭">×</button></header><div class="reference-grid"><figure><img src="./references/bathroom.jpg" alt="公卫2洗手柜与墙地砖照片"><figcaption>洗手柜、镜子与棕陶色方砖</figcaption></figure><figure><img src="./references/layout.png" alt="公卫2已确认俯视布局"><figcaption>左侧洗手与如厕，右侧淋浴；地漏在东南角</figcaption></figure></div></dialog>
+<script type="module" src="./src/main.js"></script></body></html>

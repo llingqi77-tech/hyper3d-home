@@ -1,0 +1,1 @@
+{"name":"public-bathroom-two","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"node ../厨房漫游/node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5182","build":"node ../厨房漫游/node_modules/vite/bin/vite.js build","preview":"node ../厨房漫游/node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4182"},"dependencies":{"three":"0.170.0","vite":"6.4.3"}}

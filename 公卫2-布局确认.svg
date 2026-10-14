@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="930" viewBox="0 0 1400 930">
+<defs><pattern id="tile" width="48" height="48" patternUnits="userSpaceOnUse"><rect width="48" height="48" fill="#c59478"/><path d="M48 0H0V48" fill="none" stroke="#e8d7c8" stroke-width="2"/></pattern></defs>
+<rect width="1400" height="930" fill="#faf7f2"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#342e29">
+<text x="70" y="72" font-size="34" font-weight="700">公卫 2 · 布局确认稿</text>
+<text x="70" y="112" font-size="20" fill="#756b62">俯视示意｜沿用图 3 布局，上北下南、左西右东｜非实测比例</text>
+<rect x="90" y="180" width="1220" height="510" fill="url(#tile)" stroke="#51453c" stroke-width="12"/>
+<rect x="855" y="187" width="448" height="496" fill="#f4ede4" opacity=".42"/>
+<path d="M145 690H370" stroke="#faf7f2" stroke-width="18"/>
+<rect x="137" y="205" width="286" height="164" rx="9" fill="#f7f7ef" stroke="#71685f" stroke-width="3"/>
+<rect x="150" y="213" width="260" height="8" rx="3" fill="#b5c5c7"/>
+<ellipse cx="280" cy="274" rx="71" ry="31" fill="#e1e8e5" stroke="#a4aaa5" stroke-width="2"/>
+<path d="M280 238V253" stroke="#8b9290" stroke-width="9" stroke-linecap="round"/>
+<text x="280" y="342" font-size="24" text-anchor="middle">① 洗手柜＋台盆</text>
+<text x="280" y="161" font-size="21" text-anchor="middle">② 镜子＋两盏暖黄吊灯</text>
+<g fill="#ffd16b" stroke="#9b702b" stroke-width="2">
+<circle cx="186" cy="242" r="19"/><circle cx="374" cy="242" r="19"/>
+</g>
+<text x="280" y="391" font-size="18" text-anchor="middle" fill="#756b62">黄色圆点：上方吊灯投影，间距示意</text>
+<path d="M490 221H695" stroke="#eeeae1" stroke-width="9" stroke-linecap="round"/>
+<path d="M540 225V288H625V225" fill="#ddc7b9" stroke="#eeeae1" stroke-width="3"/>
+<text x="593" y="324" font-size="20" text-anchor="middle">③ 毛巾杆（位置示意）</text>
+<rect x="551" y="605" width="174" height="61" rx="10" fill="#f7f7ef" stroke="#71685f" stroke-width="3"/>
+<path d="M573 605V535C573 474 703 474 703 535V605Z" fill="#f7f7ef" stroke="#71685f" stroke-width="3"/>
+<ellipse cx="638" cy="549" rx="45" ry="51" fill="#e1e8e5" stroke="#c3c9c4" stroke-width="2"/>
+<text x="638" y="453" font-size="25" text-anchor="middle">④ 白色马桶</text>
+<text x="638" y="479" font-size="17" text-anchor="middle" fill="#756b62">沿用公卫 1 模型</text>
+<path d="M825 193V677" stroke="#80766d" stroke-width="5"/>
+<path d="M809 196Q847 220 809 244T809 292T809 340T809 388T809 436T809 484T809 532T809 580T809 628T809 676" fill="none" stroke="#f7f4e9" stroke-width="17"/>
+<rect x="774" y="361" width="91" height="149" rx="8" fill="#faf7f2"/>
+<text x="820" y="399" font-size="21" text-anchor="middle"><tspan x="820">⑤ 干湿</tspan><tspan x="820" dy="32">分隔</tspan><tspan x="820" dy="32">帘子</tspan></text>
+<path d="M1000 203V246" fill="none" stroke="#191c1e" stroke-width="8" stroke-linecap="round"/>
+<circle cx="1000" cy="265" r="29" fill="#292c2e" stroke="#111416" stroke-width="3"/>
+<circle cx="1061" cy="235" r="12" fill="#191c1e"/>
+<path d="M1061 247V267Q1100 291 1090 221M968 211H1040" fill="none" stroke="#191c1e" stroke-width="5"/>
+<text x="1060" y="326" font-size="25" text-anchor="middle">⑥ 黑色花洒套装</text>
+<text x="1060" y="355" font-size="18" text-anchor="middle" fill="#756b62">公卫 1 顶喷＋手持花洒</text>
+<text x="1060" y="431" font-size="30" text-anchor="middle" fill="#6c5d50">淋浴区</text>
+<rect x="1275" y="242" width="48" height="327" rx="6" fill="#c0dde3" fill-opacity=".65" stroke="#899599" stroke-width="4"/>
+<path d="M1282 279H1316M1282 342H1316M1282 405H1316M1282 468H1316M1282 531H1316" stroke="#899599" stroke-width="5"/>
+<text x="1222" y="377" font-size="23" text-anchor="middle"><tspan x="1222">⑦</tspan><tspan x="1222" dy="31">百</tspan><tspan x="1222" dy="31">叶</tspan><tspan x="1222" dy="31">窗</tspan></text>
+<text x="258" y="622" font-size="26" text-anchor="middle">入口</text>
+<path d="M258 731V657M246 673L258 656L270 673" fill="none" stroke="#66594d" stroke-width="4"/>
+<text x="437" y="409" font-size="19" fill="#51453c">下方为通行空间</text>
+<rect x="1229" y="610" width="49" height="49" rx="3" fill="#53585a" stroke="#303638" stroke-width="3"/>
+<circle cx="1253.5" cy="634.5" r="17" fill="none" stroke="#aeb5b4" stroke-width="2"/>
+<path d="M1244 622V647M1253 619V650M1262 622V647" stroke="#aeb5b4" stroke-width="2"/>
+<text x="1198" y="629" font-size="22" text-anchor="end">⑧ 地漏</text>
+<text x="1198" y="657" font-size="18" text-anchor="end" fill="#756b62">淋浴区东南角</text>
+<text x="70" y="791" font-size="23" font-weight="700">材质：墙面、地面使用相同棕陶色方砖，保留可见砖缝。</text>
+<text x="70" y="835" font-size="20" fill="#756b62">马桶、黑色花洒、银灰框玻璃百叶窗：沿用公卫 1 网页样式，摆放按本图。</text>
+<text x="70" y="873" font-size="20" fill="#756b62">灯具为两盏暖黄色光吊灯；地漏位于淋浴区东南角；灯具间距与房间尺寸未实测。</text>
+</g></svg>

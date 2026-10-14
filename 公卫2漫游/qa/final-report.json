@@ -1,0 +1,103 @@
+{
+  "loaded": 23,
+  "errors": 0,
+  "total": 23,
+  "states": [
+    [
+      "cabinet",
+      "ready"
+    ],
+    [
+      "basin",
+      "ready"
+    ],
+    [
+      "faucet",
+      "ready"
+    ],
+    [
+      "mirror",
+      "ready"
+    ],
+    [
+      "mirror-shelf",
+      "ready"
+    ],
+    [
+      "pendant",
+      "ready"
+    ],
+    [
+      "toilet",
+      "ready"
+    ],
+    [
+      "shower",
+      "ready"
+    ],
+    [
+      "window",
+      "ready"
+    ],
+    [
+      "curtain",
+      "ready"
+    ],
+    [
+      "rod",
+      "ready"
+    ],
+    [
+      "towel-bar",
+      "ready"
+    ],
+    [
+      "drain",
+      "ready"
+    ],
+    [
+      "socket",
+      "ready"
+    ],
+    [
+      "fan",
+      "ready"
+    ],
+    [
+      "cup",
+      "ready"
+    ],
+    [
+      "toothbrush",
+      "ready"
+    ],
+    [
+      "soap",
+      "ready"
+    ],
+    [
+      "plastic-basin",
+      "ready"
+    ],
+    [
+      "towel",
+      "ready"
+    ],
+    [
+      "cloth",
+      "ready"
+    ],
+    [
+      "small-cup",
+      "ready"
+    ],
+    [
+      "toothpaste",
+      "ready"
+    ]
+  ],
+  "curtainClosed": true,
+  "daily": 9,
+  "mobileOverflow": false,
+  "pageErrors": []
+}

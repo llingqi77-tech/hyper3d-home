@@ -1,0 +1,152 @@
+[
+  {
+    "name": "basin-v2.glb",
+    "original": 7703384,
+    "optimized": 857796,
+    "textureLimit": 512
+  },
+  {
+    "name": "basin.glb",
+    "original": 8028208,
+    "optimized": 756980,
+    "textureLimit": 512
+  },
+  {
+    "name": "cabinet.glb",
+    "original": 8189688,
+    "optimized": 2707708,
+    "textureLimit": 1024
+  },
+  {
+    "name": "cloth.glb",
+    "original": 8316420,
+    "optimized": 692760,
+    "textureLimit": 512
+  },
+  {
+    "name": "cup.glb",
+    "original": 6192640,
+    "optimized": 591956,
+    "textureLimit": 512
+  },
+  {
+    "name": "curtain.glb",
+    "original": 7107280,
+    "optimized": 2042196,
+    "textureLimit": 1024
+  },
+  {
+    "name": "drain.glb",
+    "original": 7230496,
+    "optimized": 895148,
+    "textureLimit": 512
+  },
+  {
+    "name": "fan.glb",
+    "original": 9303536,
+    "optimized": 1479580,
+    "textureLimit": 512
+  },
+  {
+    "name": "faucet.glb",
+    "original": 6374684,
+    "optimized": 689472,
+    "textureLimit": 512
+  },
+  {
+    "name": "mirror-shelf.glb",
+    "original": 7852420,
+    "optimized": 2754532,
+    "textureLimit": 1024
+  },
+  {
+    "name": "mirror.glb",
+    "original": 6167608,
+    "optimized": 2167876,
+    "textureLimit": 1024
+  },
+  {
+    "name": "pendant.glb",
+    "original": 6490296,
+    "optimized": 871764,
+    "textureLimit": 512
+  },
+  {
+    "name": "plastic-basin.glb",
+    "original": 7650048,
+    "optimized": 658320,
+    "textureLimit": 512
+  },
+  {
+    "name": "rod.glb",
+    "original": 4937240,
+    "optimized": 564832,
+    "textureLimit": 512
+  },
+  {
+    "name": "shower-black-v2.glb",
+    "original": 11428244,
+    "optimized": 4686364,
+    "textureLimit": 1024
+  },
+  {
+    "name": "small-cup.glb",
+    "original": 5570732,
+    "optimized": 555980,
+    "textureLimit": 512
+  },
+  {
+    "name": "soap.glb",
+    "original": 7156036,
+    "optimized": 673060,
+    "textureLimit": 512
+  },
+  {
+    "name": "socket.glb",
+    "original": 6790920,
+    "optimized": 600932,
+    "textureLimit": 512
+  },
+  {
+    "name": "toilet.glb",
+    "original": 3138516,
+    "optimized": 1694316,
+    "textureLimit": 1024
+  },
+  {
+    "name": "toothbrush.glb",
+    "original": 7479372,
+    "optimized": 1056012,
+    "textureLimit": 512
+  },
+  {
+    "name": "toothpaste.glb",
+    "original": 7029524,
+    "optimized": 710112,
+    "textureLimit": 512
+  },
+  {
+    "name": "towel-bar.glb",
+    "original": 7561000,
+    "optimized": 861768,
+    "textureLimit": 512
+  },
+  {
+    "name": "towel.glb",
+    "original": 8006056,
+    "optimized": 830832,
+    "textureLimit": 512
+  },
+  {
+    "name": "window-v2.glb",
+    "original": 7863036,
+    "optimized": 2766244,
+    "textureLimit": 1024
+  },
+  {
+    "name": "window.glb",
+    "original": 7994148,
+    "optimized": 2713828,
+    "textureLimit": 1024
+  }
+]

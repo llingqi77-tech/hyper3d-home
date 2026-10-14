@@ -1,0 +1,26 @@
+// Coordinates: +X east, +Z south, Y up. Dimensions are display estimates.
+export const assets=[
+{id:'cabinet',name:'奶白色洗手柜',area:'西北 · 黑色拉手与底层板',type:'fixture',size:[1.18,.95,.61],pos:[-1.03,0,-.60]},
+{id:'basin',name:'椭圆白瓷台盆',area:'洗手柜台面内',type:'fixture',file:'basin-v2.glb',size:[.56,.17,.38],pos:[-1.03,.73,-.54]},
+{id:'faucet',name:'银色单柄龙头',area:'台盆后方',type:'fixture',size:[.075,.17,.13],pos:[-1.03,.89,-.79]},
+{id:'mirror',name:'白框镜子',area:'洗手柜上方 · 下沿置物台',type:'fixture',size:[.84,1.02,.12],pos:[-1.03,1.02,-.87]},
+{id:'mirror-shelf',name:'镜下置物托板',area:'镜框下沿 · 放置小杯与牙膏',type:'fixture',size:[.89,.085,.14],pos:[-1.03,.995,-.80]},
+{id:'pendant',name:'暖黄吊灯 × 2',area:'洗手区上方',type:'fixture',size:[.19,.63,.19],pos:[-1.36,1.99,-.54],copies:[{pos:[-.68,1.99,-.54]}]},
+{id:'toilet',name:'白色马桶',area:'南侧中部 · 公卫 1 同款',type:'fixture',file:'toilet.glb',size:[.44,.76,.70],pos:[-.10,0,.55],yaw:Math.PI},
+{id:'shower',name:'黑色顶喷与手持花洒',area:'淋浴区北墙 · 公卫 1 同款',type:'fixture',file:'shower-black-v2.glb',size:[.30,1.65,.50],pos:[1.02,.55,-.68]},
+{id:'window',name:'玻璃百叶窗',area:'东墙 · 银灰金属框',type:'fixture',file:'window-v2.glb',size:[.70,.50,.09],pos:[1.70,1.62,-.02],yaw:-Math.PI/2},
+{id:'curtain',name:'干湿分隔帘',area:'洗手区与淋浴区之间',type:'fixture',size:[1.78,1.98,.055],pos:[.46,.20,0],yaw:Math.PI/2},
+{id:'rod',name:'分隔帘杆',area:'分隔帘上方',type:'fixture',size:[1.84,.025,.025],pos:[.46,2.20,0],yaw:Math.PI/2},
+{id:'towel-bar',name:'银色毛巾杆',area:'镜子右侧墙面',type:'fixture',size:[.63,.065,.085],pos:[-.18,1.78,-.87]},
+{id:'drain',name:'方形地漏',area:'淋浴区东南角',type:'fixture',size:[.105,.012,.105],pos:[1.53,.014,.78],tint:'#44494c'},
+{id:'socket',name:'白色电源面板',area:'洗手柜左侧墙面',type:'fixture',size:[.09,.09,.017],pos:[-1.69,1.02,-.54],yaw:Math.PI/2},
+{id:'fan',name:'白色小风扇',area:'洗手柜左侧',type:'daily',size:[.21,.38,.13],pos:[-1.56,.99,-.58],yaw:.3},
+{id:'cup',name:'漱口杯 × 2',area:'台面左侧 · 蓝色与浅色',type:'daily',size:[.08,.11,.073],pos:[-1.48,.90,-.51],copies:[{pos:[-1.34,.90,-.70],tint:'#e1dfcb'}]},
+{id:'toothbrush',name:'牙刷 × 2',area:'漱口杯中',type:'daily',size:[.018,.18,.012],pos:[-1.48,.925,-.51],copies:[{pos:[-1.34,.925,-.70]}]},
+{id:'soap',name:'洗手液',area:'龙头右侧',type:'daily',size:[.082,.16,.058],pos:[-.84,.90,-.78]},
+{id:'plastic-basin',name:'紫粉色脸盆',area:'台面右侧，底层另有收纳盆',type:'daily',size:[.29,.10,.26],pos:[-.64,.90,-.56],copies:[{pos:[-1.03,.15,-.61],size:[.32,.12,.29],tint:'#b6b899'}]},
+{id:'towel',name:'悬挂毛巾 × 2',area:'镜子右侧毛巾杆',type:'daily',trim:{min:[.22,0,0],max:[.78,.85,1]},size:[.26,.35,.032],pos:[-.28,1.43,-.80],copies:[{pos:[-.02,1.47,-.80],size:[.20,.31,.032],tint:'#c2c59e'}]},
+{id:'cloth',name:'棕色擦手巾',area:'台面右前角',type:'daily',size:[.28,.016,.19],pos:[-.69,.905,-.36],tint:'#805647'},
+{id:'small-cup',name:'黄色小杯',area:'镜框下沿置物台',type:'daily',size:[.065,.065,.058],pos:[-.72,1.08,-.76]},
+{id:'toothpaste',name:'牙膏',area:'镜框下沿置物台',type:'daily',size:[.16,.025,.036],pos:[-1.04,1.08,-.76]}
+];

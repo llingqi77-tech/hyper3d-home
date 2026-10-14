@@ -1,0 +1,232 @@
+[
+  {
+    "id": "cabinet",
+    "name": "奶白洗手柜",
+    "prompt": "One freestanding ivory bathroom vanity cabinet with pale gray veined stone top and EMPTY oval opening for a separate basin. Two recessed panel doors, two long curved black handles, four turned legs, open lower shelf. Exactly match isolated reference. No sink, faucet or accessories.",
+    "generation_id": "a9cccf41-17cd-49cb-869f-e7ded1098fdc",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/a9cccf41-17cd-49cb-869f-e7ded1098fdc",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "basin",
+    "name": "白色椭圆台盆",
+    "prompt": "A single white porcelain oval undermount bathroom washbasin, wide left-right oval opening, deep concave interior bowl and thin oval rim, small central silver drain. No faucet, cabinet, countertop, toilet or pedestal. Standalone basin only, horizontal opening faces up.",
+    "generation_id": "700f290b-49dc-40f7-8c01-451a445c826a",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/700f290b-49dc-40f7-8c01-451a445c826a",
+    "used": false,
+    "review": "未采用：已有修正版"
+  },
+  {
+    "id": "faucet",
+    "name": "银色单柄龙头",
+    "prompt": "A single short chrome bathroom basin faucet, cylindrical base, compact rounded body, short spout projects forward, one lever on top. Polished silver. No basin, water, background or pedestal.",
+    "generation_id": "5984c703-768d-4038-b8a5-1bb0160feb5b",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/5984c703-768d-4038-b8a5-1bb0160feb5b",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "mirror",
+    "name": "白框镜子",
+    "prompt": "One tall rectangular bathroom wall mirror, ivory painted classic wooden frame, slim straight sides, decorative stepped molding and broad projecting lower ledge shelf. Height 1.3 times width. Flat neutral silver mirror surface, no reflected scenery. No cabinet doors, no sink, no wall.",
+    "generation_id": "c6559a6e-8ee9-4e89-8934-4b6c10abdca3",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/c6559a6e-8ee9-4e89-8934-4b6c10abdca3",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "pendant",
+    "name": "暖黄吊灯",
+    "prompt": "One simple small bathroom pendant lamp: slender dark bronze ceiling canopy and vertical hanging cord, warm ivory frosted glass rounded bell shade, yellow bulb inside. Single lamp only. Overall height about 60cm and shade width 18cm. No room or stand.",
+    "generation_id": "b493d12d-fb03-420d-aa7d-f8131171906c",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/b493d12d-fb03-420d-aa7d-f8131171906c",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "window",
+    "name": "银灰玻璃百叶窗",
+    "prompt": "One rectangular recessed bathroom louver window unit, landscape width 70cm height 50cm, thin silver gray aluminum perimeter frame, exactly five horizontal pale blue clear glass blades tilted open with air gaps. Glass is translucent and slim, no solid panel behind, no wall, no scenery, no curtain.",
+    "generation_id": "90ae5e1e-6f1b-47de-991b-024062deb05c",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/90ae5e1e-6f1b-47de-991b-024062deb05c",
+    "used": false,
+    "review": "未采用：已有修正版"
+  },
+  {
+    "id": "curtain",
+    "name": "干湿分隔帘",
+    "prompt": "One plain off-white waterproof shower curtain hanging vertically in soft parallel folds, with metal eyelet holes along top. Width 150cm height 200cm, straight lower hem. Partly gathered to 70 percent width. No rod, no wall, no bathroom, no people.",
+    "generation_id": "21b3a258-9b97-4f90-a8a9-40becf3e405c",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/21b3a258-9b97-4f90-a8a9-40becf3e405c",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "rod",
+    "name": "分隔帘杆",
+    "prompt": "One straight horizontal brushed silver shower curtain rod with two small round end wall mounts. Length 160cm diameter 2cm. Single rod only with open space around it; no fabric or wall.",
+    "generation_id": "7c547a0d-4fe2-4aa0-9bd2-9e8f9b77bfd4",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/7c547a0d-4fe2-4aa0-9bd2-9e8f9b77bfd4",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "towel-bar",
+    "name": "银色毛巾杆",
+    "prompt": "One straight horizontal chrome towel rail with two round wall mounts and short perpendicular brackets. Width 60cm and projection 6cm. Bare rail only, no towel, wall or background.",
+    "generation_id": "f0b00ff6-525e-4d7e-b469-43b742b4cca6",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/f0b00ff6-525e-4d7e-b469-43b742b4cca6",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "drain",
+    "name": "方形地漏",
+    "prompt": "One small square dark gray stainless steel bathroom floor drain grate. Thin flat square frame 10cm across with inset round slotted grate, concentric detail and visible drainage slots. Face upward on horizontal XZ plane. No floor, pipe, water or background.",
+    "generation_id": "23190138-bb3b-44dd-a561-338a04ff4998",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/23190138-bb3b-44dd-a561-338a04ff4998",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "socket",
+    "name": "白色电源面板",
+    "prompt": "One white square wall power socket faceplate with Chinese three-pin socket openings and a narrow rocker switch. Flat plastic plate, front-facing, no wall, cable or other objects.",
+    "generation_id": "8fe2f489-cb21-4927-bc3e-32641d1ea294",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/8fe2f489-cb21-4927-bc3e-32641d1ea294",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "fan",
+    "name": "白色小风扇",
+    "prompt": "One small white clip-on electric fan: circular radial safety grille, white fan blades visible behind, short flexible narrow curved gooseneck, white clamp at bottom. A single complete fan with no wall or tabletop. Front facing.",
+    "generation_id": "1bb32f44-137f-4ece-a6f8-9e6aae8f2bc4",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/1bb32f44-137f-4ece-a6f8-9e6aae8f2bc4",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "cup",
+    "name": "漱口杯",
+    "prompt": "One plain turquoise blue plastic bathroom rinse cup with one rounded handle, cylindrical open hollow body, slightly wider top rim. Empty cup, no brush, text or table.",
+    "generation_id": "743fb3b6-b34b-4aed-bd25-26e7301eb097",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/743fb3b6-b34b-4aed-bd25-26e7301eb097",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "toothbrush",
+    "name": "牙刷",
+    "prompt": "One slim bathroom toothbrush standing vertically, white handle with light blue rubber grip, small oval head with white bristles. Single toothbrush, no cup or background.",
+    "generation_id": "090d21ab-8aa4-4af5-9c05-36c61294edd2",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/090d21ab-8aa4-4af5-9c05-36c61294edd2",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "soap",
+    "name": "洗手液瓶",
+    "prompt": "One oval white plastic hand soap bottle, pale pink pump dispenser, a simple blue curved graphic on front with no letters. Single bottle only, no hands, sink or background.",
+    "generation_id": "4575b5cf-c4a3-4135-828c-8bb6b6172bd5",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/4575b5cf-c4a3-4135-828c-8bb6b6172bd5",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "plastic-basin",
+    "name": "紫粉色脸盆",
+    "prompt": "One empty lavender pink round plastic washbasin, shallow wide bowl, thick outward flared rim with two subtle grip tabs. Smooth plastic, open concave interior faces up. No water, accessories or background.",
+    "generation_id": "b53b5b0b-251b-410d-ae8d-dec580bc03c1",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/b53b5b0b-251b-410d-ae8d-dec580bc03c1",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "towel",
+    "name": "悬挂毛巾",
+    "prompt": "One cream white cotton hand towel draped over an invisible horizontal rail, doubled over at top, hangs vertically in soft wrinkles, rectangular lower edges. No rail, wall or background. Realistic terry fabric.",
+    "generation_id": "895c9f93-d97f-4051-bb08-738697462ed6",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/895c9f93-d97f-4051-bb08-738697462ed6",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "cloth",
+    "name": "棕色台面毛巾",
+    "prompt": "One small brown terry cotton rectangular washcloth lying flat horizontally, slightly rumpled edges, subtle cloth folds, no table, no other objects.",
+    "generation_id": "94939610-8650-4565-ab61-63df7808345d",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/94939610-8650-4565-ab61-63df7808345d",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "small-cup",
+    "name": "黄色小杯",
+    "prompt": "One tiny yellow plastic cup with flat base, open cylindrical body and small handle. Empty cup only, no background.",
+    "generation_id": "1ba3d341-6cab-463e-b59e-dc5930b54ae6",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/1ba3d341-6cab-463e-b59e-dc5930b54ae6",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "toothpaste",
+    "name": "牙膏",
+    "prompt": "One capped white toothpaste tube with minimal red and blue stripe packaging, no readable text, lying horizontally, crimped flat end and white screw cap. Single tube only, no toothbrush or surface.",
+    "generation_id": "564273a1-fd17-4d25-a435-a3567871e1e9",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/564273a1-fd17-4d25-a435-a3567871e1e9",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "basin-v2",
+    "name": "椭圆台盆修正版",
+    "prompt": "Exactly one standalone white porcelain oval undermount sink bowl matching the reference. Continuous oval narrow rim, hollow concave bowl, silver drain. No faucet, no rectangular countertop, no tap platform or holes, no pedestal. Horizontal opening upward, major oval axis X.",
+    "generation_id": "7b43d4ce-174e-4ab2-ba70-03cc730ceaf7",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/7b43d4ce-174e-4ab2-ba70-03cc730ceaf7",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "window-v2",
+    "name": "五叶百叶窗修正版",
+    "prompt": "Exactly one window matching reference: thin silver metal frame, five tilted open clear glass blades, air gaps, no wall or solid backing. Front +Z, upright Y, landscape width along X. Preserve precisely five blades and silver frame.",
+    "generation_id": "98b53cf6-81c0-4934-b9ec-24e589c03a54",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/98b53cf6-81c0-4934-b9ec-24e589c03a54",
+    "used": true,
+    "review": "已采用"
+  },
+  {
+    "id": "mirror-shelf",
+    "name": "镜下置物托板",
+    "prompt": "One single wall mounted ivory painted wooden mirror-bottom ledge shelf. A long horizontal shallow shelf 85cm wide 12cm deep, with ornate stepped crown molding apron underneath, two small curved bracket ends, classic bathroom style. Pure warm white painted wood. No mirror, wall, cups, other objects or floor. Long dimension X, up Y, front +Z.",
+    "generation_id": "494cb535-25d2-4d27-b75e-4862f348f494",
+    "status": "completed",
+    "display_url": "https://hyper3d.ai/workspace/rodin/494cb535-25d2-4d27-b75e-4862f348f494",
+    "used": true,
+    "review": "已采用"
+  }
+]
