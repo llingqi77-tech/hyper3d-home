@@ -1,0 +1,14 @@
+{
+  "name": "public-bathroom-one-walkthrough",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5181",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "three": "0.170.0",
+    "vite": "6.4.3"
+  }
+}

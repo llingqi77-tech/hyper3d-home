@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d7d4c9" />
+    <title>公卫 1 · 3D 漫游</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="stage" aria-label="公卫 1 三维场景">
+        <div id="canvas-host"></div>
+        <header class="masthead">
+          <div class="brand"><span class="brand-mark">居</span><span><b>HOME STUDY</b><small>公卫 1 · 细节漫游</small></span></div>
+          <div class="stage-actions">
+            <button id="day-toggle" class="pill active">☼ 自然光</button>
+            <button id="night-toggle" class="pill">☾ 暖灯</button>
+            <button id="reference-toggle" class="pill">▧ 参考照片</button>
+          </div>
+        </header>
+        <div class="stage-title"><span>空间 02 / BATHROOM</span><h1>熟悉的日常，<br />回到原来的位置。</h1><p>东南入口 · 西侧浴室柜与马桶 · 东侧淋浴头<br />公卫 1 · 约 142 × 170 cm</p></div>
+        <nav class="view-switcher" aria-label="视角">
+          <button data-view="overview" class="selected">全景</button><button data-view="vanity">洗手台</button><button data-view="toilet">马桶与淋浴</button><button data-view="top">俯视</button>
+        </nav>
+        <div class="drag-hint">拖动旋转 · 滚轮缩放 · 点击右侧物件聚焦</div>
+        <button id="reset-view" class="reset-view">重置视角 ↻</button>
+        <div id="loading" class="loading"><span></span>正在准备空间模型</div>
+        <div id="toast" class="toast"></div>
+      </section>
+      <aside class="sidebar">
+        <div class="side-eyebrow">PUBLIC BATHROOM · 01</div>
+        <h2>物件清单</h2>
+        <p class="side-intro">点选物件，在场景中查看位置。</p>
+        <div id="object-list" class="object-list"></div>
+        <div class="side-footer"><span class="status-dot"></span><span id="asset-summary">空间模型已加载</span></div>
+      </aside>
+      <aside id="reference-card" class="reference-card" hidden>
+        <button id="close-reference" aria-label="关闭参考照片">×</button>
+        <span>原始参考照片</span>
+        <figure><img src="/references/public-bathroom.jpg" alt="公卫 1 整体照片" /><figcaption>整体视角</figcaption></figure>
+        <figure><img src="/references/vanity.jpg" alt="公卫 1 台盆和水龙头细节" /><figcaption>台盆与水龙头细节</figcaption></figure>
+        <figure><img src="/references/double-lamp.jpg" alt="公卫 1 双头玻璃壁灯细节" /><figcaption>双头壁灯细节</figcaption></figure>
+      </aside>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
