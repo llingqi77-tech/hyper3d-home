@@ -1,0 +1,117 @@
+[
+  {
+    "path": "厨房漫游/hyper3d-review/base-cabinets-counter.glb",
+    "bytes": 8910968,
+    "sha256": "BC8EBEC3758052EF9F358C4C584A2D2BA4E93172123D91238F1E89FB3BF73327"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/ceiling-light.glb",
+    "bytes": 9471692,
+    "sha256": "7BBE7CE291F44F21CB7D77531810213FE625059D7C1DC1734F96EAB53FBAF40D"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/cleaner-bottle.glb",
+    "bytes": 9154260,
+    "sha256": "E1C1E4A20315FBDDEE7E6C0712EC218E8C198F25245226516B5ED8F73D56399E"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/cutting-boards.glb",
+    "bytes": 8542784,
+    "sha256": "C829A8D6C3F2820FF9F72FF371EEEBF0431D2E78EB9874818EFF7244A7EBE380"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/dish-rack.glb",
+    "bytes": 9112120,
+    "sha256": "BBB366E528A79BFEF18EC4428873DB76860E46F7E7ABD3DC8E22C795D14D39E2"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/double-basin-sink.glb",
+    "bytes": 9321584,
+    "sha256": "9F9CC56E3CD7373AFFCBB402D3D79189F995302C31793CA406E39DEBFBDF53E7"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/entry-lantern.glb",
+    "bytes": 7803396,
+    "sha256": "EC885F34839668785ED3D089B504103E9001DC46572125D3F05C1807C6232642"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/kitchen-faucet.glb",
+    "bytes": 9513368,
+    "sha256": "40078D4C3FFFAFA02F15FA6FEFC56399A4EE975B471E0F5892BC2838A76A72B2"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/lidded-pot.glb",
+    "bytes": 8850448,
+    "sha256": "1AA619284DC0469271FF3C339D1593809269E7AF7BB1835B5A83969451475B3D"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/oil-seasoning-bottles.glb",
+    "bytes": 8792244,
+    "sha256": "4777692E45A9A7BCCBC4417F178114DC630C6D0C6D31B5DD13F057A6041C94A6"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/pink-towel.glb",
+    "bytes": 9723044,
+    "sha256": "CEB0856C2F8352E4B090E6CE55C9052A73F5C9B687FE1316D8BFF27327D0E97D"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/range-hood.glb",
+    "bytes": 7874484,
+    "sha256": "080464D07C957ACD38F53D5EEE2E15AE48B40CA0CD4F5074B7A020CC5E0C4054"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/spice-set.glb",
+    "bytes": 8954576,
+    "sha256": "99F59DA9866F269566D0984E00713024E0A0A5F4679E2809727569315E3CB618"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/two-burner-gas-hob.glb",
+    "bytes": 8103160,
+    "sha256": "F2B3698E27E16CCC61C54D2073582F5401CFBD3837C5B01D07F4550C1FD1223A"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/upper-cabinet-set.glb",
+    "bytes": 10166672,
+    "sha256": "A4144E661E588DDDBF11D2A2C1EA0D519F1BAAF97BEFE4CFC9CACBF93AD5463E"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/utensil-holder.glb",
+    "bytes": 9001760,
+    "sha256": "4D8715034FCFB17CF71A8D127505AA9D678F5D1A3A6AFA1B621C4B6C6A70CFED"
+  },
+  {
+    "path": "厨房漫游/hyper3d-review/white-hood-v2-raw.glb",
+    "bytes": 8197316,
+    "sha256": "61C397D450EFA40AE5BF0CF844DEE66DB02A0D80F6100377918A6326BF9C7B7D"
+  },
+  {
+    "path": "厨房漫游/public/assets/entry-lantern.glb",
+    "bytes": 7803396,
+    "sha256": "EC885F34839668785ED3D089B504103E9001DC46572125D3F05C1807C6232642"
+  },
+  {
+    "path": "厨房漫游/public/assets/nonstick-pan-v2.glb",
+    "bytes": 7844440,
+    "sha256": "14782FD08D73F88AD125B64B287366CB49CE07E5D12F89F82BF064CC8802BFBF"
+  },
+  {
+    "path": "厨房漫游/public/assets/pressure-cooker-v2.glb",
+    "bytes": 8140488,
+    "sha256": "A94B21BBC87D000DAA358B8F8FDA3C85632570EC415A88A761F31E0D5510F7D0"
+  },
+  {
+    "path": "厨房漫游/public/assets/sink-upper-cabinet-v2.glb",
+    "bytes": 6942428,
+    "sha256": "16758F1CBD3EF6B3A73A74C93FD2ED2B4700F5F0798088776E358297D15F19F5"
+  },
+  {
+    "path": "厨房漫游/public/assets/two-burner-hob-v2.glb",
+    "bytes": 6459184,
+    "sha256": "72E8AAA26D1A466DF15BFE5456F512DB058B1D37E5755642D2240A8DD5B182BC"
+  },
+  {
+    "path": "厨房漫游/public/assets/white-hood-v2.glb",
+    "bytes": 11729576,
+    "sha256": "F7BF415E14AD16849EEC8B3BDC122C96707F2455C266F7D99BAAFFABBFAB666B"
+  }
+]

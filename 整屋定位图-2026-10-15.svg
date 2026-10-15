@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1460" viewBox="0 0 1500 1460">
+<defs>
+<pattern id="pending" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="12" height="12" fill="#f4ecdc"/><path d="M0 0V12" stroke="#e2d3b5" stroke-width="3"/></pattern>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#3b816f" stroke-width="1.4"/></marker>
+<style>text{font-family:'Microsoft YaHei','Noto Sans SC',sans-serif;fill:#233a40}.title{font-size:38px;font-weight:700}.sub{font-size:18px;fill:#627276}.room{stroke:#3d5358;stroke-width:4;stroke-linejoin:round}.name{font-size:29px;font-weight:700;text-anchor:middle}.dim{font-size:21px;text-anchor:middle}.small{font-size:17px;text-anchor:middle;fill:#5e7075}.note{font-size:19px;fill:#4f6267}.label{font-size:23px;font-weight:700}.route{fill:none;stroke:#3b816f;stroke-width:5;stroke-dasharray:9 7;marker-end:url(#arrow)}.window{stroke:#5598b8;stroke-width:7}.pill{font-size:15px;font-weight:700;fill:#79603c}</style>
+</defs>
+<rect width="1500" height="1460" fill="#f5f7f6"/>
+<rect x="34" y="30" width="1432" height="138" rx="20" fill="#173d43"/>
+<text x="65" y="88" class="title" style="fill:#fff">整屋定位图 · 门洞连接与尺寸核对</text>
+<text x="65" y="128" class="sub" style="fill:#c3d7d6">依据原始户型图｜上南 · 下北 · 左东 · 右西｜2026-10-15｜位置示意，不按屏幕比例量尺</text>
+<rect x="34" y="190" width="782" height="1145" rx="20" fill="white" stroke="#dce4e2"/>
+<g transform="translate(20,185) scale(.86)">
+<!-- Outlines traced from the user's plan; dimensions are labels, not a pixel scale. -->
+<path class="room" fill="url(#pending)" d="M160 105H434V218H463V475L435 510V575H135V230H160Z"/>
+<path class="room" fill="url(#pending)" d="M478 125H553V82H681V125H765V455H478Z"/>
+<path class="room" fill="#d9eaf0" d="M588 462H762V616H552V551H588Z"/>
+<path class="room" fill="#e2e4f1" d="M553 625H763V918H553Z"/>
+<path class="room" fill="#d9eaf0" d="M553 929H790V1036H702V1088H553Z"/>
+<path class="room" fill="#f3dfcd" d="M565 1090H702V1036H883V1280H565Z"/>
+<path class="room" fill="#dcebdc" d="M137 584H464V938H271V945H137V780L83 690Z"/>
+<path class="room" fill="#eee5d4" d="M271 945H464V929H548V1248H271Z"/>
+<path fill="#edf1ee" d="M467 460H547V1248H466V935H467Z"/>
+<text x="510" y="750" transform="rotate(-90 510 750)" class="small">中央连接过道 · 净宽待核</text>
+<!-- Windows -->
+<path class="window" d="M176 106H363M557 84H677M762 480V548M762 665V744M883 1100V1220M135 597L84 690L135 774"/>
+<!-- Door connection breaks and paths -->
+<path stroke="white" stroke-width="10" d="M463 480V546M512 455H569M552 557V606M553 631V682M553 1088H613M489 1248H562"/>
+<!-- Bathroom 2: doorway in the bottom wall at its left end; inward leaf hinged left. -->
+<path d="M553 1088V1028M553 1028A60 60 0 0 1 613 1088" fill="none" stroke="#b56c32" stroke-width="3"/>
+<text x="657" y="1070" class="small" style="fill:#a06531;font-size:15px">门在下侧靠左 · 向内开</text>
+<path class="route" d="M525 1320V1225"/>
+<path class="route" d="M510 1200L410 1170"/>
+<path class="route" d="M548 1200L635 1200"/>
+<path class="route" d="M410 1100V855"/>
+<path class="route" d="M510 1150H584V1050"/>
+<path class="route" d="M507 715V640H586"/>
+<path class="route" d="M509 610V575H604"/>
+<path class="route" d="M511 555V483L542 437"/>
+<path class="route" d="M509 525H420"/>
+<!-- Room titles -->
+<text x="292" y="300" class="name">07 主卧</text>
+<text x="292" y="341" class="dim">标注横向 3.25 m</text>
+<text x="292" y="375" class="small">总纵深待核 · 待建房间</text>
+<text x="615" y="270" class="name">08 儿童房</text>
+<text x="615" y="310" class="dim">主体约 3.66 × 3.63 m</text>
+<text x="615" y="345" class="small">凸窗另计 · 待建房间</text>
+<text x="663" y="513" class="name" style="font-size:25px">04 公卫 1</text>
+<text x="663" y="547" class="dim" style="font-size:18px">纵向标注 1.70 m</text>
+<text x="663" y="579" class="small" style="fill:#a06531;font-size:16px">1.42 为局部墙段，总宽待核</text>
+<text x="659" y="747" class="name">05 客房</text>
+<text x="659" y="786" class="dim">主体 2.94 × 3.30 m</text>
+<text x="659" y="820" class="small">约 9.70 m² · 11 个在用 GLB</text>
+<text x="662" y="980" class="name" style="font-size:25px">06 公卫 2</text>
+<text x="662" y="1015" class="small">凹形轮廓 · 总宽深待核</text>
+<text x="725" y="1141" class="name">03 厨房</text>
+<text x="725" y="1180" class="dim">标注跨度 3.00 × 1.98 m</text>
+<text x="725" y="1215" class="small">凹口另核 · 6 个在用 GLB</text>
+<text x="300" y="711" class="name">02 客厅</text>
+<text x="300" y="752" class="dim">主体标注 3.25 × 3.75 m</text>
+<text x="300" y="787" class="small">折窗与开放通道另核</text>
+<text x="398" y="1018" class="name">01 餐厅</text>
+<text x="398" y="1054" class="dim" style="font-size:19px">横墙段 2.40 / 纵向 3.25 m</text>
+<text x="398" y="1087" class="small">入口区另计 · 8 个在用 GLB</text>
+<text x="525" y="1365" class="name" style="font-size:24px">入户门 / 原图下方</text>
+<text x="500" y="55" class="label" text-anchor="middle">南 S</text>
+<text x="110" y="1030" class="label">东 E</text>
+<text x="899" y="750" class="label" transform="rotate(90 899 750)">西 W</text>
+</g>
+<!-- Right column -->
+<rect x="840" y="190" width="626" height="220" rx="20" fill="#e4eeeb"/>
+<text x="868" y="232" class="label">先固定位置，再拼家具</text>
+<text x="868" y="272" class="note">入口 → 餐厅 / 厨房 → 客厅与中央过道</text>
+<text x="868" y="306" class="note">过道 → 两卫、客房、儿童房、主卧</text>
+<text x="868" y="345" class="note">旧房间的“左右 / 东南”先视作局部方向。</text>
+<text x="868" y="378" class="note">整间旋转对门洞；不直接镜像翻转家具。</text>
+<rect x="840" y="430" width="626" height="328" rx="20" fill="#fff" stroke="#dce4e2"/>
+<text x="868" y="475" class="label">尺寸状态</text>
+<text x="868" y="516" class="note">明确标注：客房 2.94 × 3.30；儿童房纵向 3.63。</text>
+<text x="868" y="554" class="note">分段推导：儿童房横向 1.27 + 1.60 + 0.79。</text>
+<text x="868" y="592" class="note">待核：公卫 1 总宽、公卫 2 凹形、主卧纵深。</text>
+<text x="868" y="630" class="note">待核：厨房凹口、餐厅入口区、完整过道净宽。</text>
+<text x="868" y="677" class="note">统一净高预案 2.72 m；墙厚预案 0.14 m。</text>
+<text x="868" y="714" class="note" style="fill:#a06531">高度、墙厚和家具尺寸均为模型预案，非实测。</text>
+<rect x="840" y="778" width="626" height="340" rx="20" fill="#fff" stroke="#dce4e2"/>
+<text x="868" y="823" class="label">待补物件重点</text>
+<text x="868" y="866" class="note">厨房：物件均已有模型；12 类尚未接入当前页。</text>
+<text x="868" y="905" class="note">公卫 1：龙头、镜、窗、架、用品与门等 9 组。</text>
+<text x="868" y="944" class="note">公卫 2：23 类已接入；重校房壳和设备间距。</text>
+<text x="868" y="983" class="note">餐客厅：桌体、主要客厅家具需独立化 / 核对。</text>
+<text x="868" y="1022" class="note">客房：床柜桌窗等结构件需核对与尺寸适配。</text>
+<text x="868" y="1061" class="note">主卧、儿童房：独立网页和详细物件清单待建。</text>
+<rect x="840" y="1138" width="626" height="197" rx="20" fill="#f3ecdf"/>
+<text x="868" y="1182" class="label">本次不直接挪动已完成网页</text>
+<text x="868" y="1224" class="note">先确认房间门洞和尺寸冲突，再进行整屋装配。</text>
+<text x="868" y="1262" class="note">当前餐客厅面积曾放大 2 倍，整合时须恢复比例。</text>
+<text x="868" y="1300" class="note">物件详细列表及宽 × 深 × 高见配套 Markdown。</text>
+<text x="56" y="1374" class="sub">图例：浅色房间 = 已有网页；斜纹 = 待建；蓝线 = 窗位置；绿色虚线 = 门洞连接意向。</text>
+<text x="56" y="1410" class="sub">公卫 2 门位已按原图圆弧修正，橙线为门扇及开启弧；精确墙厚未展开。标注跨度不等于统一测绘净尺寸。</text>
+</svg>
