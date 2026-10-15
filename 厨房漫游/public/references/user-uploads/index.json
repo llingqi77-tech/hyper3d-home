@@ -1,0 +1,62 @@
+[
+  {
+    "file": "厨房漫游/public/references/user-uploads/codex-clipboard-51fe05fe-e4c3-4fed-b648-e3ceefa916ac.png",
+    "description": "初次加载厨房截图",
+    "status": "copied",
+    "sha256": "2E1A7E601EBA7F866942D6B2BB4D62ED190931EDA30959C5E9D31254AC4EA0BC"
+  },
+  {
+    "file": "厨房漫游/public/references/user-uploads/codex-clipboard-02fcd086-cbc0-4b4a-884d-19d87245a7c3.png",
+    "description": "模型加载后厨房截图",
+    "status": "copied",
+    "sha256": "2E5F5AF572BA03F6F5C8A9CCE2470F41FAD3ED753092BD7D7772B323D431E65B"
+  },
+  {
+    "file": "厨房漫游/public/references/user-uploads/codex-clipboard-a5bfa2c7-a4b3-4cff-b1e2-7d9593863176.png",
+    "description": "厨房墙面花砖参考",
+    "status": "copied",
+    "sha256": "9BA8A520B30D3D791159616F0EC9EC1D75A5FE3686B8A55328FC16131C7C2566"
+  },
+  {
+    "file": "厨房漫游/public/references/user-uploads/codex-clipboard-418f0a32-e12a-4e67-a7c7-c0800b883e8f.jpg",
+    "description": "厨房地砖实拍",
+    "status": "copied",
+    "sha256": "816D37BC657FFFB5C7C0E63701455E9A4288EE4174E2457A67EB7010724BBCC8"
+  },
+  {
+    "file": "厨房漫游/public/references/user-uploads/codex-clipboard-998ab746-2535-42ca-af13-d6c9812ae407.jpg",
+    "description": "厨房餐厅过渡拼花实拍",
+    "status": "copied",
+    "sha256": "6A5BD2196C621A7035407A07017F52FAB734EF5B1EF6F2EE611038A06D1E00CE"
+  },
+  {
+    "file": "厨房漫游/public/references/user-uploads/codex-clipboard-244a4065-5327-4e24-823f-f42a49474e18.png",
+    "description": "侧吸油烟机造型参考",
+    "status": "copied",
+    "sha256": "5626C98E443A15F65B95DC015EBEE193CB5F12D01CB31216B075361C0CBD5250"
+  },
+  {
+    "file": "厨房漫游/public/references/user-uploads/厨房.jpg",
+    "description": "厨房.jpg",
+    "status": "copied",
+    "sha256": "55A043CDD196368E6FFD2EA793F0C62988324ECBA9FB823A9D93585A5C2F8255"
+  },
+  {
+    "file": "厨房漫游/public/references/user-uploads/厨房门口的灯.jpg",
+    "description": "厨房门口的灯.jpg",
+    "status": "copied",
+    "sha256": "BC3837123AF1F4D3D60B7FF828B33C0E14898405E6F820004147266B501707CA"
+  },
+  {
+    "file": "厨房漫游/public/references/user-uploads/餐厅.jpg",
+    "description": "餐厅.jpg",
+    "status": "copied",
+    "sha256": "EA6709072E2989378D671E88330103E6DC10F0D9A206C4F096120211E3A183DF"
+  },
+  {
+    "file": "厨房漫游/public/references/user-uploads/户型图.png",
+    "description": "户型图.png",
+    "status": "copied",
+    "sha256": "7BA3FD818315753F0749862A592C84A1BAC118CC59E2F016E9F23338EC2726EF"
+  }
+]

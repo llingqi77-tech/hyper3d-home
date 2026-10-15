@@ -310,7 +310,7 @@ $("#night-toggle").addEventListener("click",()=>{night=true;$("#night-toggle").c
 $("#reference-toggle").addEventListener("click",()=>$("#reference-card").hidden=false);
 $("#close-reference").addEventListener("click",()=>$("#reference-card").hidden=true);
 document.querySelectorAll('#reference-card img').forEach(img=>{
-  const showLocalOnly=()=>{img.hidden=true;const caption=img.closest('figure')?.querySelector('figcaption');if(caption)caption.textContent='参考照片仅保存在本地';};
+  const showLocalOnly=()=>{img.hidden=true;const caption=img.closest('figure')?.querySelector('figcaption');if(caption)caption.textContent='参考照片加载失败，请刷新重试';};
   img.addEventListener('error',showLocalOnly);
   if(img.complete&&!img.naturalWidth)showLocalOnly();
 });

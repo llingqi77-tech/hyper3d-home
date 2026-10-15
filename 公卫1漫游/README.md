@@ -21,4 +21,4 @@ npm run dev
 
 参考图：工作区根目录的 `公卫1.jpg`、`公卫1的洗手台.jpg`、`公卫1洗手台上的灯.jpg`。
 
-参考照片仅保存在本地，未上传公开仓库；缺少照片不影响三维漫游。`npm run build` 输出静态网页到 `dist/`。独立模型预览入口为 `/model-check.html`。上传仓库不等于部署 GitHub Pages。
+参考照片已按用户要求上传至 `public/references/`，本段对话上传的布局图、细节图和修改截图位于 `public/references/user-uploads/`，图片说明见其中的 `index.json`。`npm run build` 输出静态网页到 `dist/`。独立模型预览入口为 `/model-check.html`。上传仓库不等于部署 GitHub Pages。
