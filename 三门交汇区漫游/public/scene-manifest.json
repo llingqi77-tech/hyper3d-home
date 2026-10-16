@@ -1,0 +1,13 @@
+{
+  "id": "three-door-junction",
+  "units": "meters",
+  "dimensionsAreEstimated": true,
+  "coordinateSystem": "Y up; front doorway is children room; left is master bedroom; right is bathroom 1",
+  "room": {"width": 2.55, "depth": 2.10, "height": 2.72},
+  "objects": [
+    {"id":"junction-cabinet","file":"assets/junction-cabinet.glb","sizeXYZ":[0.96,1.09,0.38],"position":[1.025,0,-0.40],"rotationY":-1.5707963267948966},
+    {"id":"junction-pendant","file":"assets/junction-pendant.glb","sizeXYZ":[0.34,0.65,0.34],"position":[0,2.05,-0.10],"rotationY":0},
+    {"id":"junction-painting-left","file":"assets/junction-painting-left.glb","sizeXYZ":[0.40,0.45,0.035],"position":[-0.98,1.54,-0.969],"rotationY":0},
+    {"id":"junction-painting-right","file":"assets/junction-painting-right.glb","sizeXYZ":[0.43,0.57,0.035],"position":[1.195,1.50,-0.40],"rotationY":-1.5707963267948966}
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "imageMethod": "built-in image_gen",
+  "imagePrompts": [
+    {
+      "key": "junction-cabinet",
+      "name": "绿色双抽屉百叶柜",
+      "paths": [
+        "D:/3d家园/厕所门口的柜子.jpg"
+      ],
+      "prompt": "Use case: background-extraction. Extract ONLY the complete freestanding vintage green louvered cabinet from the reference photo as a clean isolated product reference for 3D reconstruction. Preserve the exact cabinet: distressed muted turquoise emerald green painted wood, dark walnut brown top slab with raised curved side rails, two small horizontal top drawers with black antique swing handles, two large lower louvered doors with black vertical pulls, thin aged gold edge trim, curved lower apron, short green turned feet. Complete full body including feet, no cropping. Remove ALL clutter/items on top, wall, outlet, red banner, door frames and floor. Empty clean wooden cabinet top. Mostly frontal view with a very slight view of right side. Preserve realistic narrow hallway cupboard proportions, wider than deep and taller than wide. Neutral soft light, actual transparent background, no text or added objects."
+    },
+    {
+      "key": "junction-pendant",
+      "name": "彩色玻璃卵形吊灯",
+      "paths": [
+        "D:/3d家园/客厅和主卧，儿童房，公卫1之间的区域.jpg"
+      ],
+      "prompt": "Use case: background-extraction. Reference photo shows a hanging light at top center. Extract and faithfully reconstruct ONLY that pendant light for a standalone 3D reference. Egg/barrel-shaped rounded stained-glass shade, cream translucent glass with large irregular ruby-red, purple and amber pebble-like glass spots, slim dark solder lines; small ring of blue green multicolor rectangles at bottom and warm amber underside. Thin dark suspension cable and tiny dark top cap, include small simple ceiling canopy. NO chandelier arms, NO tassels, NO lantern base; retain the simple egg silhouette seen in reference. Full object centered, neutral product light, transparent background. Remove ceiling, walls, paintings, doors, furniture, watermarks and captions."
+    },
+    {
+      "key": "junction-painting-left",
+      "name": "儿童房门左侧田野画",
+      "paths": [
+        "D:/3d家园/客厅和主卧，儿童房，公卫1之间的区域.jpg"
+      ],
+      "prompt": "Use case: background-extraction. Isolate ONLY the small wall painting at the FAR LEFT of the reference, to the LEFT of the children's bedroom doorway. Reconstruct it as a straight-on photograph of a single thin stretched canvas, nearly square portrait proportions width:height about 0.90:1. Preserve its recognizable painted landscape: dense red poppy flowers in lower foreground, green/yellow rolling farm fields, a few dark slender cypress trees and low distant buildings, blue sky with pale warm clouds. Painterly textured oil painting style as in photo, not a new scene. No ornate frame; just dark thin wrapped canvas edges. Show entire rectangular artwork front facing, very slight edge thickness, real transparent surrounding background. No doorway, wall, other painting, labels, watermarks or furniture."
+    },
+    {
+      "key": "junction-painting-right",
+      "name": "柜子上方村庄花田画",
+      "paths": [
+        "D:/3d家园/客厅和主卧，儿童房，公卫1之间的区域.jpg"
+      ],
+      "prompt": "Use case: background-extraction. Isolate ONLY the taller portrait wall painting to the RIGHT of the children's bedroom doorway and ABOVE the green cabinet, left of bathroom doorway. Reconstruct as a straight-on photograph of a single thin stretched canvas, portrait width:height about 0.75:1. Preserve original painted composition: bright red poppy flowers in foreground, warm ochre winding path through green and red fields leading toward a white/cream Mediterranean village with red roofs and dark cypress trees near upper area, blue sky with warm white clouds. Painterly impasto oil paint, keep original colors and landscape composition. No ornate frame, only subtle dark thin canvas edges. Entire artwork, slight physical edge thickness, actual transparent background. No room, lamp, cabinet, doorway, other painting, watermark or text."
+    }
+  ],
+  "jobs": [
+    {
+      "key": "junction-pendant",
+      "prompt": "Single isolated ceiling pendant light matching reference: cream stained-glass oval egg shaped shade with ruby red purple amber round pebble glass motifs, blue green amber rectangular glass border at open bottom, thin black cable and small ceiling canopy. Whole hanging fixture upright Y. NO surrounding walls, no base stand, no other objects. Preserve thin cable, round opening underneath and glass pattern.",
+      "generation_id": "e2ef6a9d-f006-4b4d-8ab6-6e368c78cb80",
+      "status": "completed",
+      "display_url": "https://hyper3d.ai/workspace/rodin/e2ef6a9d-f006-4b4d-8ab6-6e368c78cb80"
+    },
+    {
+      "key": "junction-painting-left",
+      "generation_id": "2e1dd4d5-898d-401c-bcb0-920640fb3f15",
+      "status": "completed",
+      "display_url": "https://hyper3d.ai/workspace/rodin/2e1dd4d5-898d-401c-bcb0-920640fb3f15",
+      "prompt": "Single complete thin rectangular stretched canvas wall painting, almost square portrait. Flat painted landscape texture with blue sky, cypress trees, fields and red poppies; simple dark narrow edges; front +Z, top +Y. No wall or stand."
+    },
+    {
+      "key": "junction-cabinet",
+      "prompt": "Single isolated vintage turquoise green cupboard matching reference exactly. Two drawers, two louvered doors, aged gold molding, black antique handles, brown wooden top with raised side rails, curved apron and turned green feet. Empty top. Complete furniture, front +Z, upright +Y. No room or other objects.",
+      "generation_id": "383cc17c-a7a9-490d-a8b0-227cb1c133d1",
+      "status": "completed",
+      "display_url": "https://hyper3d.ai/workspace/rodin/383cc17c-a7a9-490d-a8b0-227cb1c133d1"
+    },
+    {
+      "key": "junction-painting-right",
+      "prompt": "Single thin rectangular portrait canvas wall painting. Attached landscape is flat painted texture on front +Z, top +Y. Red poppies, winding path, village and blue sky. Thin dark wrapped edges and plain back. No 3D landscape, no wall, no stand.",
+      "generation_id": "dd0d9779-7b99-4fac-9d11-dd3a8eb094c4",
+      "status": "completed",
+      "display_url": "https://hyper3d.ai/workspace/rodin/dd0d9779-7b99-4fac-9d11-dd3a8eb094c4"
+    }
+  ]
+}
