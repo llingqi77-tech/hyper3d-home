@@ -15,7 +15,7 @@ const light=new T.PointLight('#fff1cd',1.2,7,2);light.position.set(0,2.47,0);sce
 const architecture=room(scene);
 const specs=[
  {id:'wardrobe',size:[3.24,2.38,.55],position:[-1.485,0,-.05],yaw:Math.PI/2},
- {id:'desk',size:[.98,.75,.55],position:[1.25,0,-1.47],yaw:0},
+ {id:'desk',size:[.98,.75,.55],position:[1.49,0,-1.25],yaw:-Math.PI/2},
  {id:'bunk-bed',size:[2.10,1.82,1.40],position:[1.08,0,.48],yaw:-Math.PI/2},
  {id:'ceiling-light',size:[.46,.20,.46],position:[0,2.52,0],yaw:0},
  {id:'curtains',native:true,position:[R.windowX,.70,-1.73],yaw:0}
@@ -31,3 +31,4 @@ assemble();
 function resize(){renderer.setSize(host.clientWidth,host.clientHeight);camera.aspect=host.clientWidth/host.clientHeight;camera.updateProjectionMatrix();}new ResizeObserver(resize).observe(host);resize();
 let dirty=true;controls.addEventListener('change',()=>{dirty=true;});new ResizeObserver(()=>{dirty=true;}).observe(host);new MutationObserver(()=>{dirty=true;}).observe(host,{attributes:true});
 function frame(){requestAnimationFrame(frame);controls.update();if(!dirty||document.hidden)return;const w=architecture.walls;w.ceiling.visible=camera.position.y<R.h-.03;w.front.visible=camera.position.z<R.d/2-.03;w.back.visible=camera.position.z>-R.d/2;w.left.visible=camera.position.x>-R.w/2;w.right.visible=camera.position.x<R.w/2;renderer.render(scene,camera);dirty=false;}document.addEventListener('visibilitychange',()=>{dirty=true;});frame();
+

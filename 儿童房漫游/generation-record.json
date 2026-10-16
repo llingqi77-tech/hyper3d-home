@@ -66,5 +66,5 @@
       "role": "generic wood and panel reference, eight-door count from user"
     }
   ],
-  "wardrobeCorrection": "Raw Hyper3D result had four doors and drawers; replaced serving GLB with exact 4 upper + 4 lower door geometry from export-wardrobe.mjs; original retained."
+  "wardrobeCorrection": "User correction: eight full-height doors in eight columns; not four tall doors plus four upper doors. Serving GLB regenerated; original Hyper3D retained."
 }

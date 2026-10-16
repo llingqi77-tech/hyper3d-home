@@ -9,14 +9,14 @@ const dark=new T.MeshStandardMaterial({color:'#4f301d',roughness:.75});
 function box(w,h,d,x,y,z,m=wood,name='wood'){const o=new T.Mesh(new T.BoxGeometry(w,h,d),m);o.name=name;o.position.set(x,y,z);g.add(o);return o;}
 const W=3.24,H=2.38,D=.55;
 box(W,.10,D,0,.05,0);box(W,.06,D,0,H-.03,0);box(.04,H-.1,D,-W/2+.02,H/2,0);box(.04,H-.1,D,W/2-.02,H/2,0);box(W-.08,H-.15,.035,0,H/2,-D/2+.0175);box(W-.07,.035,D,0,1.82,0);
-for(let col=0;col<4;col++){
- const x=-W/2+.045+(col+.5)*(W-.09)/4,w=(W-.09)/4-.012;
- for(const [row,bottom,top] of [['lower',.12,1.80],['upper',1.84,2.30]]){
+for(let col=0;col<8;col++){
+ const x=-W/2+.045+(col+.5)*(W-.09)/8,w=(W-.09)/8-.012;
+ for(const [row,bottom,top] of [['full',.12,2.30]]){
   const h=top-bottom,y=(bottom+top)/2;box(w,h,.035,x,y,.258,wood,`${row}-door-${col+1}`);
   box(w-.11,h-.10,.012,x,y,.282,wood,'inset-panel');
   for(const dx of [-w/2+.025,w/2-.025])box(.035,h-.02,.025,x+dx,y,.291);
   for(const yy of [bottom+.025,top-.025])box(w-.02,.035,.025,x,yy,.291);
-  const hx=x+(col%2===0?1:-1)*(w/2-.085),hy=row==='lower'?1.04:1.96;
+  const hx=x+(col%2===0?1:-1)*(w/2-.085),hy=1.04;
   box(.022,.13,.028,hx,hy,.322,dark,'wood-handle');
  }
 }
@@ -31,4 +31,5 @@ const ihdr=Buffer.alloc(13);ihdr.writeUInt32BE(w);ihdr.writeUInt32BE(h,4);ihdr[8
 const png=Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),chunk('IHDR',ihdr),chunk('IDAT',deflateSync(pixels)),chunk('IEND',Buffer.alloc(0))]);
 const padded=Buffer.concat([bin,Buffer.alloc((4-bin.length%4)%4)]);j.bufferViews.push({buffer:0,byteOffset:padded.length,byteLength:png.length});j.images=[{bufferView:j.bufferViews.length-1,mimeType:'image/png'}];j.samplers=[{magFilter:9729,minFilter:9987,wrapS:10497,wrapT:10497}];j.textures=[{source:0,sampler:0}];for(const m of j.materials)if(m.name==='natural-brown-wood')m.pbrMetallicRoughness.baseColorTexture={index:0};
 const b=Buffer.concat([padded,png,Buffer.alloc((4-png.length%4)%4)]);j.buffers[0].byteLength=b.length;let jt=Buffer.from(JSON.stringify(j));jt=Buffer.concat([jt,Buffer.alloc((4-jt.length%4)%4,32)]);const head=Buffer.alloc(20);head.writeUInt32LE(0x46546c67);head.writeUInt32LE(2,4);head.writeUInt32LE(28+jt.length+b.length,8);head.writeUInt32LE(jt.length,12);head.writeUInt32LE(0x4e4f534a,16);const bh=Buffer.alloc(8);bh.writeUInt32LE(b.length);bh.writeUInt32LE(0x004e4942,4);await writeFile(new URL('./public/models/wardrobe.glb',import.meta.url),Buffer.concat([head,jt,bh,b]));
-console.log('Exported exact eight-door wardrobe, four upper and four lower doors');
+console.log('Exported exact eight-door wardrobe, eight full-height doors');
+
