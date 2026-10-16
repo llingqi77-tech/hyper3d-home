@@ -1,0 +1,70 @@
+{
+  "imageMethod": "builtin image_gen",
+  "imageRequests": [
+    {
+      "key": "bunk-bed",
+      "paths": [
+        "D:/3d家园/儿童房的床.jpg"
+      ],
+      "prompt": "Use case: background-extraction. Extract the complete solid natural warm brown pine bunk bed from reference as an isolated 3D modeling product reference. Remove all boxes, bags, clothes, bedding clutter, walls and floor. Reconstruct complete hidden structure consistent with photo. IMPORTANT upper bunk is narrower (90 cm) than lower bunk (135 cm); both 200 cm long, rear long edges aligned, so lower bed projects forward. Sturdy square wood posts and simple horizontal wooden upper safety rails, same natural brown wood everywhere, visible wood grain and knots, no paint. Include simple wooden ladder at one short end, plain thin cream mattresses on both levels. Show whole bed in clear three-quarter view, lower width visibly greater. Total height 180 cm. Transparent background. No other furniture, no text."
+    },
+    {
+      "key": "ceiling-light",
+      "paths": [
+        "C:/Users/admin/.codex/attachments/cf13adb2-05ac-4761-b683-d61c4da65e78/image-2.png"
+      ],
+      "prompt": "Use case: background-extraction. Extract ONLY the exact flush mount circular dome ceiling light from reference. Cream milk glass shallow hemispherical shade, thin curving dark radial solder lines, yellow green stained glass leaf border, tiny red and green floral accents around edge, small multicolored petal ring around central brass finial. Single low-profile ceiling fixture, no hanging cable. Show full fixture isolated from slightly below at an angle showing decorated underside and shallow dome depth. Faithful original patterns, transparent background, neutral lighting, no ceiling, no text, no watermark."
+    }
+  ],
+  "jobs": [
+    {
+      "key": "wardrobe",
+      "prompt": "Single isolated fitted wooden wardrobe, FOUR columns, each column has ONE tall lower hinged door and ONE short upper cabinet door, EXACTLY EIGHT doors total (4 large lower + 4 small upper), no drawers. Flat rectangular simple panel fronts, small brown wooden handles. Entire piece solid natural warm brown wood with visible grain, NO painted white or colored parts, NO mirrors, no decor. Width 320 cm, height 240 cm, depth 55 cm. Front +Z, upright +Y, long width X. Straight clean carpentry. No room or background.",
+      "result": {
+        "generation_id": "0102e398-948c-475c-8ec6-216fb697bec7",
+        "status": "completed",
+        "display_url": "https://hyper3d.ai/workspace/rodin/0102e398-948c-475c-8ec6-216fb697bec7"
+      }
+    },
+    {
+      "key": "desk",
+      "prompt": "Single isolated simple traditional solid warm medium brown pine wooden children's writing desk, rectangular top 100 cm wide 55 cm deep at 74 cm tall, four straight square wooden legs and two small shallow drawers with wooden handles beneath tabletop, open knee space. Entire item natural unpainted brown wood with subtle grain, no white panels, no black metal. Empty top. No chair, no surrounding objects. Front +Z, upright +Y.",
+      "result": {
+        "generation_id": "1fc6cf0c-3819-46d4-b051-3bb8c0cd315a",
+        "status": "completed",
+        "display_url": "https://hyper3d.ai/workspace/rodin/1fc6cf0c-3819-46d4-b051-3bb8c0cd315a"
+      }
+    },
+    {
+      "key": "bunk-bed",
+      "prompt": "Single isolated natural brown pine bunk bed exactly matching reference. IMPORTANT upper mattress width 90cm and lower mattress width 135cm, both length 200cm. Rear long edges aligned, lower bed extends forward 45cm. Open space between levels, wooden safety rails and ladder, thin ivory mattresses. Remove background completely, no backdrop mesh, no other objects. Long length X, front +Z, upright Y. Complete feet.",
+      "result": {
+        "generation_id": "f98cd283-e838-4eae-8ae4-d37e721ec83c",
+        "status": "completed",
+        "display_url": "https://hyper3d.ai/workspace/rodin/f98cd283-e838-4eae-8ae4-d37e721ec83c"
+      }
+    },
+    {
+      "key": "ceiling-light",
+      "prompt": "Single shallow round flush mount ceiling light from reference: cream glass dome, dark thin radial curves, yellow green leaves border and red green tiny floral accents, brass center finial. Horizontal circular fixture in XZ plane, flat ceiling attachment at TOP +Y and decorated convex underside facing DOWN -Y. No wire, no wall, no ceiling mesh, no stand.",
+      "result": {
+        "generation_id": "afdc726b-1271-4d4f-b68f-8a80b66e5854",
+        "status": "completed",
+        "display_url": "https://hyper3d.ai/workspace/rodin/afdc726b-1271-4d4f-b68f-8a80b66e5854"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "item": "desk",
+      "url": "https://www.muji.com/jp/ja/store/cmdty/detail/4550344873939",
+      "role": "generic construction reference, not the user's exact desk"
+    },
+    {
+      "item": "wardrobe",
+      "url": "https://www.woodlandsfurniture.co.uk/Solid-Pine-Wardrobes",
+      "role": "generic wood and panel reference, eight-door count from user"
+    }
+  ],
+  "wardrobeCorrection": "Raw Hyper3D result had four doors and drawers; replaced serving GLB with exact 4 upper + 4 lower door geometry from export-wardrobe.mjs; original retained."
+}

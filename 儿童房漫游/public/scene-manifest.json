@@ -1,0 +1,14 @@
+{
+  "id":"children-room",
+  "units":"meters",
+  "dimensionsAreEstimated":true,
+  "room":{"width":3.66,"depth":3.63,"height":2.72},
+  "layout":"Door lower left; wardrobe along left wall; bunk bed lower right; desk upper right; bay window upper wall; light ceiling center",
+  "objects":[
+    {"id":"wardrobe","file":"models/wardrobe.glb","sizeXYZ":[3.24,2.38,0.55],"position":[-1.485,0,-0.05],"rotationY":1.5707963267948966,"doors":8,"method":"exact parametric correction"},
+    {"id":"desk","file":"models/desk.glb","sizeXYZ":[0.98,0.75,0.55],"position":[1.25,0,-1.47],"rotationY":0,"method":"Hyper3D"},
+    {"id":"bunk-bed","file":"models/bunk-bed.glb","sizeXYZ":[2.10,1.82,1.40],"position":[1.08,0,0.48],"rotationY":-1.5707963267948966,"centralSectionWidths":{"lower":1.383,"upper":0.994},"method":"Hyper3D"},
+    {"id":"ceiling-light","file":"models/ceiling-light.glb","sizeXYZ":[0.46,0.20,0.46],"position":[0,2.52,0],"sourceRotationXBeforeFit":1.5707963267948966,"method":"Hyper3D"},
+    {"id":"curtains","file":"models/curtains.glb","nativeSize":true,"position":[0.24,0.70,-1.73],"method":"parametric pleated gradient cloth"}
+  ]
+}
