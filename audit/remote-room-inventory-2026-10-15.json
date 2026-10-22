@@ -1,0 +1,583 @@
+{
+  "commit": "04cc6ac8354814e85f59bbd38a040f558087bb18",
+  "scope": "Remote source and active GLB structural audit; not a visual completeness certification",
+  "rooms": [
+    {
+      "room": "厨房漫游",
+      "entry": "index.html",
+      "storedGlbs": 21,
+      "activeGlbs": 6,
+      "models": [
+        {
+          "file": "厨房漫游/public/assets/entry-lantern.glb",
+          "exists": true,
+          "bytes": 7803396,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "厨房漫游/public/assets/white-hood-v2.glb",
+          "exists": true,
+          "bytes": 11729576,
+          "validHeader": true,
+          "meshes": 2,
+          "primitives": 2,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "厨房漫游/public/assets/two-burner-hob-v2.glb",
+          "exists": true,
+          "bytes": 6459184,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "厨房漫游/public/assets/nonstick-pan-v2.glb",
+          "exists": true,
+          "bytes": 7844440,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "厨房漫游/public/assets/pressure-cooker-v2.glb",
+          "exists": true,
+          "bytes": 8140488,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "厨房漫游/public/assets/sink-upper-cabinet-v2.glb",
+          "exists": true,
+          "bytes": 6942428,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        }
+      ]
+    },
+    {
+      "room": "公卫1漫游",
+      "entry": "index.html",
+      "storedGlbs": 5,
+      "activeGlbs": 5,
+      "models": [
+        {
+          "file": "公卫1漫游/public/assets/cabinet-isolated-v3.glb",
+          "exists": true,
+          "bytes": 11498412,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫1漫游/public/assets/basin-isolated-v3.glb",
+          "exists": true,
+          "bytes": 9498340,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫1漫游/public/assets/double-lamp.glb",
+          "exists": true,
+          "bytes": 5330688,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫1漫游/public/assets/toilet.glb",
+          "exists": true,
+          "bytes": 3138516,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫1漫游/public/assets/shower-black-v2.glb",
+          "exists": true,
+          "bytes": 11428244,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        }
+      ]
+    },
+    {
+      "room": "公卫2漫游",
+      "entry": "index.html",
+      "storedGlbs": 50,
+      "activeGlbs": 23,
+      "models": [
+        {
+          "file": "公卫2漫游/public/assets/cabinet.glb",
+          "exists": true,
+          "bytes": 2707708,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/basin-v2.glb",
+          "exists": true,
+          "bytes": 857796,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/faucet.glb",
+          "exists": true,
+          "bytes": 689472,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/mirror.glb",
+          "exists": true,
+          "bytes": 2167876,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/mirror-shelf.glb",
+          "exists": true,
+          "bytes": 2754532,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/pendant.glb",
+          "exists": true,
+          "bytes": 871764,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/toilet.glb",
+          "exists": true,
+          "bytes": 1694316,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/shower-black-v2.glb",
+          "exists": true,
+          "bytes": 4686364,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/window-v2.glb",
+          "exists": true,
+          "bytes": 2766244,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/curtain.glb",
+          "exists": true,
+          "bytes": 2042196,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/rod.glb",
+          "exists": true,
+          "bytes": 564832,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/towel-bar.glb",
+          "exists": true,
+          "bytes": 861768,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/drain.glb",
+          "exists": true,
+          "bytes": 895148,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/socket.glb",
+          "exists": true,
+          "bytes": 600932,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/fan.glb",
+          "exists": true,
+          "bytes": 1479580,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/cup.glb",
+          "exists": true,
+          "bytes": 591956,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/toothbrush.glb",
+          "exists": true,
+          "bytes": 1056012,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/soap.glb",
+          "exists": true,
+          "bytes": 673060,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/plastic-basin.glb",
+          "exists": true,
+          "bytes": 658320,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/towel.glb",
+          "exists": true,
+          "bytes": 830832,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/cloth.glb",
+          "exists": true,
+          "bytes": 692760,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/small-cup.glb",
+          "exists": true,
+          "bytes": 555980,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "公卫2漫游/public/assets/toothpaste.glb",
+          "exists": true,
+          "bytes": 710112,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        }
+      ]
+    },
+    {
+      "room": "餐厅交互",
+      "entry": "index.html",
+      "storedGlbs": 17,
+      "activeGlbs": 8,
+      "models": [
+        {
+          "file": "餐厅交互/assets/餐边柜_已核对.glb",
+          "exists": true,
+          "bytes": 9540572,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "餐厅交互/assets/鞋柜凳.glb",
+          "exists": true,
+          "bytes": 7842068,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "餐厅交互/assets/餐厅窗户.glb",
+          "exists": true,
+          "bytes": 11771020,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "餐厅交互/assets/餐厅挂钟.glb",
+          "exists": true,
+          "bytes": 15225872,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "餐厅交互/assets/餐厅相框.glb",
+          "exists": true,
+          "bytes": 10596932,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "餐厅交互/assets/餐厅吊扇.glb",
+          "exists": true,
+          "bytes": 13085400,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "餐厅交互/assets/温莎椅_单体.glb",
+          "exists": true,
+          "bytes": 10463600,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "餐厅交互/assets/餐桌_独立彩色.glb",
+          "exists": true,
+          "bytes": 14787204,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        }
+      ]
+    },
+    {
+      "room": "客厅漫游",
+      "entry": "index.html",
+      "storedGlbs": 0,
+      "activeGlbs": 0,
+      "models": []
+    },
+    {
+      "room": "客房漫游",
+      "entry": "dist/index.html",
+      "storedGlbs": 22,
+      "activeGlbs": 11,
+      "models": [
+        {
+          "file": "客房漫游/dist/models/lamp.glb",
+          "exists": true,
+          "bytes": 3394852,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "客房漫游/dist/models/fan.glb",
+          "exists": true,
+          "bytes": 3903732,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "客房漫游/dist/models/bamboo.glb",
+          "exists": true,
+          "bytes": 3915512,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "客房漫游/dist/models/cactus.glb",
+          "exists": true,
+          "bytes": 4864396,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "客房漫游/dist/models/chair.glb",
+          "exists": true,
+          "bytes": 2336972,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "客房漫游/dist/models/quilt.glb",
+          "exists": true,
+          "bytes": 4638592,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "客房漫游/dist/models/pillow.glb",
+          "exists": true,
+          "bytes": 4195072,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "客房漫游/dist/models/monitor.glb",
+          "exists": true,
+          "bytes": 2075680,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "客房漫游/dist/models/keyboard.glb",
+          "exists": true,
+          "bytes": 2367312,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "客房漫游/dist/models/pencils.glb",
+          "exists": true,
+          "bytes": 4492780,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        },
+        {
+          "file": "客房漫游/dist/models/books.glb",
+          "exists": true,
+          "bytes": 3700584,
+          "validHeader": true,
+          "meshes": 1,
+          "primitives": 1,
+          "externalResources": [],
+          "externalMissing": []
+        }
+      ]
+    }
+  ]
+}

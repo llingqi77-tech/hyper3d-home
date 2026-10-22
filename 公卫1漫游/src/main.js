@@ -260,7 +260,7 @@ renderList();
 
 const loader=new GLTFLoader(); let loaded=0;
 function loadAsset(asset){
-  return new Promise(resolve=>loader.load(`/assets/${asset.file}`,gltf=>{
+  return new Promise(resolve=>loader.load(`${import.meta.env.BASE_URL}assets/${asset.file}`,gltf=>{
     const model=gltf.scene; model.updateMatrixWorld(true);
     let bounds=new THREE.Box3().setFromObject(model); const source=bounds.getSize(new THREE.Vector3());
     const center=bounds.getCenter(new THREE.Vector3());

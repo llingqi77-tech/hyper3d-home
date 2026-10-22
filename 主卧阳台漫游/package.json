@@ -1,0 +1,10 @@
+{
+  "name": "main-bedroom-balcony-tour",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "models": "node tools/export-models.mjs",
+    "build": "node ../厨房漫游/node_modules/vite/bin/vite.js build",
+    "dev": "node ../厨房漫游/node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5190"
+  }
+}

@@ -1,5 +1,9 @@
 node_modules/
 dist/
+!主卧漫游/dist/
+!主卧漫游/dist/**
+!主卧阳台漫游/dist/
+!主卧阳台漫游/dist/**
 .vite/
 coverage/
 *.log

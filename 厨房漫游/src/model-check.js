@@ -15,7 +15,7 @@ scene.add(new THREE.HemisphereLight(0xffffff, 0x777788, 2));
 const pmrem = new THREE.PMREMGenerator(renderer); const room = new RoomEnvironment(); scene.environment = pmrem.fromScene(room).texture; room.dispose(); pmrem.dispose();
 for (const [x,y,z,p] of [[3,4,5,2],[-3,2,0,1]]) { const light = new THREE.DirectionalLight(0xffffff,p); light.position.set(x,y,z); scene.add(light); }
 const controls = new OrbitControls(camera, renderer.domElement); controls.enableDamping = true;
-new GLTFLoader().load('/assets/' + file, gltf => {
+new GLTFLoader().load(import.meta.env.BASE_URL + 'assets/' + file, gltf => {
   const model = gltf.scene; model.updateMatrixWorld(true);
   const box = new THREE.Box3().setFromObject(model), size = box.getSize(new THREE.Vector3()), center = box.getCenter(new THREE.Vector3());
   console.log('MODEL_BOUNDS', file, JSON.stringify(size));

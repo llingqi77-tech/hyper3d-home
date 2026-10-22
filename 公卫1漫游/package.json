@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 127.0.0.1 --port 5181",
-    "build": "vite build"
+    "dev": "node ../厨房漫游/node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5181",
+    "build": "node ../厨房漫游/node_modules/vite/bin/vite.js build"
   },
   "dependencies": {
     "three": "0.170.0",

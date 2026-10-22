@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#eae7de">
+  <title>主卧 · 木色与花影</title>
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <main class="app">
+    <div id="scene" role="img" aria-label="主卧三维场景：木床、四门衣柜、床头柜、木书桌、花纹墙、儿童房同款窗帘和阳台推拉门"></div>
+    <header class="topbar">
+      <a class="brand" href="../../index.html" aria-label="返回全屋导览"><span class="brand-icon">居</span><span><strong>主卧漫游</strong><small>MAIN BEDROOM · 3D TOUR</small></span></a>
+      <span class="top-note">木色 · 花影 · 晚灯</span>
+      <a class="balcony-link" href="../../主卧阳台漫游/dist/index.html">进入阳台 →</a>
+    </header>
+    <section class="intro" aria-label="房间简介">
+      <span class="eyebrow">SPACE 09 / MAIN BEDROOM</span>
+      <h1>住进一室<br>温柔花影。</h1>
+      <p>四门衣柜贴紧左墙与后墙，柜门朝向右侧的床；两只床头柜分列床头，儿童房同款白色格纹与绿色花边窗帘在右侧，左下入户，右下是木书桌。</p>
+    </section>
+    <aside class="details" aria-label="空间物件">
+      <span class="eyebrow">ROOM NOTES</span>
+      <h2>主卧里的细节</h2>
+      <ul>
+        <li><span>01</span> 左后角四门木柜，柜门向右朝床</li>
+        <li><span>02</span> 木床与绿色床品</li>
+        <li><span>03</span> 两张木质床头柜</li>
+        <li><span>04</span> 公卫 2 同款吊灯 × 2</li>
+        <li><span>05</span> 儿童房原款白格布与绿色花边窗帘</li>
+        <li><span>06</span> 四扇玻璃推拉门</li>
+        <li><span>07</span> 右下角木质书桌</li>
+        <li><span>08</span> 左下入口木质大门</li>
+      </ul>
+      <p class="estimate">房间纵深与家具尺寸按展示比例估算；阳台外景使用已有参考照片。</p>
+    </aside>
+    <div class="actions" aria-label="房间交互">
+      <button id="light" aria-pressed="false">点亮床头灯</button>
+      <button id="curtain" aria-pressed="true">拉开窗帘</button>
+      <button id="door" aria-pressed="false">推开玻璃门</button>
+      <button id="entry-door" aria-pressed="false">打开木门</button>
+    </div>
+    <nav class="views" aria-label="视角切换">
+      <span id="view-label">主卧全景</span>
+      <button data-view="overview" class="active" aria-pressed="true">全景</button>
+      <button data-view="entry" aria-pressed="false">门口</button>
+      <button data-view="bedside" aria-pressed="false">床侧</button>
+      <button data-view="wardrobe" aria-pressed="false">衣柜</button>
+      <button data-view="balcony" aria-pressed="false">阳台方向</button>
+    </nav>
+    <div class="hint">拖动旋转 · 滚轮缩放 · 点击按钮切换视角</div>
+    <div id="loading" role="status">正在布置主卧…</div>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

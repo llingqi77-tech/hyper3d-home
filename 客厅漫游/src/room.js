@@ -383,7 +383,7 @@ export function createRoom(scene) {
   painting(0.6, 2, -4.87, 0.82, 0.69, 0, 1);
   const originalArt = painting(-3.37, 1.95, -1.22, 0.84, 1.12, Math.PI / 2);
   // Sample the original painting from the supplied photo; keep it on a true 3D wall.
-  new THREE.TextureLoader().load("/references/desk.jpg", (texture) => {
+  new THREE.TextureLoader().load(import.meta.env.BASE_URL + "references/desk.jpg", (texture) => {
     texture.colorSpace = THREE.SRGBColorSpace;
     texture.anisotropy = 8;
     const panel = originalArt;

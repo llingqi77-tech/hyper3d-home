@@ -1,13 +1,55 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=./餐厅交互/">
+  <meta name="theme-color" content="#f5f1e9">
   <title>家的 3D 导览</title>
   <link rel="icon" href="data:,">
+  <style>
+    :root { color-scheme: light; --ink:#2e2a25; --muted:#766d63; --paper:#f5f1e9; --card:#fffdf9; --line:#e4ddd2; --accent:#9b6b45; --accent-soft:#f0e3d5; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; color:var(--ink); background:radial-gradient(circle at 12% 0%, #fffaf1 0, transparent 32rem), var(--paper); font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+    main { width:min(1120px,calc(100% - 40px)); margin:0 auto; padding:72px 0 64px; }
+    header { max-width:720px; margin-bottom:42px; }
+    .eyebrow { color:var(--accent); font-size:12px; letter-spacing:.18em; font-weight:700; }
+    h1 { margin:12px 0 14px; font-family:Georgia,"Songti SC",serif; font-size:clamp(40px,7vw,76px); font-weight:500; line-height:1; }
+    header p { margin:0; color:var(--muted); font-size:17px; line-height:1.8; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .card { display:flex; min-height:170px; flex-direction:column; justify-content:space-between; padding:24px; color:inherit; text-decoration:none; background:var(--card); border:1px solid var(--line); border-radius:18px; box-shadow:0 10px 30px rgb(83 62 42 / 5%); transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease; }
+    .card:hover,.card:focus-visible { transform:translateY(-3px); border-color:var(--accent); box-shadow:0 14px 34px rgb(83 62 42 / 12%); outline:none; }
+    .number { color:var(--accent); font-size:12px; letter-spacing:.12em; }
+    h2 { margin:18px 0 8px; font-size:22px; font-weight:650; }
+    .desc { margin:0; color:var(--muted); font-size:14px; line-height:1.6; }
+    .open { align-self:flex-end; margin-top:18px; color:var(--accent); font-size:14px; font-weight:650; }
+    .pending { min-height:auto; grid-column:1 / -1; padding:18px 22px; background:var(--accent-soft); border-color:#e7cdb6; box-shadow:none; }
+    .pending h2 { display:inline; margin:0 10px 0 0; font-size:16px; }
+    .pending .desc { display:inline; }
+    footer { margin-top:30px; color:var(--muted); font-size:12px; }
+    @media (max-width:800px) { main { padding-top:48px; } .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:520px) { main { width:min(100% - 28px,420px); } .grid { grid-template-columns:1fr; } .pending { grid-column:auto; } }
+  </style>
 </head>
 <body>
-  <p>正在进入 <a href="./餐厅交互/">餐厅与客厅 3D 导览</a>……</p>
+  <main>
+    <header>
+      <div class="eyebrow">HOME 3D TOUR</div>
+      <h1>家的 3D 导览</h1>
+      <p>从这里进入当前已经完成的每个空间。点击卡片即可打开对应的独立网页。</p>
+    </header>
+    <section class="grid" aria-label="已生成的 3D 网页">
+      <a class="card" href="./餐厅交互/index.html"><div><div class="number">01</div><h2>餐厅与客厅</h2><p class="desc">合并导览版，包含从门外进入、自由漫游和俯瞰视角。</p></div><span class="open">打开网页 →</span></a>
+      <a class="card" href="./客厅漫游/dist/index.html"><div><div class="number">02</div><h2>客厅</h2><p class="desc">客厅独立第一人称漫游版。</p></div><span class="open">打开网页 →</span></a>
+      <a class="card" href="./厨房漫游/dist/index.html"><div><div class="number">03</div><h2>厨房</h2><p class="desc">厨房空间与物件细节漫游。</p></div><span class="open">打开网页 →</span></a>
+      <a class="card" href="./儿童房漫游/dist/index.html"><div><div class="number">04</div><h2>儿童房</h2><p class="desc">浅粉墙、双层床、衣柜和书桌的完整场景。</p></div><span class="open">打开网页 →</span></a>
+      <a class="card" href="./客房漫游/dist/index.html"><div><div class="number">05</div><h2>客房</h2><p class="desc">已生成的构建版客房三维漫游页面。</p></div><span class="open">打开网页 →</span></a>
+      <a class="card" href="./公卫1漫游/dist/index.html"><div><div class="number">06</div><h2>公卫 1</h2><p class="desc">洗手台、马桶、淋浴和灯具的独立场景。</p></div><span class="open">打开网页 →</span></a>
+      <a class="card" href="./公卫2漫游/dist/index.html"><div><div class="number">07</div><h2>公卫 2</h2><p class="desc">卫浴空间与物件细节漫游。</p></div><span class="open">打开网页 →</span></a>
+      <a class="card" href="./三门交汇区漫游/dist/index.html"><div><div class="number">08</div><h2>三门交汇区</h2><p class="desc">主卧、儿童房、公卫 1 之间的交汇空间。</p></div><span class="open">打开网页 →</span></a>
+      <a class="card" href="./主卧漫游/dist/index.html"><div><div class="number">09</div><h2>主卧</h2><p class="desc">木床与绿色床品、四门衣柜、儿童房同款窗帘与完整阳台。</p></div><span class="open">打开网页 →</span></a>
+      <a class="card" href="./主卧阳台漫游/dist/index.html"><div><div class="number">10</div><h2>主卧阳台</h2><p class="desc">紫花布罩洗衣机、水桶、三层花架，以及带水龙头、肥皂盒和搓衣板的洗衣台。</p></div><span class="open">打开网页 →</span></a>
+    </section>
+    <footer>当前共 10 个已生成网页入口。建议双击根目录的“启动全屋3D.cmd”后访问本页。</footer>
+  </main>
 </body>
 </html>

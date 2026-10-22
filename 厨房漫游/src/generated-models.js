@@ -20,7 +20,7 @@ export async function loadGeneratedModels(scene, kitchen, onProgress) {
     while(queue.length) {
       const spec=queue.shift();
       try {
-        const gltf=await loader.loadAsync('/assets/'+spec.file), model=gltf.scene;
+        const gltf=await loader.loadAsync(import.meta.env.BASE_URL+'assets/'+spec.file), model=gltf.scene;
         model.updateMatrixWorld(true);
         const bounds=new THREE.Box3().setFromObject(model), size=bounds.getSize(new THREE.Vector3()), center=bounds.getCenter(new THREE.Vector3());
         const scale=Math.min(...spec.size.map((n,i)=>n/Math.max(size.getComponent(i),.001)));

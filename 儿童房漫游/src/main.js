@@ -16,7 +16,9 @@ const architecture=room(scene);
 const specs=[
  {id:'wardrobe',size:[3.24,2.38,.55],position:[-1.485,0,-.05],yaw:Math.PI/2},
  {id:'desk',size:[.98,.75,.55],position:[1.49,0,-1.25],yaw:-Math.PI/2},
- {id:'bunk-bed',size:[2.10,1.82,1.40],position:[1.08,0,.48],yaw:-Math.PI/2},
+ {id:'bunk-bed-v2',native:true,position:[1.08,0,.48],yaw:-Math.PI/2},
+ {id:'wood-chair',native:true,position:[.82,0,-1.25],yaw:Math.PI/2},
+ {id:'mountain-bike',native:true,position:[-.63,0,-.70],yaw:Math.PI/2},
  {id:'ceiling-light',size:[.46,.20,.46],position:[0,2.52,0],yaw:0},
  {id:'curtains',native:true,position:[R.windowX,.70,-1.73],yaw:0}
 ];

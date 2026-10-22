@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">厨房物件与摆放布局（长宽方向已调整）</title>
+  <desc id="desc">灶台所在后墙为短边，东西两侧台面沿长边延伸，入口在南侧。</desc>
+  <defs><style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#202a32}.small{font-size:14px}.label{font-size:17px;font-weight:600}.title{font-size:28px;font-weight:700}.sub{font-size:15px;fill:#53616b}
+    .room{fill:#fbfaf7;stroke:#26343c;stroke-width:5}.counter{fill:#d9c7a4;stroke:#816e4b;stroke-width:2}.cab{fill:#f4f0e9;stroke:#a49a8b;stroke-width:2}.fixture{fill:#b9c5c9;stroke:#4d6068;stroke-width:2}.loose{fill:#f7e7c9;stroke:#a67e3f;stroke-width:2}.guide{stroke:#78858c;stroke-width:1.5;stroke-dasharray:7 6}
+  </style></defs>
+  <rect width="1200" height="760" fill="#f4f6f5"/>
+  <text x="48" y="52" class="title">厨房物件与摆放布局</text>
+  <text x="49" y="80" class="sub">方向已按确认调整｜灶台后墙为短边，东西侧台面为长边｜尺寸按户型图与照片比例估算</text>
+  <text x="260" y="116" class="label">北｜后墙 · 灶台短边（约 2.06 m）</text>
+  <rect x="145" y="130" width="360" height="540" class="room"/>
+  <rect x="145" y="130" width="360" height="70" class="counter"/>
+  <rect x="145" y="200" width="66" height="470" class="counter"/>
+  <rect x="439" y="200" width="66" height="470" class="counter"/>
+  <rect x="167" y="138" width="78" height="48" rx="4" class="cab"/>
+  <rect x="372" y="138" width="105" height="48" rx="4" class="cab"/>
+  <text x="177" y="168" class="small">02 吊柜</text><text x="388" y="168" class="small">02 玻璃格柜</text>
+  <rect x="257" y="139" width="106" height="40" rx="7" class="fixture"/>
+  <circle cx="286" cy="158" r="10" fill="none" stroke="#35474e" stroke-width="3"/><circle cx="335" cy="158" r="10" fill="none" stroke="#35474e" stroke-width="3"/>
+  <text x="271" y="197" class="small">04 双头灶</text><text x="270" y="126" class="small">03 油烟机</text>
+  <ellipse cx="309" cy="157" rx="18" ry="9" class="loose"/><text x="296" y="147" class="small">08 锅</text>
+  <text x="112" y="365" class="label" transform="rotate(-90 112 365)">西侧长边台面</text>
+  <text x="542" y="365" class="label" transform="rotate(90 542 365)">东侧长边台面</text>
+  <rect x="151" y="224" width="54" height="60" rx="8" class="loose"/><text x="155" y="303" class="small">09 油瓶</text>
+  <rect x="448" y="224" width="47" height="57" rx="3" class="loose"/><text x="445" y="301" class="small">12 砧板</text>
+  <rect x="450" y="320" width="42" height="52" rx="12" class="loose"/><text x="442" y="392" class="small">10 厨具筒</text>
+  <rect x="448" y="414" width="45" height="40" rx="5" class="loose"/><text x="443" y="472" class="small">11 调料</text>
+  <path d="M450 485h40M450 516h40M454 485v31M486 485v31" fill="none" stroke="#576a70" stroke-width="4"/><text x="443" y="540" class="small">13 碗碟架</text>
+  <rect x="444" y="558" width="55" height="82" rx="8" fill="#acbbc0" stroke="#4d6068" stroke-width="2"/><line x1="471" y1="563" x2="471" y2="635" stroke="#f1f4f2" stroke-width="2"/>
+  <path d="M458 551v-13q0-13 13-13t13 13v13" fill="none" stroke="#42565d" stroke-width="5"/><text x="442" y="655" class="small">05 双槽水槽 / 06 龙头</text>
+  <rect x="449" y="578" width="14" height="27" rx="4" class="loose"/><text x="443" y="670" class="small">15 清洁瓶</text>
+  <path d="M495 544q-15 16 0 31" fill="none" stroke="#c24873" stroke-width="6"/><text x="483" y="583" class="small">14 抹布</text>
+  <rect x="228" y="231" width="194" height="356" rx="4" fill="#f3eee4" stroke="#b8ad9c" stroke-width="2"/>
+  <text x="267" y="385" class="label">01 U 形下柜与台面</text><text x="255" y="414" class="sub">两侧沿长边延伸，南侧留入口通道</text>
+  <circle cx="325" cy="485" r="24" fill="#f8e2a6" stroke="#bb973b" stroke-width="2"/><text x="277" y="526" class="small">07 顶部中央吸顶灯</text>
+  <path d="M321 673v40m-12-12 12 12 12-12" fill="none" stroke="#26343c" stroke-width="3"/><text x="344" y="704" class="label">南侧入口</text>
+  <circle cx="325" cy="730" r="13" fill="#e5a544" stroke="#805622" stroke-width="2"/><path d="M325 743v12" stroke="#805622" stroke-width="3"/><text x="350" y="737" class="small">16 入口外吊灯</text>
+  <rect x="610" y="132" width="545" height="496" rx="14" fill="#fff" stroke="#d2d9d8" stroke-width="2"/>
+  <text x="645" y="174" class="label">摆放位置把握</text>
+  <text x="645" y="215" class="small">• 灶具与油烟机在后墙短边，灶具偏左</text>
+  <text x="645" y="250" class="small">• 西侧长边放置油瓶等台面小物</text>
+  <text x="645" y="285" class="small">• 东侧长边包含砧板、收纳架和水槽</text>
+  <text x="645" y="320" class="small">• 入口在南侧，门口吊灯在厨房外</text>
+  <text x="645" y="375" class="label">比例依据</text>
+  <text x="645" y="410" class="small">• 短边约 2.06 m；东西侧长边约 3.08 m</text>
+  <text x="645" y="445" class="small">• 原户型图标注约 300 × 198，按此交换方向</text>
+  <text x="645" y="480" class="small">• 各物件高度、深度按照片比例适配</text>
+  <text x="645" y="535" class="label">精度说明</text>
+  <text x="645" y="570" class="small">照片可确认相对位置，未提供实测柜体尺寸。</text>
+  <text x="48" y="738" class="sub">布局示意用于 3D 漫游，不作为施工尺寸依据。</text>
+</svg>

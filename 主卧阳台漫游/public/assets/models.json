@@ -1,0 +1,42 @@
+[
+  {
+    "file": "washingMachine.glb",
+    "bytes": 157792,
+    "sha256": "784ff52eb45b4350ccefe6d1017aaae084ae0c3f88ddb02951925f6a5386d071"
+  },
+  {
+    "file": "bucket.glb",
+    "bytes": 195404,
+    "sha256": "a145884966b2619e24920542a5914fd1208c22be978f218cc43383b345aa9c5d"
+  },
+  {
+    "file": "plantRack.glb",
+    "bytes": 216436,
+    "sha256": "9a71e0cbe276ae8eb6f5d8754527295ff1f501e46d7a6c4db8fe354009faa55c"
+  },
+  {
+    "file": "washStand.glb",
+    "bytes": 36024,
+    "sha256": "a2980de6e4f15ff2c0df8df3968e79a1d4faf28153c82b1415f702accabb0d1e"
+  },
+  {
+    "file": "faucet.glb",
+    "bytes": 36228,
+    "sha256": "00f084289fd673de81deea060d796b2200685042de8db52533496ba23b783c21"
+  },
+  {
+    "file": "soapDish.glb",
+    "bytes": 18436,
+    "sha256": "346e570c64a3267c5c5e1cb994c7a1eb17bfa9efff2002d3215717b828e484f2"
+  },
+  {
+    "file": "washboard.glb",
+    "bytes": 65768,
+    "sha256": "46abc65e2f1424f189c063e47767bc1d8a689baa7c4f9a7dd6c2402dfcdd65b0"
+  },
+  {
+    "file": "broom.glb",
+    "bytes": 53992,
+    "sha256": "fa05a9a37e846c992c8cc0a3d691ea7758b71c825aae932413e315eaa3ddeb91"
+  }
+]

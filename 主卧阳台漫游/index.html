@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f3eee4"><title>主卧阳台 · 日光与洗衣角</title><link rel="icon" href="data:,">
+</head>
+<body>
+  <main class="app">
+    <div id="scene" role="img" aria-label="主卧外阳台三维场景，右侧有洗衣机、水桶与三层花架，左侧有洗衣台"></div>
+    <header class="topbar">
+      <div class="identity"><span class="icon">阳</span><div><h1>主卧阳台</h1><span class="subtitle">SUNLIGHT & LAUNDRY</span></div></div>
+      <nav aria-label="空间导航"><a href="../../主卧漫游/dist/index.html">返回主卧</a><a href="../../index.html">全屋导览 ↗</a></nav>
+    </header>
+    <section class="view-caption" aria-live="polite"><span class="eyebrow">SPACE 10 / BALCONY</span><h2 id="view-title">日光里的洗衣角</h2><p id="view-description">右侧收纳与左侧洗衣台，在同一个阳台里。</p></section>
+    <div class="toolbar" aria-label="阳台交互">
+      <button id="cover" aria-pressed="false">掀开花布罩</button>
+      <button id="water" aria-pressed="false">打开水龙头</button>
+      <button id="reference">对照照片</button>
+    </div>
+    <nav class="views" aria-label="视角切换">
+      <button data-view="overview" class="active" aria-pressed="true">全景</button>
+      <button data-view="right" aria-pressed="false">出门向右</button>
+      <button data-view="sink" aria-pressed="false">左侧洗衣台</button>
+      <button data-view="top" aria-pressed="false">俯视布局</button>
+    </nav>
+    <p class="hint">拖动旋转 · 滚轮缩放</p>
+    <p class="scale-note">左侧洗衣台按描述补建，尺寸按照片比例估算。</p>
+    <div id="loading" role="status"><span>阳台正在布置</span><strong id="progress">0 / 8</strong></div>
+    <dialog id="photo-dialog" aria-label="阳台右侧参考照片">
+      <div class="dialog-heading"><div><strong>阳台右侧 · 原始照片</strong><p>洗衣机、紫色水桶与三层花架的位置参考。</p></div><button id="close-photo" aria-label="关闭参考照片">×</button></div>
+      <img id="reference-photo" alt="主卧外阳台原照：紫花罩洗衣机、紫色水桶、三层木花架与黄色小方砖墙">
+    </dialog>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

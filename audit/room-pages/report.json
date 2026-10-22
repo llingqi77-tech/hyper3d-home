@@ -1,0 +1,71 @@
+[
+  {
+    "room": "厨房",
+    "ok": true,
+    "url": "http://127.0.0.1:8765/厨房漫游/dist/index.html",
+    "canvas": [
+      {
+        "width": 1280,
+        "height": 834
+      }
+    ],
+    "assets": "6 / 6 件独立模型已接入",
+    "modelErrors": 0,
+    "errors": []
+  },
+  {
+    "room": "客厅",
+    "ok": true,
+    "url": "http://127.0.0.1:8765/客厅漫游/dist/index.html",
+    "canvas": [
+      {
+        "width": 1280,
+        "height": 708
+      }
+    ],
+    "modelErrors": 0,
+    "errors": []
+  },
+  {
+    "room": "公卫 1",
+    "ok": true,
+    "url": "http://127.0.0.1:8765/公卫1漫游/dist/index.html",
+    "canvas": [
+      {
+        "width": 950,
+        "height": 900
+      }
+    ],
+    "assets": "5 个 Hyper3D 独立模型已加载",
+    "modelErrors": 0,
+    "errors": []
+  },
+  {
+    "room": "公卫 2",
+    "ok": true,
+    "url": "http://127.0.0.1:8765/公卫2漫游/dist/index.html",
+    "canvas": [
+      {
+        "width": 978,
+        "height": 900
+      }
+    ],
+    "assets": "23 / 23 类独立物件已载入",
+    "modelErrors": 0,
+    "errors": []
+  },
+  {
+    "room": "三门交汇区",
+    "ok": true,
+    "url": "http://127.0.0.1:8765/三门交汇区漫游/dist/index.html",
+    "canvas": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "modelErrors": 0,
+    "junctionLoaded": "4",
+    "errors": []
+  }
+]
