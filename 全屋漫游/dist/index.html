@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#efeee7"><meta name="repo-root" content="../../"><title>一整个家 · 全屋 3D 漫游</title><link rel="icon" href="data:,">
+  <script type="module" crossorigin src="./assets/index-CcdyOL45.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-ChXvWsE5.css">
+</head>
+<body class="legacy-home">
+ <main class="app">
+  <div id="scene" role="img" aria-label="按户型图拼接的完整住宅三维场景"></div>
+  <header class="topbar"><div class="brand"><span class="brand-mark">家</span><div><h1>一整个家</h1><small>ONE HOME · TEN ORIGINAL ROOMS</small></div></div><div class="top-actions"><span id="load-state" role="status">正在接入各个空间</span><button id="reference">户型图</button><button id="spaces" aria-expanded="false" aria-controls="room-panel">空间清单</button></div></header>
+  <aside id="room-panel" aria-label="全屋空间清单" hidden><div class="panel-title"><span>10 个空间 · 一个家</span><button id="close-panel" aria-label="关闭空间清单">×</button></div><p>点击定位，仍在同一个三维场景中。</p><div id="room-list"></div><a id="legacy-link">查看原独立页面 ↗</a></aside>
+  <div class="view-heading"><span class="eyebrow">A CONTINUOUS HOME</span><h2 id="view-title">全屋立体总览</h2><p id="view-description">打开屋顶，把每一处生活连接起来。</p></div>
+  <div class="compass" aria-label="户型图方向：上南、下北、左东、右西"><span>南 S</span><b>↑</b><small>户型图原方向</small></div>
+  <div id="labels" aria-hidden="true"></div>
+  <aside class="mini-map" aria-label="全屋位置图"><div class="map-heading"><span>全屋位置</span><span id="current-room">全屋</span></div><svg id="mini-map" viewBox="-4 -12.6 9.2 14.8" role="img" aria-label="可点击各房间定位的户型小地图"></svg><span class="map-note">上南 · 下北</span></aside>
+  <div class="secondary-actions"><button id="walls" aria-pressed="false">完整墙体</button><button id="labels-toggle" aria-pressed="true">空间名称</button><button id="reset">复位视角</button></div>
+  <nav class="mode-dock" aria-label="全屋浏览模式"><button data-mode="overview" class="active" aria-pressed="true"><span>◈</span> 全屋立体</button><button data-mode="plan" aria-pressed="false"><span>▦</span> 正上方俯瞰</button><button data-mode="walk" aria-pressed="false"><span>↗</span> 房间内查看</button><button id="tour" disabled><span>▷</span> 全屋导览</button></nav>
+  <p id="hint" class="hint">拖动旋转 · 滚轮缩放 · 点击房间定位</p>
+  <div id="walk-pad" hidden aria-label="触屏行走"><button data-key="w" aria-label="向前走">↑</button><div><button data-key="a" aria-label="向左走">←</button><button data-key="s" aria-label="向后走">↓</button><button data-key="d" aria-label="向右走">→</button></div></div>
+  <div id="loading" role="status"><span class="loading-mark">家</span><h2>正在装入每个原尺寸空间</h2><p id="loading-detail">保留原有墙地面和家具</p><div class="progress"><i id="progress"></i></div><button id="dismiss-loading">先看全屋布局</button></div>
+  <div id="toast" role="status" hidden></div>
+  <dialog id="reference-dialog"><div class="dialog-heading"><div><strong>布局依据 · 门位确认户型图</strong><p>南在上方。家具尺寸及阳台纵深为展示估算，非施工模型。</p></div><button id="close-reference" aria-label="关闭户型图">×</button></div><img id="floorplan" alt="完整户型图，包括房间位置、尺寸和门洞"></dialog>
+ </main>
+</body></html>

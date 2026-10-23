@@ -1,0 +1,6 @@
+{
+  "name":"whole-home-tour",
+  "private":true,
+  "type":"module",
+  "scripts":{"build":"node ../厨房漫游/node_modules/vite/bin/vite.js build && node tools/update-root.mjs","test":"node tools/check-canonical-layout.mjs && node tools/check-layout.mjs","test:parity":"node tools/verify-integrated.mjs"}
+}

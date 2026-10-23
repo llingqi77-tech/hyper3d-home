@@ -1,0 +1,12 @@
+{
+  "room": "junction",
+  "counts": [
+    237,
+    237
+  ],
+  "missing": [],
+  "extra": [],
+  "mismatches": [],
+  "lights": [],
+  "renderer": []
+}

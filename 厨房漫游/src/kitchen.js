@@ -70,15 +70,18 @@ function makeKitchenFloorTexture() {
 }
 
 function makeCounterTexture() {
+  // Keep the existing speckled-stone design stable across standalone and whole-home loads.
+  let seed = 0x4b1d5e77;
+  const random = () => ((seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) / 0x100000000);
   const c = document.createElement("canvas");
   c.width = c.height = 256;
   const ctx = c.getContext("2d");
   ctx.fillStyle = palette.stone;
   ctx.fillRect(0, 0, 256, 256);
   for (let i = 0; i < 2400; i++) {
-    const a = 0.04 + Math.random() * 0.16;
+    const a = 0.04 + random() * 0.16;
     ctx.fillStyle = `rgba(78,68,55,${a})`;
-    ctx.fillRect(Math.random() * 256, Math.random() * 256, 1 + Math.random() * 2, 1 + Math.random() * 2);
+    ctx.fillRect(random() * 256, random() * 256, 1 + random() * 2, 1 + random() * 2);
   }
   const t = new THREE.CanvasTexture(c);
   t.colorSpace = THREE.SRGBColorSpace;

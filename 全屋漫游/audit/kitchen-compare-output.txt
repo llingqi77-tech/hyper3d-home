@@ -1,0 +1,43 @@
+{
+  "room": "kitchen",
+  "counts": [
+    288,
+    288
+  ],
+  "missing": [],
+  "extra": [],
+  "mismatches": [
+    {
+      "name": "",
+      "diff": [
+        {
+          "path": ".materials.0.map.pixels",
+          "original": "719078dc192d20d935ed2abbef03e36c6e1314faa9c59821f98ec0d3246887bd",
+          "canonical": "25210a7f6d06645ecd1199894e1cf836365bb60580318dd6367acaa46c352020"
+        }
+      ]
+    },
+    {
+      "name": "",
+      "diff": [
+        {
+          "path": ".materials.0.map.pixels",
+          "original": "719078dc192d20d935ed2abbef03e36c6e1314faa9c59821f98ec0d3246887bd",
+          "canonical": "25210a7f6d06645ecd1199894e1cf836365bb60580318dd6367acaa46c352020"
+        }
+      ]
+    },
+    {
+      "name": "",
+      "diff": [
+        {
+          "path": ".materials.0.map.pixels",
+          "original": "719078dc192d20d935ed2abbef03e36c6e1314faa9c59821f98ec0d3246887bd",
+          "canonical": "25210a7f6d06645ecd1199894e1cf836365bb60580318dd6367acaa46c352020"
+        }
+      ]
+    }
+  ],
+  "lights": [],
+  "renderer": []
+}

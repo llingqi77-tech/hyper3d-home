@@ -1,0 +1,12 @@
+{
+  "room": "living",
+  "counts": [
+    750,
+    750
+  ],
+  "missing": [],
+  "extra": [],
+  "mismatches": [],
+  "lights": [],
+  "renderer": []
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "master",
+    "reachable": true,
+    "continuous": true,
+    "steps": 123,
+    "point": [
+      0.8999999999999995,
+      -13.660000000000002
+    ]
+  },
+  {
+    "id": "children",
+    "reachable": true,
+    "continuous": true,
+    "steps": 129,
+    "point": [
+      3.3,
+      -14.14
+    ]
+  },
+  {
+    "id": "bathroom1",
+    "reachable": true,
+    "continuous": true,
+    "steps": 115,
+    "point": [
+      4.8599999999999985,
+      -11.860000000000001
+    ]
+  },
+  {
+    "id": "guest",
+    "reachable": true,
+    "continuous": true,
+    "steps": 87,
+    "point": [
+      3.3,
+      -9.100000000000001
+    ]
+  },
+  {
+    "id": "bathroom2",
+    "reachable": true,
+    "continuous": true,
+    "steps": 63,
+    "point": [
+      3.3,
+      -5.020000000000001
+    ]
+  },
+  {
+    "id": "kitchen",
+    "reachable": true,
+    "continuous": true,
+    "steps": 18,
+    "point": [
+      3.3,
+      0.019999999999999574
+    ]
+  },
+  {
+    "id": "dining",
+    "reachable": true,
+    "continuous": true,
+    "steps": 10,
+    "point": [
+      0.41999999999999993,
+      2.299999999999997
+    ]
+  },
+  {
+    "id": "living",
+    "reachable": true,
+    "continuous": true,
+    "steps": 46,
+    "point": [
+      -0.9000000000000004,
+      -4.420000000000002
+    ]
+  },
+  {
+    "id": "junction",
+    "reachable": true,
+    "continuous": true,
+    "steps": 105,
+    "point": [
+      2.7,
+      -11.500000000000002
+    ]
+  },
+  {
+    "id": "balcony",
+    "reachable": true,
+    "continuous": true,
+    "steps": 150,
+    "point": [
+      -0.1800000000000006,
+      -16.900000000000002
+    ]
+  }
+]

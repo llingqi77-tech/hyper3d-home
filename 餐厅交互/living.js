@@ -3,7 +3,7 @@ import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js'
 
 // World coordinates are shared with the original dining scene.
 // The living room sits north of z=-1.625. Dimensions without plan labels are estimates.
-export function buildLiving({scene,box,obstacles}){
+export function buildLiving({scene,box,obstacles,assetUrl=path=>'../'+path}){
   const root=new THREE.Group();root.name='客厅陈设';scene.add(root);
   const ceiling=new THREE.Group();ceiling.name='客厅吊顶';scene.add(ceiling);
   const objects=new Map();
@@ -157,7 +157,7 @@ export function buildLiving({scene,box,obstacles}){
   // Hang the artwork on the west wall between the bookcase and balcony window, facing east toward the desk.
   const painting=group('客厅的画',-3.42,1.72,-2.18,Math.PI/2);
   cube(.66,.78,.055,m.wood,0,0,0,painting);
-  const paintingMap=new THREE.TextureLoader().load('../客厅的画.jpg');
+  const paintingMap=new THREE.TextureLoader().load(assetUrl('客厅的画.jpg'));
   paintingMap.colorSpace=THREE.SRGBColorSpace;
   // The source photo includes the surrounding wall; crop its UVs to the canvas itself.
   paintingMap.repeat.set(.794,.517);paintingMap.offset.set(.102,.226);

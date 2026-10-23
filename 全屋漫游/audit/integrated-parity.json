@@ -1,0 +1,102 @@
+{
+  "master": {
+    "source": "master",
+    "sourceSubset": false,
+    "originalMeshes": 437,
+    "assembledMeshes": 437,
+    "materialGeometryTransformDifferences": 0,
+    "lightsMatch": true,
+    "environmentMatch": true,
+    "rigidPlacement": true
+  },
+  "children": {
+    "source": "children",
+    "sourceSubset": false,
+    "originalMeshes": 345,
+    "assembledMeshes": 345,
+    "materialGeometryTransformDifferences": 0,
+    "lightsMatch": true,
+    "environmentMatch": true,
+    "rigidPlacement": true
+  },
+  "bathroom1": {
+    "source": "bathroom1",
+    "sourceSubset": false,
+    "originalMeshes": 97,
+    "assembledMeshes": 97,
+    "materialGeometryTransformDifferences": 0,
+    "lightsMatch": true,
+    "environmentMatch": true,
+    "rigidPlacement": true
+  },
+  "guest": {
+    "source": "guest",
+    "sourceSubset": false,
+    "originalMeshes": 234,
+    "assembledMeshes": 234,
+    "materialGeometryTransformDifferences": 0,
+    "lightsMatch": true,
+    "environmentMatch": true,
+    "rigidPlacement": true
+  },
+  "kitchen": {
+    "source": "kitchen",
+    "sourceSubset": false,
+    "originalMeshes": 288,
+    "assembledMeshes": 288,
+    "materialGeometryTransformDifferences": 0,
+    "lightsMatch": true,
+    "environmentMatch": true,
+    "rigidPlacement": true
+  },
+  "dining": {
+    "source": "dining",
+    "sourceSubset": false,
+    "originalMeshes": 412,
+    "assembledMeshes": 412,
+    "materialGeometryTransformDifferences": 0,
+    "lightsMatch": true,
+    "environmentMatch": true,
+    "rigidPlacement": true
+  },
+  "living": {
+    "source": "dining",
+    "sourceSubset": true,
+    "originalMeshes": 412,
+    "assembledMeshes": 375,
+    "materialGeometryTransformDifferences": 0,
+    "lightsMatch": true,
+    "environmentMatch": true,
+    "rigidPlacement": true
+  },
+  "bathroom2": {
+    "source": "bathroom2",
+    "sourceSubset": false,
+    "originalMeshes": 43,
+    "assembledMeshes": 43,
+    "materialGeometryTransformDifferences": 0,
+    "lightsMatch": true,
+    "environmentMatch": true,
+    "rigidPlacement": true
+  },
+  "balcony": {
+    "source": "balcony",
+    "sourceSubset": false,
+    "originalMeshes": 266,
+    "assembledMeshes": 266,
+    "materialGeometryTransformDifferences": 0,
+    "lightsMatch": true,
+    "environmentMatch": true,
+    "rigidPlacement": true
+  },
+  "junction": {
+    "source": "junction",
+    "sourceSubset": false,
+    "originalMeshes": 237,
+    "assembledMeshes": 237,
+    "materialGeometryTransformDifferences": 0,
+    "lightsMatch": true,
+    "environmentMatch": true,
+    "rigidPlacement": true
+  }
+}

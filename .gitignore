@@ -4,6 +4,8 @@ dist/
 !主卧漫游/dist/**
 !主卧阳台漫游/dist/
 !主卧阳台漫游/dist/**
+!全屋漫游/dist/
+!全屋漫游/dist/**
 .vite/
 coverage/
 *.log

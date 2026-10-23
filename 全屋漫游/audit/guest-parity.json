@@ -1,0 +1,12 @@
+{
+  "room": "guest",
+  "counts": [
+    234,
+    234
+  ],
+  "missing": [],
+  "extra": [],
+  "mismatches": [],
+  "lights": [],
+  "renderer": []
+}
